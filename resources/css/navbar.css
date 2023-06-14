@@ -1,0 +1,19 @@
+.navbar{
+  background-color: #00021c  ;
+  color: #ffdd;
+  padding: 10px;
+  width: 100%;
+  border-radius: 0%;
+  
+}
+.navbar-left{
+  display: flex;
+  contain: content;
+}
+.Txt_item{
+  flex-direction: row;
+  align-content: center !important ;
+  align-items:center !important ;
+    margin:20px 10px 10px 30px; 
+  font-size: 20px 
+}

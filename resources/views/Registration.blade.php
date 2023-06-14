@@ -1,39 +1,38 @@
 @extends('layout')
-@section('title','Registration')
+@section('title', 'Registration')
+
+
 @section('content')
-<div class="container">
-<form style='width:500px' class="ms-auto me-auto mt-auto mb-auto ">
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">First Name</label>
-    <input type="text" class="form-control" id="exampleInputFirstName1" aria-describedby="emailHelp">
-    
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Laast Name</label>
-    <input type="text
-    " class="form-control" id="exampleInputLastName1" aria-describedby="emailHelp">
+<link rel="stylesheet" href="{{ asset('css/registration.css') }}">
 
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label"> address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-  </div>
+    <form action="action_page.php" style="border:1px solid #7c3535">
+        <div class="container">
+            <h1>Sign Up</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
 
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-</div>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+            <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
+                 Remember me
+            </label>
+
+            <p>By creating an account you agree to our
+                 <a href="#" style="color:rgb(102, 152, 202)">Terms & Privacy</a>.</p>
+
+            <div class="clearfix">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+        </div>
+    </form>
+    <script src="{{ asset('js/navbar.js') }}"></script>
 @endsection
