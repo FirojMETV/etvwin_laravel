@@ -3,36 +3,60 @@
 
 
 @section('content')
-<link rel="stylesheet" href="{{ asset('css/registration.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
-    <form action="action_page.php" style="border:1px solid #7c3535">
-        <div class="container">
-            <h1>Sign Up</h1>
-            <p>Please fill in this form to create an account.</p>
-            <hr>
-
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
-
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-
-            <label for="psw-repeat"><b>Repeat Password</b></label>
-            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-
-            <label>
-                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
-                 Remember me
-            </label>
-
-            <p>By creating an account you agree to our
-                 <a href="#" style="color:rgb(102, 152, 202)">Terms & Privacy</a>.</p>
-
-            <div class="clearfix">
-                <button type="button" class="cancelbtn">Cancel</button>
-                <button type="submit" class="signupbtn">Sign Up</button>
-            </div>
+    {{-- <nav class="navbar">
+        <div class="navbar-left">
+          <img  src="{{ asset('image/et.jpg') }}" alt="Logo" class="navbar-logo">
+          <div class="navbar-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
-    </form>
-   
+        <div class="navbar-center">
+          <ul class="navbar-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">TV SHOWS</a></li>
+            <li><a href="#">MOVIES</a></li>
+            <li><a href="#"> LIVETV</a></li>
+            <li><a href="#">NEWS</a></li>
+            <li><a href="#">FOOD</a></li>
+            <li><a href="#">HEALTH</a></li>
+
+          </ul>
+        </div>
+        <div class="navbar-RIGHT">
+            <ul class="nav navbar-nav navbar-right align-content-center align-self-center ">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('C:/xampp/firoj/webwin_project/image/subscribe.png') }}">
+                        <img src="{{ asset('image/subscribe.png') }}" height="50px" width="120px" alt=""
+                            class="subscription-img">
+                    </a>
+                </li>
+                <li class="nav-item" style="padding: 10px 0  0 0px">
+                    <a class="nav-link " href="{{ url('/search') }}">
+                        <img src="{{ asset('image/search.png') }}" height="35px" width="35px" alt=""
+                            class="search-img " />
+                    </a>
+                </li>
+                <li class="hidden-sm">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" href="{{ url('/profile') }}">
+                        <img src="{{ asset('image/profile-icon-white.png') }}" height="45px" width="45px"
+                            alt="" class="profile-img  color-#00021d " />
+                        <ul class="dropdown-menu "
+                            style="background: #191D4F ; min-width:280px ; padding:10px 50px; font-size:15px;  ">
+                            <li style="padding-bottom:22px"><a href="#" style="color: #e7b851 ; ">SIGN IN</a>
+                            </li>
+                            <li><a href="#" style="color:#e7b851">SIGN OUT</a></li>
+
+                        </ul>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+      </nav>
+      
+    <script src="{{ asset('js/navbar.js') }}"></script> --}}
 @endsection

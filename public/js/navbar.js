@@ -22,7 +22,24 @@ function closeNav() {
   document.getElementById("main").style.marginLeft = "0";
   document.body.style.backgroundColor = "white";
 }
-// $( document ).ready(function() {
-//   openNav();
-//   closeNav();
-// });
+var offcanvasElementList = [].slice.call(document.querySelectorAll('.offcanvas'))
+var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
+  return new bootstrap.Offcanvas(offcanvasEl)
+})
+
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+// Toggle navbar menu on click
+const navbarMenu = document.querySelector('.navbar-menu');
+const navbarItems = document.querySelector('.navbar-center');
+
+navbarMenu.addEventListener('click', () => {
+  navbarItems.classList.toggle('show');
+});
