@@ -9,6 +9,8 @@
 .navbar-left{
   display: flex;
   contain: content;
+  justify-content:center; 
+  padding-right:50px
 }
 .Txt_item{
   flex-direction: row;

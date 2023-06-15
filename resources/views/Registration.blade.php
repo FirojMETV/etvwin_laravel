@@ -34,5 +34,5 @@
             </div>
         </div>
     </form>
-    <script src="{{ asset('js/navbar.js') }}"></script>
+   
 @endsection
