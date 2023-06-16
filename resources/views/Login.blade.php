@@ -4,7 +4,7 @@
 
    
 @section('content')
-    <div class="container">
+    {{-- <div class="container">
         <form style='width:500px' class="ms-auto me-auto mt-auto mb-auto ">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -40,6 +40,9 @@
           </div>
 
     </div>
-   
+    --}}
 
 @endsection
+
+
+    

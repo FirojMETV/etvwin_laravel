@@ -1,5 +1,6 @@
-.topnav{
-  background: #00021C;
-  overflow: hidden;
- 
+.navbar{
+  width: 100%;
+  position: absolute;
+  background-color: #00021C;
+  height: 80px;
 }

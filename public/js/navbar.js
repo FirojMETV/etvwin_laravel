@@ -43,3 +43,4 @@ const navbarItems = document.querySelector('.navbar-center');
 navbarMenu.addEventListener('click', () => {
   navbarItems.classList.toggle('show');
 });
+  
