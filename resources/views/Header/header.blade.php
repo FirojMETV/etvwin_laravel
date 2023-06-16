@@ -1,26 +1,26 @@
 <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
 
-<nav class="navbar navbar-inverse " style="background: #00021c !important ; justify-content:center">
+<nav class="d-block navbar navbar-inverse " style="background: #00021c !important ; justify-content:center">
 
-    <div class="navbar-menu hidden-sm">
-        <span style="color: #e7b851"></span>
-        <span></span>
-        <span></span>
-      </div>
+   
 
-    <div class="container-fluid justify-content-center" style="justify-content-center; padding-right:50px">
-        <div class="header" style="padding:5x 43px !important">
+    <div class="container-fluid justify-content-center d-flex" style="justify-content-center; padding-right:50px">
+        <div class="header ml-5" >
             <a class="navbar-brand" href="#">
                 <img src="{{ asset('image/et.jpg') }}" height="50px" width="50px" alt=""
                     class="logo-img sm:pd-6">
             </a>
         </div>
-
+        <div class="hidden-xs" style="background: #addaef">
+            <span style="color: #e7b851" class="red"></span>
+            <span></span>
+            <span></span>
+          </div>
         {{-- center text  --}}
 
-        <div  class="collapse navbar-collapse hidden-sm offset-md-5" id="navbarSupportedContent">
-            <ul class=" nav navbar-nav justify-content-center  nav-pills me-auto mb-0 mb-lg-0"
-                style="align-content: center !important ; align-item-center !important ; margin:20px 10px 10px 30px; font-size: 20px ">
+        <div  class="collapse navbar-collapse hidden-sm d-inline-block " id="navbarSupportedContent">
+            <ul class=" nav navbar-nav justify-content-center  nav-pills "
+                style="align-content: center !important ; align-item-center !important ;  font-size: 20px ">
                 <li class="nav-item" >
                     <a class="nav-link red " href="{{ url('/home') }}">HOME</a>
                 </li>
@@ -47,15 +47,15 @@
 
 
         {{-- right content --}}
-        <div class="navbar-form navbar-right position-fixed" style="">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="nav-item">
+      <div class="d-inline-block align-content-center ">
+            <ul class="navbar-nav nav navbar-right">
+                <li class="nav-item  height-xs-20px width-xs-40px">
                     <a class="nav-link" href="{{ url('C:/xampp/firoj/webwin_project/image/subscribe.png') }}">
                         <img src="{{ asset('image/subscribe.png') }}" height="50px" width="120px" alt=""
                             class="subscription-img">
                     </a>
                 </li>
-                <li class="nav-item align-items-xs-start" style="">
+                  <li class="nav-item align-items-xs-start mt-15" style="">
                     <a class="nav-link " href="{{ url('/search') }}">
                         <img src="{{ asset('image/search.png') }}" height="35px" width="35px" alt=""
                             class="search-img " />
@@ -76,7 +76,7 @@
                 </li>
 
             </ul>
-          </div>
+      </div>
     </div>
 
 </nav>
