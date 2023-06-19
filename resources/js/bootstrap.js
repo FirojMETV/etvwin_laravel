@@ -5,9 +5,15 @@ import 'bootstrap';
  * to our Laravel back-end. This library automatically handles sending the
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
-
+window._ = require('lodash');
 import axios from 'axios';
 window.axios = axios;
+try {
+    window.$ = window.jQuery = require('jquery');
+    window.Popper = require('@popperjs/core');
+    window.bootstrap = require('bootstrap');
+
+} catch (e) {}
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
