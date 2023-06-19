@@ -1,6 +1,58 @@
-.navbar{
-  width: 100%;
-  position: absolute;
-  background-color: #00021C;
-  height: 80px;
+.container-fluid{
+  padding-top: 2px;
+  align-items: center;
+  align-content:  baseline;
+background-color: #03023d;
+}
+
+.row{
+  background-color: #00021b;
+}
+.text-item li a{
+ 
+  color: #fffd;
+  border-radius: 50px;
+}
+.text-item li a:hover ,
+:active{
+  color: saddlebrown;
+  border: 1px solid #ff5;
+}
+
+
+
+@-webkit-keyframes gradbar {
+0% {
+  background-position: 0% 50%
+}
+50% {
+  background-position: 100% 50%
+}
+100% {
+  background-position: 0% 50%
+}
+}
+
+@-moz-keyframes gradbar {
+0% {
+  background-position: 0% 50%
+}
+50% {
+  background-position: 100% 50%
+}
+100% {
+  background-position: 0% 50%
+}
+}
+
+@keyframes gradbar {
+0% {
+  background-position: 0% 50%
+}
+50% {
+  background-position: 100% 50%
+}
+100% {
+  background-position: 0% 50%
+}
 }

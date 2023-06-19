@@ -36,11 +36,3 @@ function myFunction() {
     x.className = "topnav";
   }
 }
-// Toggle navbar menu on click
-const navbarMenu = document.querySelector('.navbar-menu');
-const navbarItems = document.querySelector('.navbar-center');
-
-navbarMenu.addEventListener('click', () => {
-  navbarItems.classList.toggle('show');
-});
-  
