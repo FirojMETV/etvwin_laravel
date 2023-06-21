@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
-
+{{-- navbar code  --}}
 <div class="navbar-inverse " style="justify-content:space-between">
     <div class="container-fluid" style="display:inline-flex;">
         {{-- menu icon --}}
@@ -40,25 +40,23 @@
                 <a class="nav-link" href="{{ url('/health') }}">HEALTH</a>
             </li>
         </ul>
-
-
         {{-- right content --}}
         <div class="" style="display:inline-flex; ">
             <div style="display:inline; margin:10px 5px 10px 10px ">
-                <a class="nav-link" href="{{ url('subscribe') }}">
+                <a class="nav-link" href="javascript:void(0)">
                     <img src="{{ asset('image/subscribe.png') }}" height="50px" width="120px" alt=""
-                        class="subscription-img">
+                        class="subscription-img" onclick="openSubcription()">
             </div>
             <div style="display: inline; margin:20px 5px 10px 10px">
                 <a class="nav-link  " href="javascript:void(0);">
                     <img src="{{ asset('image/search.png') }}" height="35px" width="35px" alt=""
-                        class="search-img " onclick="openSearch()" />
+                        class="" onclick="openSearch()" />
                 </a>
             </div>
             <div class="dropdown hidden-xs" style="display:inline;">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" href="{{ url('/profile') }}">
                     <img src="{{ asset('image/profile.png') }}" height="45px" width="45px" alt=""
-                        class="profile-img   " />
+                        class="profile-img" />
                 </a>
                 <ul class="dropdown-menu "
                     style="background: #191D4F !important ;
@@ -77,43 +75,62 @@
     </div>
 </div>
 
+{{-- Side-Drawer for menu --}}
 <div id="mySidenav" class="sidenav " style="display:none;">
-    <div class="signin" style="background: linear-gradient(#598a59,#91914a) ; ">
-        hey guest user !!
+    <div class="signin" style="background: linear-gradient(#598a59,#91914a) ; margin-bottom:50px; ">
+        <h5> hey guest user !! </h5>
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-        <div class="d-inline" style="margin-bottom:10px;">
-            <button href="#" type="button" class="col-sm-1 col-xs-6 btn form-button blue-button">SIGN IN</button>
-            <button href="#" type="button"  class="col-sm-1 col-xs-6 btn form-button blue-button">
+        <div class="d-inline" style="margin-bottom:30px;">
+            <button href="#" type="button" class="col-sm-2 col-xs-4 btn form-button blue-button"
+                style="margin-right: 2px ">
+                SIGN IN</button>
+            <button href="#" type="button" class="col-sm-2 col-xs-4 btn form-button blue-button">
                 SIGN UP
             </button>
         </div>
     </div>
-    <hr class="rounded">
-    <div>
-        <a href="#">Home</a>
-        <hr class="rounded">
+    <hr class="hr">
+    <div style="margin-bottom: 60px">
+        <a href="#" class="active">Home</a>
+        <hr class="hr">
         <a href="#">TV SHOWS</a>
-        <hr class="rounded">
+        <hr class="hr">
         <a href="#">MOVIES</a>
-        <hr class="rounded">
+        <hr class="hr">
         <a href="#">LIVE TV</a>
-        <hr class="rounded">
+        <hr class="hr">
         <a href="#">NEWS</a>
-        <hr class="rounded">
+        <hr class="hr">
         <a href="#">FOOD</a>
-        <hr class="rounded">
+        <hr class="hr">
         <a href="#">HEALTH</a>
+        <hr class="hr">
+
+    </div>
+    <div class="download-button">
+        <h3 style="color: #888888dd">
+            DOWNLOAD APP
+            <span class="fa fa-apple" style="font-size:26px">
+
+            </span>
+            <span class="fa fa-android" style="font-size: 26px">
+
+            </span>
+        </h3>
     </div>
 </div>
+
+{{-- searching code  --}}
 <div id="myOverlay" class="overlay">
     <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
     <div class="overlay-content">
         <form action="/action_page.php">
-            <input type="text" placeholder="Search.." name="search">
-
+            <input type="text" placeholder="Search.........." name="search">
         </form>
     </div>
 </div>
+
+
 
 <script src="{{ asset('js/navbar.js') }}"></script>

@@ -1,27 +1,25 @@
 .navbar-inverse {
- position:absolute;
+  position: absolute;
   background-color: #00021C;
   width: 100%;
   border-radius: 0%;
 }
+
 .nav.split {
   float: right;
   background-color: #04AA6D;
   color: white;
 }
+
 .navbar-brand {
   color: brown;
   font-size: xx-large;
 }
 
-.signin{
+.signin {
   background-image: url('/public/image/guest-user-background.png');
 }
-.hr.rounded{
-border-top: 1px solid #595858 !important;
-border-radius: 2px;
-margin: 1px 0px 0px 0px !important;
-}
+
 .blue-button {
   background: #7249bf;
   font-size: 100%;
@@ -31,42 +29,58 @@ margin: 1px 0px 0px 0px !important;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  /* background-color: #e184de; */
-  /* border: none;
-  border-radius:20px;
-  color: white;
-  padding: 8px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 8px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer; */
-}
-.from-button{
-  font-size: 100%;
-    background: #7249bf;
-    box-shadow: none;
-    border: 1px solid #7249bf;
-    border-radius: 60px;
-    width: 150px!important;
-    height: 45px;
-    margin: auto;
-    display: table;
-    color: #fff;
-}
-.button:hover,
-:active{
 
-  color: #b83f74;
 }
+
+.from-button {
+  font-size: 100%;
+  background: #7249bf;
+  box-shadow: none;
+  border: 1px solid #7249bf;
+  border-radius: 60px;
+  width: 150px !important;
+  height: 45px;
+  margin: auto;
+  display: table;
+  color: #fff;
+}
+
+.button:hover,
+:active {
+
+  color: #586c95;
+}
+
+.hr {
+  height: 1px;
+  border-width: 0;
+  color: rgb(103, 109, 130);
+  background-color: rgb(62, 63, 80)
+}
+
 .header {
   padding: 15x 43px !important
 }
 
+.fa:hover {
+  color: #d2691e;
+}
+
 .navbar-toggler-icon {
   color: brown;
+}
+
+.download-button {
+  width: 0;
+  position: fixed;
+  background: #020018;
+  bottom: 0;
+  z-index: 1990;
+  left: 0;
+  min-height: 35px;
+  min-width: 270px;
+  transition: .3s;
+  overflow: auto;
 }
 
 .hidden-xs {
@@ -82,34 +96,44 @@ margin: 1px 0px 0px 0px !important;
   padding: 10px 50px;
   font-size: 15px;
 }
+
 /* The side navigation menu */
 .sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 80%; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
+  height: 100%;
+  /* 100% Full-height */
+  width: 80%;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
   top: 0;
   left: 0;
-  background-color: #00021C; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  
+  background-color: #00021C;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
+
 }
 
 /* The navigation menu links */
 .sidenav a {
-  padding: 8px 8px 8px 32px;
+  padding: 0px 0px 0px 30px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   color: #f1e8e8;
   display: block;
   transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
+.sidenav a:hover,
+:active {
+  color: #daa844;
 }
 
 /* Position and style the close button (top right corner) */
@@ -130,13 +154,13 @@ margin: 1px 0px 0px 0px !important;
 .openBtn {
   background: #f1f1f1;
   border: none;
-  padding: 10px 15px;
+  padding: 5px 10px;
   font-size: 20px;
   cursor: pointer;
 }
 
 .openBtn:hover {
-  background: #bbb;
+  background: #3952b8;
 }
 
 .overlay {
@@ -147,62 +171,67 @@ margin: 1px 0px 0px 0px !important;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #000000;
-  background-color: #000000e6;
+  background-color: #00021C;
+  background-color: #00021C;
+ 
 }
 
 .overlay-content {
   position: relative;
-  top: 46%;
-  width: 80%;
+  top: 10%;
+  width: 90%;
   text-align: center;
   margin-top: 30px;
   margin: auto;
+  
 }
 
 .overlay .closebtn {
   position: absolute;
-  top: 20px;
+  top: 10%;
   right: 45px;
   font-size: 60px;
   cursor: pointer;
-  color: white;
+  color: #e4edf0;
 }
 
-.overlay .closebtn:hover {
-  color: #ccc;
+.overlay input[type=placeholder] {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: #101340;
+  border: 1px solid #101340 !important;
+  border-radius: 5px;
 }
-
 .overlay input[type=text] {
   padding: 15px;
   font-size: 17px;
   border: none;
   float: left;
   width: 80%;
-  background: white;
+  background: #101340;
+  border: 1px solid #101340 !important;
+  border-radius: 5px;
 }
 
 .overlay input[type=text]:hover {
-  background: #f1f1f1;
+  background: #101340;
+  color: #fff;
+  border: 1px solid #101340 !important;
 }
 
-.overlay button {
-  float: left;
-  width: 20%;
-  padding: 15px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-}
 
-.overlay button:hover {
-  background: #bbb;
-}
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
 }
 
 @-webkit-keyframes gradbar {
