@@ -105,6 +105,9 @@
   padding: 10px 50px;
   font-size: 15px;
 }
+.dropdown-menu li a:hover{
+    color:#fff;
+}
 
 /* The side navigation menu */
 .sidenav {
@@ -233,7 +236,7 @@
 
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 1250px) {
+@media screen and (max-height: 450px) {
   .sidenav {
     width: 70%;
   }

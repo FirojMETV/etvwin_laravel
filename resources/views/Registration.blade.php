@@ -2,6 +2,7 @@
 @section('title', 'Registration')
 
 <link rel="stylesheet" href="{{asset('css/registration.css')}}">
+
 @section('content')
 
     <div class="center">
@@ -28,7 +29,7 @@
               <label>Re-Password*</label>
           </div>
             <div>
-                <input type="submit" value="SIGN UP">
+                <input type="submit" value="SIGN UP" >
                 </div>
                 
         </form>
