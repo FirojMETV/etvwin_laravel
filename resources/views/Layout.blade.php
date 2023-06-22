@@ -18,7 +18,8 @@
 </head>
 
 <body>
-    @include('Header.header')
+    {{-- @include('Header.header') --}}
+    
     @yield('content')
 </body>
 

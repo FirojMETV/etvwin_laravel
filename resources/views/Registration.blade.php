@@ -3,43 +3,35 @@
 
 
 @section('content')
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"><img src="/path/to/your/logo.png" alt="Logo"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" 
-    data-target="#navbarNav" aria-controls="navbarNav" 
-    aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">News</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Movies</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Film</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Series</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
-            </li>
-        </ul>
-    </div>
-</nav>
-
-    <script src="{{ asset('js/navbar.js') }}"></script>
+<html>
+    <head>
+      <title>Title of the document</title>
+      <style>
+        body {
+          background-color: #b2be92;
+        }
+        input[type="text"],
+        input[type="password"],
+        textarea {
+          border: none;
+          outline: none;
+          background: #b2be92;
+          border-bottom: 1px solid #7a7c7d; /* You can adjust the color and thickness of the outline */
+          
+        }
+      </style>
+    </head>
+    <body>
+      <form>
+        <p>Ordinary input field with box outline:</p>
+        <input type="text" placeholder="Enter Something" />
+        <p>Input field without outline:</p>
+        <input type="text" class="no-outline" placeholder="Enter Something" />
+        <div class="form-group">
+            
+            <input type="text" class="no-outline" placeholder="Enter Something" />
+        </div>
+      </form>
+    </body>
+  </html>
 @endsection

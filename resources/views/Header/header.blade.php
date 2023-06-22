@@ -62,7 +62,7 @@
                     style="background: #191D4F !important ;
                              min-width:280px ; padding:10px 50px; font-size:15px;  ">
                     <li style="padding-bottom:22px">
-                        <a href="#" style="color: #e7b851 ; background:#191D4F !important ">SIGN IN</a>
+                        <a href="{{asset('login')}}" style="color: #e7b851 ; background:#191D4F !important ">SIGN IN</a>
                     </li>
                     <li>
                         <a href="#" style="color:#e7b851 ; background:#191D4F !important;">SIGN OUT</a>
@@ -77,21 +77,19 @@
 
 {{-- Side-Drawer for menu --}}
 <div id="mySidenav" class="sidenav " style="display:none;">
-    <div class="signin" style="background: linear-gradient(#598a59,#91914a) ; margin-bottom:50px; ">
-        <h5> hey guest user !! </h5>
+    <div class="signin" >
+        <h5 style="padding-left: 010px; color:#dddd " > hey guest user !! </h5>
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
         <div class="d-inline" style="margin-bottom:30px;">
             <button href="#" type="button" class="col-sm-2 col-xs-4 btn form-button blue-button"
-                style="margin-right: 2px ">
+                style="margin-right: 4px " >
                 SIGN IN</button>
             <button href="#" type="button" class="col-sm-2 col-xs-4 btn form-button blue-button">
                 SIGN UP
             </button>
         </div>
     </div>
-    <hr class="hr">
-    <div style="margin-bottom: 60px">
+    <div style="margin-bottom: 60px; margin-top:10px;" >
         <a href="#" class="active">Home</a>
         <hr class="hr">
         <a href="#">TV SHOWS</a>
@@ -108,7 +106,7 @@
         <hr class="hr">
 
     </div>
-    <div class="download-button">
+    <div class="download-button" id="mydownload">
         <h3 style="color: #888888dd">
             DOWNLOAD APP
             <span class="fa fa-apple" style="font-size:26px">
