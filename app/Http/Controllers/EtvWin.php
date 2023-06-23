@@ -43,7 +43,7 @@ class EtvWin extends Controller
     {
         $request->validate([
             'Email' => 'required|email|',
-            'password' => 'required|min:8|max:15',
+            'password' => 'required|min:8|max:15', 
         ]);
         $user = User::where('email', '=', $request->Email)->first();
         if ($user) {
@@ -59,6 +59,16 @@ class EtvWin extends Controller
     }
     public function dashboard()
     {
-        return "welcome !! to your dashboard";
+        $data =array();
+        if(Session::has('loginId')){
+            $data=User::where('id','=',Session::get('loginId'))->first();
+        }
+        return view('dashboard',compact('data'));
+    }
+    public function logout(){
+        if(Session::has('loginId')){
+            Session::pull('loginId');
+            return redirect(('login'));
+        }
     }
 }

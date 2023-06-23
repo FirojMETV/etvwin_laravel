@@ -35,7 +35,7 @@
                 <input type="password" name="repassword"  value="{{old('repassword')}}" >
                 <label>Re-Password*</label>
             </div>
-            <span class="text-warning">  @error('password')  {{ $message }} @enderror</span>
+            <span class="text-warning" style="margin-top: -15px">  @error('password')  {{ $message }} @enderror</span>
             <div>
                 <input type="submit" value="SIGN UP">
             </div>
