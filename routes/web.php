@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\EtvWin;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,9 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/login', function () {
-    return view('Login');
-});
-Route::get('/registration', function () {
-    return view('Registration');
-});
+Route::get('/login',[EtvWin::class,'login']);
+Route::get('/registration',[EtvWin::class,'registration']);
+Route::post('/register-user',[EtvWin::class,'registerUser'])->name('register-user');
+Route::post('login-user',[EtvWin::class,'loginUser'])->name('login-user');
+Route::get('/dashboard',[EtvWin::class,'dashboard']);

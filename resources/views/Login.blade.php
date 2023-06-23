@@ -6,14 +6,23 @@
 
     <div class="center">
         <h2> Sign in</h2>
-        <form method="post">
+        <form method="post" action="{{route('login-user')}}">
+            @if(Session::has('success'))
+            <div class="alert alert-success">{{Session::get('success')}}</div>
+            @endif
+            @if(Session::has('fail'))
+            <div class="alert alert-danger ">{{Session::get('failed')}}</div>
+            @endif
+            @csrf
             <div class="txt_field">
-                <input type="text" required>
+                <input type="text" name="Email" value="{{old('Email')}}">
+                <span class="text-warning" style="">@error('Email'){{$message}}@enderror</span>
                 <span></span>
-                <label>Email / Mobile*</label>
+                <label for="Email">Email / Mobile*</label>
             </div>
             <div class="txt_field">
-                <input type="password" required pattern=".{8,}" title="Password must be at least 8 characters long">
+                <input type="password" name="password" value="">
+                <span class="text-warning" style="">@error('password'){{$message}}@enderror</span>
                 <span></span>
                 <label>Password*</label>
             </div>
