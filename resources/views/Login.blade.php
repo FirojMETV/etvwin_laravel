@@ -33,7 +33,7 @@
                     </div>
                 </div>
                <a href="{{asset('registration')}}">
-                <input type="submit" value="SIGN UP">
+                <input type="sign-up" value="SIGN UP">
               </a>
         </form>
     </div>

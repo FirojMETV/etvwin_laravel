@@ -65,7 +65,7 @@
                         <a href="{{asset('login')}}" style="color: #e7b851; background:#191D4F !important">SIGN IN</a>
                     </li>
                     <li>
-                        <a href="{{asset('registration')}}" style="color:#e7b851; ; background:#191D4F !important;">SIGN OUT</a>
+                        <a href="{{asset('registration')}}" style="color:#e7b851; ; background:#191D4F !important;">SIGN UP</a>
                     </li>
                 </ul>
             </div>
