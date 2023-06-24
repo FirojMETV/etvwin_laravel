@@ -62,10 +62,12 @@
                     style="background: #191D4F !important ;
                              min-width:280px ; padding:10px 50px; font-size:15px;  ">
                     <li style="padding-bottom:22px">
-                        <a href="{{asset('login')}}" style="color: #e7b851; background:#191D4F !important">SIGN IN</a>
+                        <a href="#" style="color: #e7b851; background:#191D4F !important" 
+                        onclick="openSignIN()">SIGN IN</a>
                     </li>
                     <li>
-                        <a href="{{asset('registration')}}" style="color:#e7b851; ; background:#191D4F !important;">SIGN UP</a>
+                        <a href="#" style="color:#e7b851; ; background:#191D4F !important;" 
+                         onclick="SignUPopen()">SIGN UP</a>
                     </li>
                 </ul>
             </div>
@@ -75,16 +77,19 @@
     </div>
 </div>
 
+
 {{-- Side-Drawer for menu --}}
 <div id="mySidenav" class="sidenav " style="display:none;">
     <div class="signin" >
         <h5 style="padding-left: 010px; color:#dddd " > hey guest user !! </h5>
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="d-inline" style="margin-bottom:30px;">
-            <button href="{{asset('login')}}" onclick="{{asset('login')}}" type="button" class="col-sm-2 col-xs-4 btn form-button blue-button"
+            <button href="{{asset('login')}}" onclick="openSignIN()" type="button"
+             class="col-sm-2 col-xs-4 btn form-button blue-button"
                 style="margin-right: 4px " >
                 SIGN IN</button>
-            <button href="{{asset('registration')}}" type="button" class="col-sm-2 col-xs-4 btn form-button blue-button">
+            <button href="{{asset('registration')}}" type="button" class="col-sm-2 col-xs-4 btn form-button blue-button"
+             onclick="SignUPopen()">
                 SIGN UP
             </button>
         </div>
@@ -119,6 +124,8 @@
     </div>
 </div>
 
+
+
 {{-- searching code  --}}
 <div id="myOverlay" class="overlay">
     <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
@@ -130,5 +137,98 @@
 </div>
 
 
+{{-- Sign in page popup --}}
+
+<div class="SignIn-overlay" id="SignIN">
+    <div class="center">
+        <span class="closebtn" onclick="SigninClose()" title="Close ">×</span>
+        <h2> Sign in</h2>
+        <form method="post" action="{{route('login-user')}}">
+            @if(Session::has('success'))
+            <div class="alert alert-success">{{Session::get('success')}}</div>
+            @endif
+            @if(Session::has('fail'))
+            <div class="alert alert-danger ">{{Session::get('failed')}}</div>
+            @endif
+            @csrf
+            <div class="txt_field">
+                <input type="text" name="Email" value="{{old('Email')}}">
+                <span class="text-warning" style="">@error('Email'){{$message}}@enderror</span>
+                <span></span>
+                <label for="Email">Email / Mobile*</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" name="password" value="">
+                <span class="text-warning" style="">@error('password'){{$message}}@enderror</span>
+                <span></span>
+                <label>Password*</label>
+            </div>
+            <div class="pass">
+                Forget Password?
+            </div>
+
+            <div>
+                <input type="submit" value="SIGN IN">
+                <h3 class="hr-lines"><span>OR</span></h3>
+
+                <div class="social" style="display: inline-flex">
+                    <div class="fb"><img src="{{ asset('image/facebook-new.png') }}" width="27px" height="27px"
+                            style="margin-top: -2px" />
+                    </div>
+                    <div class="go"><img src="{{ asset('image/google.png') }}" width="20px" height="20px" />
+                    </div>
+                </div>
+               <a href="{{asset('registration')}}">
+                <input type="sign-up" value="SIGN UP">
+              </a>
+        </form>
+    </div>
+</div>
+
+
+{{-- Sign up page popup --}}
+
+<div class="SignUP-Overlay" id="SignUPForm">
+    <div class="center">
+        <span class="closebtn" onclick="CloseSignUP()" title="Close ">×</span>
+        <h2> Sign Up</h2>
+        <form method="post" action="{{ route('register-user') }}">
+            @if (Session::has('success'))
+                <div class="alert alert-success">{{ Session::get('success') }}</div>
+            @endif
+            @if (Session::has('fail'))
+                <div class="alert alert-danger ">{{ Session::get('failed') }}</div>
+            @endif
+            @csrf
+            <div class="txt_field">
+                <input type="text" name="name" value="{{ old('name') }} ">
+                <span></span>
+                <label>Name*</label>
+            </div>
+            {{-- <p class="text-warning">@error('name'){{$message}}@enderror</p> --}}
+
+            <div class="txt_field">
+                <input type="text" name="Email" value="{{ old('Email') }}">
+                <label>Email / Mobile*</label>
+            </div>
+            {{-- <p class="text-warning">  @error('Email') {{ $message }}@enderror</p> --}}
+            <div class="txt_field">
+                <input type="password" name="password" id="password" value="{{ old('password') }}">
+                <label>Password*</label>
+            </div>
+            {{-- <p class="text-warning">@error('password'){{ $message }}@enderror</p> --}}
+            <div class="txt_field">
+                <input type="password" name="repassword" id="confirm-password" value="{{ old('repassword') }}">
+                <label>Re-Password*</label>
+            </div>
+            {{-- <p class="text-warning" style="margin-top: -15px">  @error('password')  {{ $message }} @enderror</p> --}}
+            <p id="message" style="color:black !important ; "></p>
+            <div>
+                <input type="submit" onclick="checkpassword" value="SIGN UP">
+            </div>
+
+        </form>
+    </div>
+</div>
 
 <script src="{{ asset('js/navbar.js') }}"></script>

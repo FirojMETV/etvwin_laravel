@@ -1,3 +1,23 @@
+.SignIn-overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #00021C;
+  background-color: #00021C;
+ 
+}
+.SignIn-overlay .closebtn {
+  position: absolute;
+  top: 10%;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: #e4edf0;
+}
 
 .center{
   position: absolute;

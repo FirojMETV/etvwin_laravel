@@ -6,6 +6,8 @@ function openNav() {
   document.getElementById('mydownload').style.display = 'block';
 }
 
+
+
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
@@ -13,6 +15,8 @@ function closeNav() {
   document.getElementById("mySidenav").style.display = "none";
   document.getElementById('mydownload').style.display = 'none';
 }
+
+
 
 // search icon 
 function openSearch() {
@@ -22,6 +26,43 @@ function closeSearch() {
   document.getElementById('myOverlay').style.display = 'none';
 }
 
+
+
+// sign in open close
+function openSignIN() {
+  document.getElementById("SignIN").style.display = "block";
+}
+function SigninClose(){
+ document.getElementById('SignIN').style.display='none'
+}
+var SignIn = document.getElementById('SignIN');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == SignIn) {
+    SignIn.style.display = "none";
+  }
+}
+
+
+// sign up or registration form popup page 
+function SignUPopen(){
+  document.getElementById('SignUPForm').style.display='block';
+}
+function CloseSignUP(){
+  document.getElementById('SignUPForm').style.display='none';
+}
+var SignUP = document.getElementById('SignUPForm');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == SignUP ) {
+    SignUP.style.display = "none";
+  }
+}
+
+
+
+
+// check password or confirm password
 function checkpassword() {
   const password = document.getElementById('password').value;
   const confirmpassword = document.getElementById('confirm-password').value;
