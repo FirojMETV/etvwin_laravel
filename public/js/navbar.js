@@ -15,6 +15,13 @@ function closeNav() {
   document.getElementById("mySidenav").style.display = "none";
   document.getElementById('mydownload').style.display = 'none';
 }
+var navBar = document.getElementById('mySidenav');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == navBar) {
+    navBar.style.display = "none";
+  }
+}
 
 
 
