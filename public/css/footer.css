@@ -16,6 +16,10 @@
     background-color: #0b0f48;
     padding: 25px 45px 25px 45px;
 }
+img {
+    vertical-align: middle;
+    max-width: 100%;
+}
 .store-icon{
     height: 40px;
     width: 130px;

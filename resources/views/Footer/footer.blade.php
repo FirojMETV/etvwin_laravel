@@ -5,7 +5,8 @@
         <div class="footer-icons">
             <div class="download-app-icons" style="display:flex;justify-content:center">
                 <h2>Download App
-                    <span><a href="https://play.google.com/store/apps/details?id=com.etvwin.mobile" target="_blank">
+                    <span>
+                        <a href="https://play.google.com/store/apps/details?id=com.etvwin.mobile" target="_blank">
                             <img src="{{ asset('image/google-play-store-btn.png') }}" alt="" class="store-icon">
                         </a>
                     </span>
@@ -17,8 +18,8 @@
                 </h2>
             </div>
             <div class="social-media-icons" style="display: inline-flex">
-                <h2>Connect with us
-                    <span>
+                <h2 >Connect with us
+                    <span >
                         <a href="">
                             <img src="{{ asset('image/facebook.png') }}" alt="" class="social-media-icons-new">
                         </a>
