@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+
 {{-- navbar code  --}}
 <div class="navbar-inverse " style="justify-content:space-between">
     <div class="container-fluid" style="display:inline-flex;">

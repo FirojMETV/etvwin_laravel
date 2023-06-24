@@ -23,3 +23,7 @@ Route::post('/register-user', [EtvWin::class, 'registerUser'])->name('register-u
 Route::post('login-user', [EtvWin::class, 'loginUser'])->name('login-user');
 Route::get('/dashboard', [EtvWin::class, 'dashboard'])->middleware('isLoggedIn');
 Route::get('/logout', [EtvWin::class, 'logout']);
+
+Route::get('/footer', function () {
+    return view('Footer/footer');
+});

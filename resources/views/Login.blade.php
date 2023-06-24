@@ -15,24 +15,16 @@
                 @csrf
                 <div class="txt_field">
                     <input type="text" name="Email" value="{{ old('Email') }}">
-                    <span class="text-warning" style="">
-                        @error('Email')
-                            {{ $message }}
-                        @enderror
-                    </span>
                     <span></span>
                     <label for="Email">Email / Mobile*</label>
                 </div>
+                <p class="text-warning">@error('Email'){{ $message }}@enderror</p>
                 <div class="txt_field">
                     <input type="password" name="password" value="">
-                    <span class="text-warning" style="">
-                        @error('password')
-                            {{ $message }}
-                        @enderror
-                    </span>
                     <span></span>
                     <label>Password*</label>
                 </div>
+                <p class="text-warning">@error('password'){{ $message }}@enderror</p>
                 <div class="pass">
                     Forget Password?
                 </div>
@@ -53,5 +45,6 @@
                     </a>
             </form>
         </div>
+
     <script src="{{ asset('js/navbar.js') }}"></script>
-@endsection
+    @endsection

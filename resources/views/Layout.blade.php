@@ -22,8 +22,8 @@
 
 <body>
     @include('Header.header')
-    
     @yield('content')
+    @include('Footer.footer')
 </body>
 
 </html>
