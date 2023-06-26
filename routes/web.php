@@ -27,3 +27,28 @@ Route::get('/logout', [EtvWin::class, 'logout']);
 Route::get('/footer', function () {
     return view('Footer/footer');
 });
+Route::get('/aboutus', function () {
+    return view('Footer/aboutus');
+});
+Route::get('/contactus',function(){
+    return view(('footer/Contactus'));
+});
+
+Route::get('/privacypolicy',function(){
+    return view('footer/policy');
+});
+
+Route::get('/termsandconditions',function(){
+    return view('footer/conditions');
+});
+
+Route::get('/faq',function(){
+    return view('footer/faq');
+});
+Route::get('/feedback',function(){
+    return view('footer/feedback');
+});
+
+Route::get('/subcription-plan',function(){
+    return view('footer/subscriptions');
+});

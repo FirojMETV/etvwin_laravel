@@ -1,0 +1,55 @@
+.ekta-view {
+    top: 32px;
+    position: relative;
+    min-height: 500px;
+    background-color: #00021c;
+    padding-bottom: 70px;
+}
+.container {
+    width: 100%;
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+.list-container{
+    margin-top: 40px;
+
+}
+.policy-header {
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.policy-header h1 {
+    font-family:fangsong;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+.aboutus-content, .feedback-content {
+    display: table;
+    margin: auto;
+}
+.aboutus-content h1 {
+    font-family:fangsong;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(255,255,255,1);
+    text-align: center;
+    line-height: 32px;
+    margin-top: 40px;
+    margin-bottom: 18px;
+}
+.aboutus-content h2 {
+    font-family:fangsong;
+    font-size: 18px;
+    color: rgba(255,255,255,.5);
+    text-align: center;
+    line-height: 32px;
+}
+.aboutus-content h2 a {
+    color: #337ab7;
+    cursor: pointer;
+    text-decoration: none;
+}
+.aboutus-content h2 a:hover{
+    color:#ffc908
+}

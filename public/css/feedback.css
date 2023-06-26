@@ -1,0 +1,117 @@
+.login-form-dialog {
+    background-color: #1e2257;
+    border-radius: 9px;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ekt-dialog-header {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #fff;
+    padding: 20px;
+    background: #101340;
+    margin-top: 20px;
+    font-family: OpenSansLight;
+}
+.ekt-dialog-form {
+    padding: 20px;
+    margin-top: 10%;
+}
+
+.feedback-text-color {
+    color: #fff;
+}
+.ngdialog *, .ngdialog :after, .ngdialog :before {
+    box-sizing: inherit;
+}
+.ekt-dialog-form {
+    padding: 20px;
+    margin-top: 10%;
+}
+.plan-title-area, .signin-error-area {
+    text-align: center;
+    padding: 20px;
+    color: #ffc908;
+    font-size: 14px;
+    margin-bottom: 40px;
+    margin-left: -38px;
+    margin-right: -38px;
+}
+.md-input-container {
+    display: inline-block;
+    position: relative;
+    padding: 2px;
+    margin: 18px 0;
+    vertical-align: middle;
+}
+.md-input-container.md-block {
+    display: block;
+}
+.md-input-container label:not(.md-no-float):not(.md-container-ignore), md-input-container .md-placeholder {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    order: 1;
+    pointer-events: none;
+    -webkit-font-smoothing: antialiased;
+    padding-left: 3px;
+    padding-right: 0;
+    z-index: 1;
+    -webkit-transform: translate3d(0, 28px, 0) scale(1);
+    transform: translate3d(0, 28px, 0) scale(1);
+    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: -webkit-transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    max-width: 100%;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+.md-input-container .md-input-messages-animation {
+    position: relative;
+    -webkit-box-ordinal-group: 5;
+    -webkit-order: 4;
+    order: 4;
+    overflow: hidden;
+    clear: left;
+}
+.full-width-button {
+    width: 100%;
+}
+.md-select {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    margin: 20px 0 26px 0;
+}
+.md-select-menu .ekt-dialog-form {
+    background: #2f357e;
+}
+.md-select-menu .md-content {
+    min-width: 136px;
+    min-height: 48px;
+    max-height: 256px;
+    overflow-y: auto;
+}
+.md-select:not([disabled]).ng-invalid.ng-touched .md-select-value {
+    border-bottom-style: solid;
+    padding-bottom: 1px;
+}
+.md-select.ng-invalid.ng-touched .md-select-value {
+    color: #fff!important;
+    border-bottom-color: rgba(255,255,255,.08)!important;
+}
+.md-input-container .md-resize-handle {
+    position: absolute;
+    bottom: 22px;
+    left: 0;
+    height: 10px;
+    background: transparent;
+    width: 100%;
+    cursor: ns-resize;
+}
