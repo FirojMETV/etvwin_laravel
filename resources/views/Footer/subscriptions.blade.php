@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="{{ asset('css/subscription.css') }}">
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <div class="ekta-view ng-scope top-large" id="view_begin" ng-class="{'top-large':heightst, 'top-small':!heightst}"
     ng-view="" style="">
     <div class="subscription-container ng-scope">
@@ -22,7 +22,7 @@
                                     <li class="subscribe-radiobuttons md-checked">
                                         <div style="display: inline-flex">
                                         <input class="subscribe-radio md-checked" ng-value="pricing"
-                                            id="radio_11" role="radio" aria-checked="true" value="[object Object]"
+                                            id="radio_11" role="radio"  name="plan" value="365"
                                             aria-label="₹365₹499" type="radio">
                                             <div ng-transclude="" class="md-label">
                                                 <span class="plan-price ng-binding ng-scope">₹365
@@ -54,8 +54,7 @@
                                 <ul class="radiolinks subscribe-radiolinks">
                                     <li class="subscribe-radiobuttons">
                                         <div style="display: inline-flex">
-                                        <input class="subscribe-radio" ng-value="pricing" id="radio_12"
-                                            role="radio" aria-checked="false" value="[object Object]"
+                                        <input class="subscribe-radio" name="plan" value="99"
                                             aria-label="₹99" type="radio">
                                             <div ng-transclude="" class="md-label"><span
                                                     class="plan-price ng-binding ng-scope">₹99</span>
@@ -75,13 +74,8 @@
                                     <li class="subscribe-radiobuttons">
                                         <div style="display: inline-flex">
                                         <input ng-value="pricing" id="radio_13"
-                                            type="radio" aria-checked="false" value="[object Object]"
+                                            type="radio" name="plan" value="499"
                                             aria-label="₹499₹699">
-                                            {{-- <div class="md-container md-ink-ripple" md-ink-ripple=""
-                                                md-ink-ripple-checkbox="">
-                                                <div class="md-off"></div>
-                                                <div class="md-on"></div>
-                                            </div> --}}
                                             <div ng-transclude="" class="md-label">
                                                 <span
                                                     class="plan-price ng-binding ng-scope">₹499
@@ -89,7 +83,6 @@
                                                 <span ng-if="pricing.strikedPrice"
                                                     class="striked-value ng-binding ng-scope">₹699
                                                 </span>
-                                                <!-- end ngIf: pricing.strikedPrice -->
                                             </div>
                                         
                                     </div>
@@ -142,17 +135,13 @@
                             <!-- ngIf: feature.value!=='yes' && feature.value!=='no' -->
                             <h5 ng-if="feature.value!=='yes' &amp;&amp; feature.value!=='no'" ng-bind="feature.value"
                                 class="ng-binding ng-scope">HD</h5>
-                            <!-- end ngIf: feature.value!=='yes' && feature.value!=='no' -->
-                            <!-- ngIf: feature.value=='yes' -->
-                            <!-- ngIf: feature.value=='no' -->
+                            
                         </td><!-- ngIf: feature.premiumValue -->
                         <td class="plan-value ng-scope" ng-if="feature.premiumValue">
                             <!-- ngIf: feature.premiumValue!=='yes' && feature.premiumValue!=='no' -->
                             <h5 ng-if="feature.premiumValue!=='yes' &amp;&amp; feature.premiumValue!=='no'"
                                 ng-bind="feature.premiumValue" class="ng-binding ng-scope">Full HD</h5>
-                            <!-- end ngIf: feature.premiumValue!=='yes' && feature.premiumValue!=='no' -->
-                            <!-- ngIf: feature.premiumValue=='yes' -->
-                            <!-- ngIf: feature.premiumValue=='no' -->
+                           
                         </td><!-- end ngIf: feature.premiumValue -->
                     </tr><!-- end ngRepeat: feature in subscriptionPlansViewController.planDetails -->
                     <tr class="pack-item ng-scope" ng-repeat="feature in subscriptionPlansViewController.planDetails">
@@ -160,7 +149,7 @@
                             <h4 ng-bind="feature.info" class="ng-binding">Before TV</h4>
                         </td>
                         <td class="plan-value">
-                            <!-- ngIf: feature.value!=='yes' && feature.value!=='no' -->
+                          
                             <!-- ngIf: feature.value=='yes' --><img ng-if="feature.value=='yes'" alt="image"
                                 src="{{ asset('image/tick.png') }}" class="ng-scope">
                             <!-- end ngIf: feature.value=='yes' -->
@@ -170,8 +159,7 @@
                             <!-- ngIf: feature.premiumValue!=='yes' && feature.premiumValue!=='no' -->
                             <!-- ngIf: feature.premiumValue=='yes' --><img ng-if="feature.premiumValue=='yes'"
                                 alt="image" src="{{ asset('image/tick.png') }}" class="ng-scope">
-                            <!-- end ngIf: feature.premiumValue=='yes' -->
-                            <!-- ngIf: feature.premiumValue=='no' -->
+                           
                         </td><!-- end ngIf: feature.premiumValue -->
                     </tr><!-- end ngRepeat: feature in subscriptionPlansViewController.planDetails -->
                     <tr class="pack-item ng-scope" ng-repeat="feature in subscriptionPlansViewController.planDetails">
@@ -179,11 +167,9 @@
                             <h4 ng-bind="feature.info" class="ng-binding">Live TV </h4>
                         </td>
                         <td class="plan-value">
-                            <!-- ngIf: feature.value!=='yes' && feature.value!=='no' -->
                             <!-- ngIf: feature.value=='yes' --><img ng-if="feature.value=='yes'" alt="image"
                                 src="{{ asset('image/tick.png') }}" class="ng-scope">
-                            <!-- end ngIf: feature.value=='yes' -->
-                            <!-- ngIf: feature.value=='no' -->
+
                         </td><!-- ngIf: feature.premiumValue -->
                         <td class="plan-value ng-scope" ng-if="feature.premiumValue">
 
@@ -235,9 +221,7 @@
                         respective resolutions</p>
                 </div>
                 <div class="selected-plan-details">
-                    <h2 class="selected-plan-name ng-binding">Basic</h2>
-                    <h1 class="selected-plan-amount ng-binding">₹365 <span class="selected-plan-period ng-binding">per
-                            Year</span></h1>
+                    <div id="selectedValue"  style="color: aliceblue !important ;text-align:center;"></div>
                 </div>
                 <div> <button class="subscribe-button"
                         ng-click="subscriptionPlansViewController.openSubscriptions()"><span><img
@@ -247,3 +231,12 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        $('input[type=radio][name=plan]').change(function() {
+            var selectedValue = $(this).val();
+            $('#selectedValue').text('You have selected: ' + selectedValue);
+        });
+    });
+    </script>
+    
