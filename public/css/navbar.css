@@ -3,6 +3,7 @@
   background-color: #00021C;
   width: 100%;
   border-radius: 0%;
+  height: 80px;
 }
 
 .nav.split {
@@ -53,7 +54,14 @@
   display: table;
   color: #fff;
 }
-
+.main-menu{
+  display: table;
+}
+.mobile-os-list{
+  position: absolute;
+  float: right;
+  right: 50px;
+}
 .button:hover,
 :active {
 
@@ -99,11 +107,15 @@
   font-size: 20px
 }
 
-.dropdown-menu {
+.dropdown-menu{
+  position: absolute;
   background: #191D4F !important;
   min-width: 280px;
-  padding: 10px 50px;
+  padding: 10px 20px;
   font-size: 15px;
+  right: 0% !important;
+  float: right;
+  z-index: 1000;
 }
 .dropdown-menu li a:hover{
     color:#fff;

@@ -63,11 +63,12 @@
     display: table;
     margin: auto;
 }
-a {
+.policy-content P a {
     text-decoration: none;
     color: #337ab7;
     cursor: pointer;
 }
-a:hover{
+.policy-content P a:hover{
+    text-decoration: none;
     color: #ffc908;
 }

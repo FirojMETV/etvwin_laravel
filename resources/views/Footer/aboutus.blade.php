@@ -1,4 +1,7 @@
+@extends('layout')
+@section('title', 'About-Us')
 <link rel="stylesheet" href="{{asset('css/aboutus.css')}}">
+@section('content')
 <div class="ekta-view " id="view_begin" 
 ng-class="{'top-large':heightst, 'top-small':!heightst}"
     ng-view="" style="">

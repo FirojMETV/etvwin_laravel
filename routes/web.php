@@ -49,6 +49,6 @@ Route::get('/feedback',function(){
     return view('footer/feedback');
 });
 
-Route::get('/subcription-plan',function(){
+Route::get('/subscription-plans',function(){
     return view('footer/subscriptions');
 });

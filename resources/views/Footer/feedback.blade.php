@@ -1,3 +1,5 @@
+@extends('layout')
+@section('title', 'feedback')
 <link rel="stylesheet" href="{{ asset('css/feedback.css') }}">
 
 <div ng-if="!feedbackCtrl.formSubmitted" class="login-form-dialog ng-scope" style="">

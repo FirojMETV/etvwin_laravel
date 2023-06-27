@@ -1,4 +1,7 @@
+@extends('layout')
+@section('title', 'Contact-Us')
 <link rel="stylesheet" href="{{ asset('css/contactus.css') }}">
+
 
 <div class="ekta-view ng-scope top-large" id="view_begin" ng-class="{'top-large':heightst, 'top-small':!heightst}"
     ng-view="" style="">

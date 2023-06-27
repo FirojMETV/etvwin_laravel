@@ -1,3 +1,5 @@
+@extends('layout')
+@section('title', 'Terms and Conditions')
 <link rel="stylesheet" href="{{asset('css/conditions.css')}}">
 
 <div class="ekta-view ng-scope top-large" id="view_begin" ng-class="{'top-large':heightst, 'top-small':!heightst}"

@@ -1,3 +1,5 @@
+@extends('layout')
+@section('title', 'Privacy-Policy')
 <link rel="stylesheet" href="{{asset('css/policy.css')}}">
 <div class="ekta-view ng-scope top-large" id="view_begin" ng-class="{'top-large':heightst, 'top-small':!heightst}"
     ng-view="" style="">

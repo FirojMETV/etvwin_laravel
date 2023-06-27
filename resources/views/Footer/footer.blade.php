@@ -1,3 +1,4 @@
+
 <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 
 <div class="footer footer-white">
@@ -44,7 +45,7 @@
     <div class="row Social-row">
         <ul class="horizontal-layout footer-submenu contact-details">
             <li  role="button" tabindex="0">
-                <a href="/aboutus">ABOUT US</a>
+                <a href="{{asset('aboutus')}}">ABOUT US</a>
             </li>
             <li> <a>|</a></li>
             <li role="button" tabindex="0">
@@ -65,10 +66,10 @@
                 <a href="/faq">FAQ</a>
             </li>
             <li> <a>|</a></li>
-            <li> <a ng-click="openFeedbackDialog()">FEEDBACK</a>
+            <li> <a href="/feedback">FEEDBACK</a>
             </li>
             <li> <a>|</a></li>
-            <li> <a ng-click="openSubscription()">SUBSCRIPTIONS</a>
+            <li> <a href="/subscription-plans">SUBSCRIPTIONS</a>
             </li>
         </ul>
     </div>

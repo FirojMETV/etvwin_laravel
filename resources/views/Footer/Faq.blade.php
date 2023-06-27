@@ -1,4 +1,6 @@
-<link rel="stylesheet" href="{{asset('css/faq.css')}}">
+@extends('layout')
+@section('title', 'Faq')
+<link rel="stylesheet" href="{{ asset('css/faq.css') }}">
 <div class="ekta-view ng-scope top-large" id="view_begin" ng-class="{'top-large':heightst, 'top-small':!heightst}"
     ng-view="" style="">
     <div class="container side-padding ng-scope">
@@ -14,14 +16,14 @@
                     PCS, Smart Phones, Tablets and connected TVs (Android TV &amp; Fire TV Stick).</p><br>
                 <h1 class="faq-headings">Registration - ETV Win</h1><br>
                 <p class="question"> How do I register on ETV Win?</p>
-                <p> 
+                <p>
                     You can sign up for ETV Win by using any of the below methods:
                     <br> 1) Email address, Password
                     creation, Mail Verification &amp; followed by Profile Info<br>
-                     2) Mobile Number, Password creation,
+                    2) Mobile Number, Password creation,
                     OTP Verification &amp; followed by Profile info<br>
-                     3) Sign up with Google Account<br>
-                      4) Sign up
+                    3) Sign up with Google Account<br>
+                    4) Sign up
                     with Facebook Account<br>
                 </p>
                 <br>
@@ -133,7 +135,7 @@
                     <li>Your access remains active till the end of the current billing period even if you cancel
                         membership midway</li>
                     <li>For any other queries regarding your subscription, please reach out to us at <a
-                            href="mailto:support@etvwin.com">support@etvwin.com</a></li>
+                            href="mailto:support@etvwin.com" style="text-decoration: none;color:#FFC908">support@etvwin.com</a></li>
                 </ul>
                 <p></p><br>
                 <h1 class="faq-headings">Supported Devices</h1><br>
@@ -144,7 +146,8 @@
                     Requires iPadOS 9.3 or later.<br> 4. <b class="font-bold">iPod touch:</b> Requires iOS 9.3 or
                     later.<br> 5. <b class="font-bold">Mac:</b> Requires macOS 11.0 or later and a Mac with Apple M1
                     chip.<br> 6. <b class="font-bold">Android TV &amp; Fire TV Stick:</b> Android 6.0 and above.<br> 7.
-                    <b class="font-bold">Windows:</b> Recommended OS versions are 8 and 10.</p><br>
+                    <b class="font-bold">Windows:</b> Recommended OS versions are 8 and 10.
+                </p><br>
                 <p class="question"> Does ETV Win support Roku TV?</p>
                 <p> As of now ETV Win is not available on Roku TV. ETV Win supports Android TV, Fire TV and Chromecast
                     support.</p><br>
@@ -179,7 +182,8 @@
                     browser versions are supported:<br> <b class="font-bold">a. Mac Browsers</b><br> i. Safari v9.0<br>
                     <b class="font-bold">b. Windows Browsers</b><br> i. Chrome v52.0<br> ii. Firefox v48.0<br> iii. IE10
                     and IE11<br> iv. Edge v38.0<br> <b class="font-bold">c. Android browsers:</b> Chrome OS 56.0<br> <b
-                        class="font-bold">d. iOS browsers:</b> Safari 8<br></p><br>
+                        class="font-bold">d. iOS browsers:</b> Safari 8<br>
+                </p><br>
                 <h1 class="faq-headings">Access to TV</h1><br>
                 <p class="question"> How to access ETV Win content on TV using Chromecast?</p>
                 <p></p>
@@ -198,7 +202,7 @@
                 <p class="question"> How do I activate ETV Win in Smart TV?</p>
                 <p> Activate the TV in simple steps:<br></p>
                 <ul style="list-style-type:disc;" class="tab-space">
-                    <li>Visit <a href="/active" style="color: #FFC908"
+                    <li>Visit <a href="/active" style="color: #FFC908 ;text-decoration:none  "
                             target="_blank">https://www.etvwin.com/active</a> by typing the URL in the web browser of
                         your mobile/laptop with your registered ID.</li>
                     <li>Enter the code you see on your TV screen and click on verify</li>
@@ -247,15 +251,17 @@
                     <li><b class="font-bold">IOS:</b> If you are facing this issue on IOS, please make sure that you
                         have the latest iOS app version of 1.0 &amp; in order to check for a ETV Win update, go to the
                         <b class="font-bold">App Store</b> and select <b class="font-bold">Updated</b>. If there are
-                        any updates available for ETV Win, select <b class="font-bold">Update</b> next to the app.</li>
+                        any updates available for ETV Win, select <b class="font-bold">Update</b> next to the app.
+                    </li>
                     <li><b class="font-bold">Web:</b> If you are facing this issue in website, clear your browser cache
                         on a regular basis to help with stability and performance when viewing on <a href="/home"
                             style="color: #FFC908" target="_blank">https://www.etvwin.com</a>.</li>
                 </ul>
                 <p></p><br>
                 <p class="question"> How can I contact you?</p>
-                <p> We are always happy to assist you. Please drop us an email to <a
-                        href="mailto:contact@etvwin.com">contact@etvwin.com</a>. We shall respond as soon as possible.
+                <p> We are always happy to assist you. Please drop us an email to <a href="mailto:contact@etvwin.com"
+                        style="text-decoration: none; color:#FFC908">contact@etvwin.com</a>. We shall respond as soon
+                    as possible.
                 </p><br>
                 <h1 class="faq-headings">Offline Downloads</h1><br>
                 <p> Content that can be downloaded will have the Download Button below the Video Player &amp; the

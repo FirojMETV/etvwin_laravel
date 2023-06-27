@@ -5,6 +5,7 @@
     background-color: #00021c;
     padding-bottom: 70px;
     color: #ffff;
+    width: 100%;
 }
 .left-margin {
     margin-top: 50px;
@@ -13,15 +14,15 @@
 .subscription-top-margin {
     margin-top: 70px;
     padding-right: 50px;
-    padding-left: 20px;
+    padding-left: 50px;
 }
 .subscription-plans-list {
     display: flex;
     justify-content: space-around;
-    width: 98%;
+    width: 100%;
 }
 .plans-detail {
-    width: 48%;
+    width: 45%;
     background: #14173e;
     border-radius: 10px;
     margin-top: -45px;
@@ -32,13 +33,6 @@
     color: #fff;
     font-size: 24px;
 }
-.plans-detail {
-    width: 48%;
-    background: #14173e;
-    border-radius: 10px;
-    margin-top: -45px;
-    padding: 15px;
-}
 .plan-details-wrapper {
     display: flex;
     justify-content: space-around;
@@ -47,21 +41,20 @@
     margin: auto;
 }
 .subscribe-radiolinks {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .radiolinks {
-    background: #101340;
+    background: #14173e;
     border-radius: 2px;
-    margin-bottom: 30px;
+    justify-content: center;
+    padding: inherit;
 }
 .radiolinks li {
     display: inline-block;
-    margin-top: 15px;
-    margin-bottom: 5px;
     text-decoration: none;
     color: #fff;
+    align-items: center;
     font-size: 16px;
-    padding: 0 20px;
 }
 .subscribe-radiobuttons {
     padding: 10px 0 5px 15px!important;
@@ -69,59 +62,12 @@
     height: 90px;
     border-radius: 10px;
     width: 160px;
+    align-items: center;
 }
 .subscribe-radio {
     margin-bottom: 0;
-}
-.md-container {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    box-sizing: border-box;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    left: 0;
-    right: auto
-}
-.md-container:before {
-    box-sizing: border-box;
-    background-color: transparent;
+    border: 0.5rem solid #ce8b8b;
     border-radius: 50%;
-    content: '';
-    position: absolute;
-    display: block;
-    height: auto;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-    width: auto;
-}
-.md-on {
-    border-width: 2px!important;
-    border-color: #7249bf!important;
-}
-.md-off {
-    border-width: 2px!important;
-    border-color: #7249bf!important;
-}
-.md-off {
-    box-sizing: border-box;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 50%;
-    -webkit-transition: border-color ease 0.28s;
-    transition: border-color ease 0.28s;
 }
 
 .text-color-white {
@@ -152,11 +98,11 @@
     text-align: center;
 }
 .plans-period {
-    font-size: 10px;
+    font-size: 15px;
     color: #caaeff;
 }
 .plans-period-description {
-    margin-left: 30px;
+    margin-left: 20px;
     line-height: 16px;
 }
 .plan-value h5{
@@ -182,12 +128,15 @@
     background: #00021c;
     border: 2px dashed #14173e;
     padding: 10px;
+    margin: 30px 50px 0 50px;
 }
 .note-div {
+   
     font-size: 14px;
     width: 600px;
 }
 .selected-plan-details {
+   margin-top: 10px;
     position: absolute;
     right: 250px;
 }
@@ -199,12 +148,14 @@
 .selected-plan-amount {
     color: #fff;
     font-size: 30px;
+    font-weight: 500;
 }
 .selected-plan-period {
     color: #fff;
     font-size: 14px;
 }
 .subscribe-button {
+    justify-content: flex-end;
     width: 150px;
     height: 50px;
     background: #7249bf;
@@ -222,3 +173,50 @@
 img {
     max-width: 100%;
 }
+@media only screen and (max-width: 600px) {
+    .subscription-plans-list{
+        display: block;
+        justify-content: space-evenly;
+    }
+    .subscription-top-margin {
+      
+        padding-right: 0px;
+        padding-left: 10px;
+    }
+    .plans-detail{
+        min-width: 300px;
+        text-align: center;
+    }
+    .plan-details-wrapper{
+        display: inline-flex;
+
+    }
+    .radiolinks li{
+        display:table-cell;
+       
+    }
+   
+    .text-color-white{
+      width: 100%;
+      margin-left: 0;
+    }
+    .subscription-bottom-div {
+        display: block;
+        padding: 10px;
+        margin: 0px 0px 0 10px;
+    }
+    .note-div{
+        display: inline;
+    }
+    .selected-plan-details{
+        font-size: 15px;
+        margin-left: 20px;
+        justify-content: center;
+    }
+    .selected-plan-amount{
+        font-size: 12px;
+    } 
+    .subscribe-button{
+     margin-left: 150px;
+    }
+  }
