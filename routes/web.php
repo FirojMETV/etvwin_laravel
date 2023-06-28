@@ -52,3 +52,7 @@ Route::get('/feedback',function(){
 Route::get('/subscription-plans',function(){
     return view('footer/subscriptions');
 });
+
+Route::get('/home', function(){
+    return view('home/home');
+});
