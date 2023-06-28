@@ -40,12 +40,12 @@
     </div>
     {{-- Before TV --}}
     <div class="Before TV">
-       
-            <a href="" class="section-title">Before TV</a>  
-           <a href="" class="see-all-link left-margin-episode ">+More</a>
+
+        <a href="" class="section-title">Before TV</a>
+        <a href="" class="see-all-link left-margin-episode ">+More</a>
         <div class="owl-carousel owl-theme" id='Before-TV'>
             <div class="item"
-                style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2214px;">
+                style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; ">
                 <img alt="" class="owl-lazy" data-src="{{ asset('image/sample.jpg') }}">
             </div>
             <div class="item">
@@ -62,14 +62,6 @@
             </div>
             <div class="item">
                 <img alt="" class="owl-lazy" data-src="{{ asset('image/sample.jpg') }}">
-            </div>
-            <div class="item"> <img class="owl-lazy" data-src="{{ asset('image/tst.jpg') }}" alt="Slide Image"></div>
-            <div class="item"> <img class="owl-lazy" data-src="{{ asset('image/tst.jpg') }}" alt="Slide Image"></div>
-            <div class="item"> <img class="owl-lazy" data-src="{{ asset('image/tst.jpg') }}" alt="Slide Image"></div>
-            <div class="item"> <img class="owl-lazy" data-src="{{ asset('image/tst.jpg') }}" alt="Slide Image"></div>
-            <div class="item"> <img class="owl-lazy" data-src="{{ asset('image/tst.jpg') }}" alt="Slide Image">
-            </div>
-            <div class="item"> <img class="owl-lazy" data-src="{{ asset('image/tst.jpg') }}" alt="Slide Image">
             </div>
         </div>
     </div>
