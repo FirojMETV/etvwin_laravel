@@ -1,8 +1,9 @@
 @extends('layout')
-@section('title', 'feedback')
+@section('title', 'FEEDBACK')
 <link rel="stylesheet" href="{{ asset('css/feedback.css') }}">
 
-<div ng-if="!feedbackCtrl.formSubmitted" class="login-form-dialog ng-scope" style="">
+@section('content')
+<div class="login-form-dialog ng-scope" style="">
     <h1 class="ekt-dialog-header" id="ngdialog3-aria-labelledby">Feedback</h1>
     <form class="ekt-dialog-form ng-pristine ng-invalid ng-invalid-required ng-valid-maxlength ng-valid-pattern"
         name="feedbackform">
@@ -159,3 +160,4 @@
         </div><!-- ngIf: feedbackCtrl.showLoading -->
     </form>
 </div>
+@endsection

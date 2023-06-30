@@ -1,7 +1,8 @@
 @extends('layout')
-@section('title', 'Terms and Conditions')
+@section('title', 'TERMS AND CONDITIONS')
 <link rel="stylesheet" href="{{asset('css/conditions.css')}}">
 
+@section('content')
 <div class="ekta-view ng-scope top-large" id="view_begin" ng-class="{'top-large':heightst, 'top-small':!heightst}"
     ng-view="" style="">
     <div class="container ng-scope">
@@ -260,3 +261,4 @@
         </div>
     </div>
 </div>
+@endsection

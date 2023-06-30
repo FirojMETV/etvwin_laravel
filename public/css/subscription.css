@@ -1,9 +1,9 @@
 .ekta-view {
-    top: 32px;
+    top: 70px;
     position: relative;
     min-height: 500px;
     background-color: #00021c;
-    padding-bottom: 70px;
+    margin-bottom: 100px;
     color: #ffff;
     width: 100%;
 }

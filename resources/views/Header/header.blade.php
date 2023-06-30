@@ -82,6 +82,8 @@
     </div>
 </div>
 {{-- Side-Drawer for menu --}}
+
+
 <div id="mySidenav" class="sidenav " style="display:none;">
     <div class="signin">
         <h5 style="padding-left: 010px; color:#dddd "> hey guest user !! </h5>
@@ -141,7 +143,7 @@
 
 {{-- Sign in page popup --}}
 
-<div class="SignIn-overlay" id="SignIN">
+{{-- <div class="SignIn-overlay" id="SignIN">
     <div class="center">
         <span class="closebtn" onclick="SigninClose()" title="Close ">×</span>
         <h2> Sign in</h2>
@@ -193,7 +195,7 @@
                 </a>
         </form>
     </div>
-</div>
+</div> --}}
 
 
 {{-- Sign up page popup --}}

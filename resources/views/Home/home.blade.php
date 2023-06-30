@@ -1,13 +1,22 @@
+@extends('layout')
+@section('title', 'Home')
 <!-- Include the LazyLoad plugin script -->
 <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<link rel="stylesheet" href="{{ URL::asset('css/owl.carousel.css') }}" />
+{{-- <link rel="stylesheet" href="{{ URL::asset('css/owl.carousel.css') }}" /> --}}
+<link rel="stylesheet" href="{{ URL::asset('css/owl.carousel.min.css') }}" />
 <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 <script type="text/javascript" src="{{ URL::asset('js/owl.carousel.js') }}"></script>
-
+<script type="text/javascript" src="{{URL::asset('js/owl.carousel.min.js')}}"></script>
 <link rel="stylesheet" href="{{ URL::asset('css/owl.theme.default.css') }}">
-<div class="container-fluid
-" style="background: #00021C !important; margin-bottom:40px">
+
+
+@section('content')
+    
+
+
+
+<div class="container-fluid" style="background: #00021C !important; padding-bottom:40px;padding-top:70px; width:100% !important">
     <div class="owl-carousel owl-theme" id="main-page">
         <div class="item"> <img class="owl-lazy" data-src="{{ asset('image/tst.jpg') }}"
                 data-src-retina="{{ asset('image/tst.jpg') }}" alt=""></div>
@@ -108,6 +117,37 @@
                     </div>
                 </a>
             </div>
+            <div class="item card-item">
+                <a href="">
+                    <div class="image-holder">
+                        <img src="https://etv-win-image.akamaized.net/etvwin/live/channel/27931/etv-cinema-270x360.jpg"
+                            lazy-img="https://etv-win-image.akamaized.net/etvwin/live/channel/27931/etv-cinema-270x360.jpg"
+                            alt="thumbnails">
+                        <img src='{{ asset('image/crown-small.png') }}' alt="" class="premium-badge">
+                    </div>
+                </a>
+            </div>
+            <div class="item card-item">
+
+                <a href="">
+                    <div class="image-holder">
+                        <img src="https://etv-win-image.akamaized.net/etvwin/live/channel/27931/etv-cinema-270x360.jpg"
+                            lazy-img="https://etv-win-image.akamaized.net/etvwin/live/channel/27931/etv-cinema-270x360.jpg"
+                            alt="thumbnails">
+                        <img src='{{ asset('image/crown-small.png') }}' alt="" class="premium-badge">
+                    </div>
+                </a>
+            </div>
+            <div class="item card-item">
+                <a href="">
+                    <div class="image-holder">
+                        <img src="https://etv-win-image.akamaized.net/etvwin/live/channel/27931/etv-cinema-270x360.jpg"
+                            lazy-img="https://etv-win-image.akamaized.net/etvwin/live/channel/27931/etv-cinema-270x360.jpg"
+                            alt="thumbnails">
+                        <img src='{{ asset('image/crown-small.png') }}' alt="" class="premium-badge">
+                    </div>
+                </a>
+            </div>
 
         </div>
     </div>
@@ -117,3 +157,4 @@
 <script src="{{ asset('js/Home.js') }}"></script>
 
 <script src="{{ URL::asset('js/owl.carousel.min.js') }}"></script>
+@endsection

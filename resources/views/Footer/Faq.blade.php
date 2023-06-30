@@ -1,6 +1,8 @@
 @extends('layout')
-@section('title', 'Faq')
+@section('title', 'FAQ')
 <link rel="stylesheet" href="{{ asset('css/faq.css') }}">
+
+@section('content')
 <div class="ekta-view ng-scope top-large" id="view_begin" ng-class="{'top-large':heightst, 'top-small':!heightst}"
     ng-view="" style="">
     <div class="container side-padding ng-scope">
@@ -282,3 +284,4 @@
         </div>
     </div>
 </div>
+@endsection

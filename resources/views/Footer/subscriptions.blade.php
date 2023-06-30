@@ -1,7 +1,12 @@
 @extends('layout')
-@section('title', 'Subscriptions')
+@section('title', 'SUBSCRIPTIONS')
+
+
 <link rel="stylesheet" href="{{ asset('css/subscription.css') }}">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+@section('content')
+
 
 <div class="ekta-view ng-scope top-large" id="view_begin" ng-class="{'top-large':heightst, 'top-small':!heightst}"
     ng-view="" style="">
@@ -213,3 +218,4 @@
         });
     });
 </script>
+@endsection

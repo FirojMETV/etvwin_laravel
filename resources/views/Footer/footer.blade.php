@@ -2,7 +2,7 @@
 
 <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 
-<div class="footer footer-white">
+<div class="footer footer-white  my-5">
     <div class="row">
         <div class="footer-icons">
             <div class="download-app-icons" style="display:flex;justify-content:center">
@@ -43,7 +43,7 @@
         </div>
     </div>
 
-    <div class="row Social-row">
+    <div class=" Social-row" style="">
         <ul class="horizontal-layout footer-submenu contact-details">
             <li  role="button" tabindex="0">
                 <a href="{{asset('aboutus')}}">ABOUT US</a>

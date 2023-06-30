@@ -19,11 +19,13 @@
 <style>
     body{
         background: #00021C;
+        
     }
+    
 </style>
 </head>
 
-<body>
+<body >
     @include('Header.header')
     @yield('content')
     @include('Footer.footer')

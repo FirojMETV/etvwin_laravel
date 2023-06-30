@@ -1,10 +1,9 @@
 @extends('layout')
-@section('title', 'About-Us')
+@section('title', 'About Us')
+
 <link rel="stylesheet" href="{{asset('css/aboutus.css')}}">
 @section('content')
-<div class="ekta-view " id="view_begin" 
-ng-class="{'top-large':heightst, 'top-small':!heightst}"
-    ng-view="" style="">
+<div class="ekta-view "  style="padding-top:0px">
     <div class="container ng-scope">
         <div class="list-container">
             <div class="policy-header">
@@ -31,3 +30,4 @@ ng-class="{'top-large':heightst, 'top-small':!heightst}"
         </div>
     </div>
 </div>
+@endsection
