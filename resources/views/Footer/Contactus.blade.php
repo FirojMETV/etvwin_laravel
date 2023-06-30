@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="ekta-view ng-scope top-large" id="view_begin" 
-    ng-view="" style="">
+    ng-view="" style="padding-top: 60px">
     <div class="container ng-scope">
         <div class="list-container">
             <div class="policy-header">

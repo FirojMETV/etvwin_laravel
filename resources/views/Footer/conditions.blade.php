@@ -3,8 +3,7 @@
 <link rel="stylesheet" href="{{asset('css/conditions.css')}}">
 
 @section('content')
-<div class="ekta-view ng-scope top-large" id="view_begin" ng-class="{'top-large':heightst, 'top-small':!heightst}"
-    ng-view="" style="">
+<div class="ekta-view ng-scope top-large"  style="">
     <div class="container ng-scope">
         <div class="list-container">
             <div class="policy-header">

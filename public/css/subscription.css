@@ -1,12 +1,12 @@
 .ekta-view {
-    top: 70px;
-    position: relative;
+    padding-top: 70px;
+   
     min-height: 500px;
     background-color: #00021c;
     margin-bottom: 100px;
     color: #ffff;
     width: 100%;
-}
+} 
 .left-margin {
     margin-top: 50px;
     margin-left: 50px;
@@ -59,7 +59,6 @@
 .subscribe-radiobuttons {
     padding: 10px 0 5px 15px!important;
     background: #111435;
-    height: 90px;
     border-radius: 10px;
     width: 160px;
     align-items: center;

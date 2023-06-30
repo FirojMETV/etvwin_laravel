@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="{{ asset('css/feedback.css') }}">
 
 @section('content')
-<div class="login-form-dialog ng-scope" style="">
+<div class="login-form-dialog ng-scope" style="padding-top:100px">
     <h1 class="ekt-dialog-header" id="ngdialog3-aria-labelledby">Feedback</h1>
     <form class="ekt-dialog-form ng-pristine ng-invalid ng-invalid-required ng-valid-maxlength ng-valid-pattern"
         name="feedbackform">

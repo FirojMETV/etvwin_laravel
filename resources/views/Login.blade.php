@@ -1,6 +1,7 @@
 @extends('layout')
-@section('title', 'Login')
+@section('title', 'LOGIN')
 <link rel='stylesheet' href="{{ asset('css/login.css') }}">
+
 @section('content')
 
         <div class="center">
@@ -47,4 +48,4 @@
         </div>
 
     <script src="{{ asset('js/navbar.js') }}"></script>
-    @endsection
+@endsection

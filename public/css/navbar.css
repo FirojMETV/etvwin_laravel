@@ -1,5 +1,5 @@
 .navbar-inverse {
-  position: absolute;
+  position: fixed;
   background-color: #00021C;
   width: 100%;
   border-radius: 0%;

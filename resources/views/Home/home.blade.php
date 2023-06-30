@@ -4,7 +4,7 @@
 <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 {{-- <link rel="stylesheet" href="{{ URL::asset('css/owl.carousel.css') }}" /> --}}
-<link rel="stylesheet" href="{{ URL::asset('css/owl.carousel.min.css') }}" />
+{{-- <link rel="stylesheet" href="{{ URL::asset('css/owl.carousel.min.css') }}" /> --}}
 <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 <script type="text/javascript" src="{{ URL::asset('js/owl.carousel.js') }}"></script>
 <script type="text/javascript" src="{{URL::asset('js/owl.carousel.min.js')}}"></script>
@@ -16,7 +16,7 @@
 
 
 
-<div class="container-fluid" style="background: #00021C !important; padding-bottom:40px;padding-top:70px; width:100% !important">
+<div class="container-fluid" style=" padding-bottom:40px;padding-top:70px; width:100% !important; overflow:auto;">
     <div class="owl-carousel owl-theme" id="main-page">
         <div class="item"> <img class="owl-lazy" data-src="{{ asset('image/tst.jpg') }}"
                 data-src-retina="{{ asset('image/tst.jpg') }}" alt=""></div>

@@ -3,7 +3,7 @@
 
 <link rel="stylesheet" href="{{asset('css/aboutus.css')}}">
 @section('content')
-<div class="ekta-view "  style="padding-top:0px">
+<div class="ekta-view "  style="padding-top:60px">
     <div class="container ng-scope">
         <div class="list-container">
             <div class="policy-header">

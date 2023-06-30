@@ -1,10 +1,10 @@
 @extends('layout')
-@section('title', 'Registration')
+@section('title', 'REGISTRATION')
 
 <link rel="stylesheet" href="{{ asset('css/registration.css') }}">
 
-@section('content')
 
+@section('content')
     <div class="center">
         <h2> Sign Up</h2>
         <form method="post" action="{{ route('register-user') }}">
@@ -50,5 +50,4 @@
         </form>
     </div>
     <script src="{{ asset('js/navbar.js') }}"></script>
-    
 @endsection
