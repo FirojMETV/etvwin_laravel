@@ -1,0 +1,126 @@
+.owl-carousel {
+       display: none;
+        width: 100%;
+        z-index: 1;
+
+}
+.owl-stage-outer {
+    border-radius: 8px;
+}
+.owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translate3d(0,0,0);
+}
+.owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+}
+.owl-item {
+    border-radius: 10px;
+    overflow: hidden;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 15%;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,0);
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+.cover-image {
+    height: 600px;
+    max-height: 500px;
+}
+.carousel-caption {
+    left: 16px;
+    padding-bottom: 0;
+}
+@media screen and (min-width: 863px){
+.channel_banner {
+    background-size: contain!important;
+    background-position: top center!important;
+    margin-bottom: 0!important;
+    height: auto!important;
+    padding: 0 0 30.7%;
+}
+.gen_mobile_image {
+    display: none!important;
+}
+.carousel-caption {
+    right: 20%;
+    left: 20%;
+    padding-bottom: 30px;
+}
+}
+
+
+
+.fluid {
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.fluid .owl-nav {
+    color: #e36565 !important;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.fluid .owl-nav:hover {
+    color: #dad2d2 !important;
+}
+
+.fluid .owl-dot.active span {
+    width: 20px !important;
+    background: #f39c77 !important;
+}
+
+.fluid .owl-dot:hover span {
+    width: 20px !important;
+    background: #c4b531 !important;
+}
+
+.fluid .owl-prev,
+.fluid .owl-next {
+    position: absolute;
+    font-size: 10rem !important;
+    top: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: opacity .2s ease-out;
+    opacity: 0 !important;
+    background-color:  #fff444 ;
+  
+}
+
+.fluid .owl-prev {
+    left: 0;
+    padding-left: 85px;
+}
+
+.fluid .owl-next {
+    right: 0;
+    padding-right: 85px;
+}
+.cover-image {
+    height: 600px;
+    width: 300px;
+    max-height: 500px;
+    background-image: contain !important;
+}
+
+

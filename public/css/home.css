@@ -1,3 +1,72 @@
+ 
+ .main-page-item{
+    margin: 0px ;
+    display: block;
+ }
+ .fluid{
+    position: relative;
+    border-radius: 3px;
+    display: block;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+ }
+.fluid .owl-nav {
+    color: #f3ebeb !important;
+    opacity: 1;
+    cursor: pointer;
+ } 
+ .owl-prev,
+ .owl-next {
+   display: block;
+ }
+ 
+ .hide-navigation .owl-prev,
+ .hide-navigation .owl-next {
+   display: none;
+ }
+ 
+.fluid .owl-nav:hover {
+    color: #5b5656 !important;
+    cursor: pointer;
+}
+.fluid .owl-dot.active span {
+    width: 10px !important;
+    background: #f39c77 !important;
+}
+.fluid .owl-dot:hover span {
+    width: 10px !important;
+    background: #c4b531 !important;
+}
+
+.fluid .owl-prev,
+.fluid .owl-next {
+    position: absolute;
+    font-size: 10rem !important;
+    top: 20%;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: opacity .2s ease-out;
+    opacity: 1 !important;
+}
+.fluid .owl-prev:hover,
+.fluid .owl-next:hover {
+   opacity: 2 !important;
+   background-color: #bbb8b8 !important;
+   
+}
+.fluid .owl-prev {
+    left: 0; 
+}
+.fluid .owl-next {
+    right: 0; 
+}
+
+.card-img-top{
+    width: 100%;
+    min-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
 
 .owl-carousel .item {
     height: 10rem;
@@ -38,18 +107,6 @@ a:hover{
     cursor: pointer;
     color: #ffc908;
 }
-
-.owl-lazy {
-    height: 500px;
-    max-height: 400px;
-    size: contain;
-    border-radius: 10px solid red;
-   
-}
-.owl-lazy:hover{
-   
-}
-
 .card-item {
     position: relative;
     border-radius: 3px;
@@ -78,10 +135,13 @@ a:hover{
 .owl-carousel .owl-item img {
     display: block;
     width: 100%;
-    -webkit-transform-style: preserve-3d;
+    /* -webkit-transform-style: preserve-3d; */
 }
 
 .card-item img {
     width: 100%;
     border-radius: 3px 3px 0 0;
+}
+.LiveTv{
+    margin:10px 10px ;
 }

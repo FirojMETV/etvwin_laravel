@@ -1,19 +1,27 @@
 
 
+function startTimer() {
+  setTimeout(function() {
+    owlCarousel.addClass("hide-navigation");
+  }, 3000); // Adjust this value to match the autoplayTimeout value
+};
+
 $(document).ready(function() {
   $('#main-page').owlCarousel({
     items:1,
-    loop: false, // Enable loop
-    lazyLoad: true, // Enable lazy loading
+    loop: true, // Enable loop
+    lazyLoad: false, // Enable lazy loading
     mouseDrag: true, // Disable mouse drag
     touchDrag: true, // Enable touch drag
     nav: true, // Show navigation buttons
-    stagePadding:50,
+    stagePadding:40,
     margin: 10,
     autoWidth:true,
     autoplayHoverPause: false,
     center:true,
-    // navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'], // Customize navigation icons
+    autoplay:true,
+    // dotsData:["<button>&#65439;</button>"],
+    navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'], // Customize navigation icons
     responsive: {
       0: {
         items: 1 // Number of items to show on different screen sizes
@@ -32,8 +40,8 @@ $(document).ready(function() {
     lazyLoad: true,
     mouseDrag: true,
     touchDrag: true,
-    nav: true,
-    navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+    nav: false,
+    // navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
     responsive: {
       0: {
         items: 2
