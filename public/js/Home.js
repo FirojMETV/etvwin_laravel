@@ -19,7 +19,7 @@ $(document).ready(function() {
     autoWidth:false,
     autoplayHoverPause: false,
     center:true,
-    autoplay:true,
+    autoplay:false,
     center: true,
     // dotsData:["<button>&#65439;</button>"],
     navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'], // Customize navigation icons
@@ -137,10 +137,10 @@ $(document).ready(function() {
     nav:true,
     responsive:{
       0:{
-          items:3
+          items:2
       },
       668:{
-          items:3
+          items:2
       },
       1024:{
           items:7
@@ -258,10 +258,10 @@ $("#Latest-News").owlCarousel({
   nav:true,
   responsive:{
     0:{
-        items:3
+        items:2
     },
     668:{
-        items:3
+        items:2
     },
     1024:{
         items:7
@@ -275,10 +275,10 @@ $("#Food").owlCarousel({
   nav:true,
   responsive:{
     0:{
-        items:3
+        items:2
     },
     668:{
-        items:3
+        items:2
     },
     1024:{
         items:7
@@ -292,10 +292,10 @@ $("#Health-FitNess").owlCarousel({
   nav:true,
   responsive:{
     0:{
-        items:3
+        items:2
     },
     668:{
-        items:3
+        items:2
     },
     1024:{
         items:7

@@ -1,6 +1,6 @@
  
  .main-page-item{
-    margin: 0px ;
+    margin-top: 0;
     display: block;
  }
  .Live-Tv h2{
@@ -22,7 +22,9 @@
  .owl-next {
    display:block;
  }
- 
+ .carousel-list {
+    margin: 20px 0 30px 50px;
+}
  .hide-navigation .owl-prev,
  .hide-navigation .owl-next {
    display: none;
@@ -45,7 +47,7 @@
 .fluid .owl-next {
     position: absolute;
     font-size: 5rem !important;
-    top: 30%;
+    top: 27%;
     padding-left: 15px;
     padding-right: 15px;
     transition: opacity .2s ease-out;
@@ -64,13 +66,13 @@
     right: 0; 
 }
 
-.card-img-top{
+/* .card-img-top{
     width: 100%;
-    min-height: 500px;
+  
     height: 40vh;
     border-radius: 10px;
     min-width: 300px;
-}
+} */
 
 .owl-carousel .item {
     padding: 0.5rem;
@@ -100,7 +102,7 @@ div a:hover{
     font-weight: 700;
     cursor: default;
     font-family: Arial, Helvetica, sans-serif;
-   padding-left: 50px;
+   
 }
 .section-title:hover{
     text-decoration: none;
@@ -128,7 +130,25 @@ div a:hover{
     overflow: hidden;
     border-radius: 10px;
 }
-
+#carousel-play-btn {
+    height: 55px;
+    width: 55px;
+    float: left;
+}
+#carousel-caption {
+    left: 1%;
+}
+#carousel-caption {
+    right: 15%;
+    bottom: 10px;
+    position: absolute;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
 .card-item .premium-badge {
     width: 20px !important;
     position: absolute;
@@ -199,8 +219,8 @@ img.premium-badge {
     left: 15px;
 }
 .carousel-caption {
-    left: 16px;
-    padding-bottom: 0;
+    left: 1px;
+    padding-bottom: 10px;
 }
 img {
     max-width: 100%;
@@ -208,10 +228,10 @@ img {
 .carousel-control {
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: 15px;
     left: 0;
     width: 15%;
-    font-size: 20px;
+    font-size: 10px;
     color: #fff;
     text-align: center;
     text-shadow: 0 1px 2px rgba(0,0,0,.6);
@@ -219,57 +239,21 @@ img {
     filter: alpha(opacity=50);
     opacity: .5;
 }
-@media screen and (max-width: 500px){
-.cover-image {
-    height: 180px;
-}
-.carousel-play-btn {
-    height: 44px;
-    width: 44px;
-    margin-top: 0;
-}
-.carousel-caption {
-    left: 5%;
-}
-#small-play-btn {
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-}
-.card-item .premium-badge {
-    width: 20px!important;
-    top: 8px!important;
-    left: 5px!important;
-}
-}
 
-.carousel-play-btn {
-    height: 55px;
-    width: 55px;
-    float: left;
-}
-.carousel-caption {
-    left: 15%;
-}
-.carousel-caption {
-   display: block;
-    right: 15%;
-    bottom: 20px;
-    left: 5%;
-    z-index: 10;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #fff;
-    text-align: center;
-    text-shadow: 0 1px 2px rgba(0,0,0,.6);
-}
+
+
 
 @media screen and (max-width: 770px){
 .cover-image {
     height: 430px;
 }
+.section-title {
+    margin-left: 0px;
+}
+.carousel-list {
+    margin: 30px 0 30px 0;
+}
+
 }
 
 @media screen and (max-width: 862px){
@@ -282,7 +266,13 @@ img {
     margin-bottom: 0!important;
     height: auto!important;
     padding: 0 0 75%;
-}}
+}
+.carousel-control {
+   bottom: 20px;
+    width: 15%;
+    opacity: .5;
+}
+}
 @media screen and (min-width: 863px){
 .gen_mobile_image {
     display: none!important;
@@ -297,24 +287,34 @@ img {
 }
 }
 
-
-
 @media screen and (max-width: 500px){
-.carousel-caption {
-    left: 5%;
-}}
-.carousel-caption {
-    left: 13%;
-}
-.carousel-caption {
-    position: absolute;
-    right: 15%;
-    bottom: 20px;
-    left: 15%;
-    z-index: 10;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #fff;
-    text-align: center;
-    text-shadow: 0 1px 2px rgba(0,0,0,.6);
-}
+    .cover-image {
+        height: 180px;
+    }
+    #carousel-play-btn {
+        height: 30px;
+        width: 30px;
+        margin-top: 0;
+    }
+    .carousel-caption {
+        left: 0%;
+    }
+    .carousel-list {
+        margin: 0 0 30px 0;
+    }
+    .small-play-btn {
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+    }
+    .section-title {
+        margin-left: 14px;
+    }
+    .card-item .premium-badge {
+        width: 20px!important;
+        top: 8px!important;
+        left: 5px!important;
+    }
+    }

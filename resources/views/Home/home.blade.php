@@ -16,7 +16,7 @@
 
 
 
-    <div class="container-fluid mt-5" style="padding-top:70px;  overflow:auto;">
+    <div class="container-fluid mt-5" style="padding-top:70px;  overflow:hidden">
         <div class="main-page-item">
             <div class="owl-carousel owl-theme fluid " id="main-page">
                 <div class="ms-2 me-2">
@@ -30,9 +30,9 @@
                                 background-repeat: no-repeat;">
                         </div>
                         <img src='{{ asset('image/crown-small.png') }}' alt="" class="premium-badge">
-                        {{-- <div class="carousel-caption">
-                                <img src="{{asset('image/play-btn-new-big.png')}}" alt="" class="carousel-play-btn">
-                            </div> --}}
+                        <div id="carousel-caption">
+                                <img src="{{asset('image/play-btn-new-big.png')}}" alt="" id="carousel-play-btn">
+                            </div>
                     </a>
                     <a class="left carousel-control" role="button" data-slide="prev"></a>
                     <a class="next carousel-control" role="button" data-slide="next"></a>
@@ -48,9 +48,9 @@
                             background-repeat: no-repeat;">
                         </div>
                         <img src='{{ asset('image/crown-small.png') }}' alt="" class="premium-badge">
-                        {{-- <div class="carousel-caption">
-                            <img src="{{asset('image/play-btn-new-big.png')}}" alt="" class="carousel-play-btn">
-                        </div> --}}
+                        <div id="carousel-caption">
+                            <img src="{{asset('image/play-btn-new-big.png')}}" alt="" id="carousel-play-btn">
+                        </div>
                     </a>
                     <a class="left carousel-control" role="button" data-slide="prev"></a>
                     <a class="next carousel-control" role="button" data-slide="next"></a>
@@ -66,9 +66,9 @@
                         background-repeat: no-repeat;">
                         </div>
                         <img src='{{ asset('image/crown-small.png') }}' alt="" class="premium-badge">
-                        {{-- <div class="carousel-caption">
-                        <img src="{{asset('image/play-btn-new-big.png')}}" alt="" class="carousel-play-btn">
-                    </div> --}}
+                        <div id="carousel-caption">
+                            <img src="{{asset('image/play-btn-new-big.png')}}" alt="" id="carousel-play-btn">
+                        </div>
                     </a>
                     <a class="left carousel-control" role="button" data-slide="prev"></a>
                     <a class="next carousel-control" role="button" data-slide="next"></a>
@@ -84,9 +84,9 @@
                         </div>
 
                         <img src='{{ asset('image/crown-small.png') }}' alt="" class="premium-badge">
-                        {{-- <div class="carousel-caption">
-                    <img src="{{asset('image/play-btn-new-big.png')}}" alt="" class="carousel-play-btn">
-                </div> --}}
+                        <div id="carousel-caption">
+                            <img src="{{asset('image/play-btn-new-big.png')}}" alt="" id="carousel-play-btn">
+                        </div>
                     </a>
                     <a class="left carousel-control" role="button" data-slide="prev"></a>
                     <a class="next carousel-control" role="button" data-slide="next"></a>
@@ -103,9 +103,8 @@
                         </div>
                         <img class="premium-badge ng-scope" alt="premium" src='{{ asset('image/crown-small.png') }}'>
 
-                        <div class="carousel-caption">
-                            <img id="carousel-play-btn" alt="play" src="{{ asset('image/play-btn-new-big.png') }}"
-                                class="carousel-play-btn">
+                        <div id="carousel-caption">
+                            <img src="{{asset('image/play-btn-new-big.png')}}" alt="" id="carousel-play-btn">
                         </div>
                     </a>
                     <a class="left carousel-control" role="button" data-slide="prev"></a>
@@ -115,7 +114,7 @@
             </div>
         </div>
         {{-- WIN-Exclusive --}}
-        <div class="WIN-Exclusives">
+        <div class="WIN-Exclusives carousel-list">
             <a href="" class="section-title">WIN-Exclusive</a>
             <a href="" class="see-all-link left-margin-episode " style="text-decoration: none">+More</a>
             <div class="owl-carousel owl-theme fluid " id="another-carousel">
@@ -169,7 +168,7 @@
         </div>
 
         {{-- Before TV --}}
-        <div class="Before TV">
+        <div class="Before TV carousel-list">
             <a href="" class="section-title">Before TV</a>
             <a href="" class="see-all-link left-margin-episode " style="text-decoration: none">+More</a>
             <div class="owl-carousel owl-theme fluid" id='Before-TV'>
@@ -202,7 +201,7 @@
 
         </div>
         {{-- Live Tv --}}
-        <div class="Live-Tv">
+        <div class="Live-Tv carousel-list">
             <a href="" class="section-title">Live Tv</a>
             <a class="see-all-link left-margin-episode  hideMoreBar" style="text-decoration: none">+ More</a>
             <div class="owl-carousel owl-theme" id="Live-TV">
@@ -281,7 +280,7 @@
             </div>
         </div>
         {{-- TV shows  --}}
-        <div class="TV-SHows">
+        <div class="TV-SHows carousel-list">
             <a href="" class="section-title"> Tv Shows</a>
             <a href="" class="see-all-link left-margin-episode " style="text-decoration: none">+More</a>
             <div class="owl-carousel owl-theme fluid " id="TV-shows-carousel">
@@ -359,7 +358,7 @@
         </div>
         {{-- trending show --}}
 
-        <div class="trending-shows">
+        <div class="trending-shows carousel-list">
             <a href="" class="section-title">Trending</a>
             <a href="" class="see-all-link left-margin-episode " style="text-decoration: none">+More</a>
             <div class="owl-carousel owl-theme fluid " id='Trending-carousel'>
@@ -520,7 +519,7 @@
         </div>
         {{-- Recommended For You --}}
 
-        <div class="Recommended-For-You">
+        <div class="Recommended-For-You carousel-list">
             <a href="" class="section-title">Recommended For You</a>
             <a href="" class="see-all-link left-margin-episode " style="text-decoration: none">+More</a>
             <div class="owl-carousel owl-theme fluid" id="Recommended-for-you">
@@ -965,7 +964,7 @@
         </div>
         {{-- Top Movies --}}
 
-        <div class="Top-Movies">
+        <div class="Top-Movies carousel-list">
             <a href="" class="section-title">Top Movies</a>
             <a href="" class="see-all-link left-margin-episode" style="text-decoration: none">+more</a>
             <div class="owl-carousel owl-theme fluid" id="Top-Movies-carousel">
@@ -1108,7 +1107,7 @@
         </div>
         {{-- Family --}}
 
-        <div class="Family">
+        <div class="Family carousel-list">
             <a href="" class="section-title">Family</a>
             <a href="" class="see-all-link left-margin-episode" style="text-decoration: none">+more</a>
             <div class="owl-carousel owl-theme fluid" id="Family">
@@ -1294,7 +1293,7 @@
         </div>
         {{-- Comedy --}}
 
-        <div class="Comedy">
+        <div class="Comedy carousel-list">
             <a href="" class="section-title">Comedy</a>
             <a href="" class="see-all-link left-margin-episode " style="text-decoration: none">+More</a>
             <div class="owl-carousel owl-theme fluid" id="Comedy">
@@ -1371,7 +1370,7 @@
         </div>
 
         {{-- Classic --}}
-        <div class="Classic">
+        <div class="Classic carousel-list">
             <a href="" class="section-title">Classic</a>
             <a href="" class="see-all-link left-margin-episode " style="text-decoration: none">+More</a>
             <div class="owl-carousel owl-theme fluid" id="Classic">
@@ -1539,7 +1538,7 @@
         </div>
 
         {{-- Action / Thriller --}}
-        <div class="Action-Thriller">
+        <div class="Action-Thriller carousel-list">
             <a href="" class="section-title"> Action / Thriller</a>
             <a href="" class="see-all-link left-margin-episode " style="text-decoration: none">+More</a>
             <div class="owl-carousel owl-theme fluid" id="Action-thriller">
@@ -1628,7 +1627,7 @@
         </div>
 
         {{-- Latest News --}}
-        <div class="Latest News">
+        <div class="Latest News carousel-list">
             <a href="" class="section-title">Latest News</a>
             <a href="" class="see-all-link left-margin-episode " style="text-decoration: none">+More</a>
             <div class="owl-carousel owl-theme fluid" id="Latest-News">
@@ -1708,7 +1707,7 @@
         </div>
 
         {{-- Food --}}
-        <div class="Food">
+        <div class="Food carousel-list">
             <a href="" class="section-title">Food</a>
             <a href="" class="see-all-link left-margin-episode " style="text-decoration: none">+More</a>
             <div class="owl-carousel owl-theme fluid" id="Food">
@@ -1729,7 +1728,7 @@
         </div>
 
         {{-- Health & Fitness --}}
-        <div class="Health & Fitness">
+        <div class="Health & Fitness carousel-list">
             <a href="" class="section-title">Food</a>
             <a href="" class="see-all-link left-margin-episode " style="text-decoration: none">+More</a>
             <div class="owl-carousel owl-theme fluid" id="Health-FitNess">
