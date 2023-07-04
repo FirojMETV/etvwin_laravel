@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CookieController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EtvWin;
 
@@ -56,3 +57,17 @@ Route::get('/subscription-plans',function(){
 Route::get('/home', function(){
     return view('home/home');
 });
+
+Route::get('/video',function(){
+    return view('Videoplayer/videoplayer');
+});
+
+Route::get('/cookies',function(){
+    return view(('Cookies/cookies-form'));
+});
+
+Route::get('/cookie/set', [CookieController::class, 'setCookie']);
+Route::get('/cookie/get',[CookieController::class,'getCookie']);
+
+Route::get('session/set',[CookieController::class,'Session_set']);
+Route::get('session/get',[CookieController::class,'Session_get']);

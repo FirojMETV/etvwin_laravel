@@ -13,7 +13,7 @@
 .SignIn-overlay .closebtn {
   position: absolute;
   top: 10%;
-  right: 45px;
+  right: 45px; 
   font-size: 60px;
   cursor: pointer;
   color: #e4edf0;
@@ -21,8 +21,8 @@
 
 .center{
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 54%;
+  left:50%;
   transform: translate(-50%, -50%);
   width: 400px;
   background: #191d4f;
@@ -181,7 +181,7 @@ input[type="sign-up"]:hover{
   .social div{
   width: 20px;
   border-radius: 3px;
-  padding: 1px 30px 3px 5px;
+  padding: 1px 10px 3px 5px;
   color: #d68c47;
   text-align: center;
   }

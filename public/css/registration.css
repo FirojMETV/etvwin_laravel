@@ -10,7 +10,7 @@
   box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
   max-width: 320px;
   min-height: 300px;
-  margin-bottom: 25%;
+  margin-bottom: 25%; 
 }
 .center h2{
   text-align: center;
@@ -20,7 +20,7 @@
   font-size: 22px;
 }
 .center form{
- 
+  
   box-sizing: border-box;
 
 }

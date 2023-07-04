@@ -5,6 +5,7 @@
 
 
 @section('content')
+<div style="display: inline">
     <div class="center">
         <h2> Sign Up</h2>
         <form method="post" action="{{ route('register-user') }}">
@@ -43,11 +44,12 @@
             </div>
             {{-- <p class="text-warning" style="margin-top: -15px">  @error('password')  {{ $message }} @enderror</p> --}}
             <p id="message" style="color:black !important ; "></p>
-            <div>
+            <div style="padding: 20px">
                 <input type="submit" onclick="checkpassword" value="SIGN UP">
             </div>
 
         </form>
     </div>
+</div>
     <script src="{{ asset('js/navbar.js') }}"></script>
 @endsection

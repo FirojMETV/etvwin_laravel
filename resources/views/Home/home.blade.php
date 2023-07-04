@@ -16,7 +16,7 @@
 
 
 
-    <div class="container-fluid mt-5" style="padding-top:70px;  overflow:hidden">
+    <div class="container-fluid mt-5" style="padding-top:70px;  overflow:hidden;">
         <div class="main-page-item">
             <div class="owl-carousel owl-theme fluid " id="main-page">
                 <div class="ms-2 me-2">

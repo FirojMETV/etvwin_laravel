@@ -1,9 +1,9 @@
-@extends('layout')
+
 @section('title', 'LOGIN')
 <link rel='stylesheet' href="{{ asset('css/login.css') }}">
 
-@section('content')
 
+    <div class="container-fluid">
         <div class="center">
             <h2> Sign in</h2>
             <form method="post" action="{{ route('login-user') }}">
@@ -19,13 +19,13 @@
                     <span></span>
                     <label for="Email">Email / Mobile*</label>
                 </div>
-                <p class="text-warning">@error('Email'){{ $message }}@enderror</p>
+                <p class="text-warning" style="margin:-15px 1px 0px 0px; color:#ff5">@error('Email'){{ $message }}@enderror</p>
                 <div class="txt_field">
                     <input type="password" name="password" value="">
                     <span></span>
                     <label>Password*</label>
                 </div>
-                <p class="text-warning">@error('password'){{ $message }}@enderror</p>
+                <p class="text-warning" style="margin: -20px 0px 25px 1px; color:#ff5">@error('password'){{ $message }}@enderror</p>
                 <div class="pass">
                     Forget Password?
                 </div>
@@ -41,11 +41,12 @@
                         <div class="go"><img src="{{ asset('image/google.png') }}" width="20px" height="20px" />
                         </div>
                     </div>
-                    <a href="{{ asset('registration') }}">
+                    <a href="{{ asset('registration') }}" style="padding-top: 10px">
                         <input type="sign-up" value="SIGN UP">
                     </a>
             </form>
         </div>
+    </div>
 
     <script src="{{ asset('js/navbar.js') }}"></script>
-@endsection
+
