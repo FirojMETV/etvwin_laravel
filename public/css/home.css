@@ -294,7 +294,7 @@ img {
     #carousel-play-btn {
         height: 30px;
         width: 30px;
-        margin-top: 0;
+      margin:  0px 6px -15px;
     }
     .carousel-caption {
         left: 0%;
@@ -316,5 +316,11 @@ img {
         width: 20px!important;
         top: 8px!important;
         left: 5px!important;
+    }
+    img.premium-badge{
+        width: 25px!important;
+    position: absolute;
+    top: 10px;
+    left: 9px;
     }
     }

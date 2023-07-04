@@ -22,13 +22,11 @@
                 <div class="ms-2 me-2">
                     <a href="">
                         <div class="cover-image channel_banner gen_desktop_image"
-                            style="background:url(https://etv-win-image.akamaized.net/etvwin/exclusives/shows/asalu/subcategories/season1/episodes/asalumovie/78984/asalu-movie-Asalu_Movie-1960x600.jpg);background-repeat: no-repeat;background-position: center 20%;background-size: cover;">
-                        </div>
-
-                        <div class="cover-image channel_banner gen_mobile_image"
-                            style="background:url(https://etv-win-image.akamaized.net/etvwin/exclusives/shows/asalu/subcategories/season1/episodes/asalumovie/78984/asalu-movie-Asalu_Movie-640x480.jpg);
-                                background-repeat: no-repeat;">
-                        </div>
+                        style="background:url(https://etv-win-image.akamaized.net/etvwin/exclusives/shows/dearmegha/subcategories/season1/episodes/dearmegamovie/61949/dear-mega-movie-Dear_megha_Movie-1960x600.jpg);background-repeat: no-repeat;background-position: center 20%;background-size: cover;">
+                    </div>
+                    <div class="cover-image channel_banner gen_mobile_image"
+                        style="background:url(https://etv-win-image.akamaized.net/etvwin/exclusives/shows/dearmegha/subcategories/season1/episodes/dearmegamovie/48056/dear-mega-movie-Dear_megha_Movie-640x480.jpg);background-repeat: no-repeat;">
+                    </div>
                         <img src='{{ asset('image/crown-small.png') }}' alt="" class="premium-badge">
                         <div id="carousel-caption">
                                 <img src="{{asset('image/play-btn-new-big.png')}}" alt="" id="carousel-play-btn">

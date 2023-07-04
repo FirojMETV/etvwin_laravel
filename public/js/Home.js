@@ -19,7 +19,7 @@ $(document).ready(function() {
     autoWidth:false,
     autoplayHoverPause: false,
     center:true,
-    autoplay:false,
+    autoplay:true,
     center: true,
     // dotsData:["<button>&#65439;</button>"],
     navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'], // Customize navigation icons
