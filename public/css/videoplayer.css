@@ -16,6 +16,17 @@
 max-width: 730px;
 min-height: 50px; */
 }
+ video::-internal-media-controls-download-button {
+    display:none;
+}
+
+  video::-webkit-media-controls-enclosure {
+    overflow:hidden;
+}
+
+ video::-webkit-media-controls-panel {
+    width: calc(100% + 30px); 
+}
 
 .list-container {
     margin-top: 40px;
@@ -108,7 +119,7 @@ min-height: 50px; */
         margin: 0 auto;
         height: 400px;
         width: auto;
-        max-width: 300px;
+        max-width: 380px;
         min-height: 50px;
         display: flex;
         justify-content: center;

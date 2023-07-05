@@ -36,7 +36,7 @@ class EtvWin extends Controller
         if ($res) {
             return back()->with('success', 'you have registered success');
         } else {
-            return back()->with('failed', 'somethinge worng');
+            return back()->with('failed', 'somethinge wrong');
         }
     }
     public function loginUser(Request $request)

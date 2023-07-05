@@ -63,7 +63,7 @@ Route::get('/video',function(){
 });
 
 Route::get('/cookies',function(){
-    return view(('Cookies/cookies-form'));
+    return view('Cookies/cookies-form');
 });
 
 Route::get('/cookie/set', [CookieController::class, 'setCookie']);
@@ -71,3 +71,7 @@ Route::get('/cookie/get',[CookieController::class,'getCookie']);
 
 Route::get('session/set',[CookieController::class,'Session_set']);
 Route::get('session/get',[CookieController::class,'Session_get']);
+
+Route::get('Videotv',function(){
+    return view('TvShows/TvShows');
+});

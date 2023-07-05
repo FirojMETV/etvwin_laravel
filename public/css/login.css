@@ -1,4 +1,4 @@
-.SignIn-overlay {
+/* .SignIn-overlay {
   height: 100%;
   width: 100%;
   display: none;
@@ -17,7 +17,7 @@
   font-size: 60px;
   cursor: pointer;
   color: #e4edf0;
-}
+} */
 
 .center{
   position: absolute;
@@ -57,6 +57,7 @@ form .txt_field{
   border: none;
   background: transparent;
   outline: none;
+  color: #fff;
 }
 .txt_field label{
   position: absolute;

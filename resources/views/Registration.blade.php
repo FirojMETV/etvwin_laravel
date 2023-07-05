@@ -33,16 +33,12 @@
             <div class="txt_field">
                 <input type="password" name="password" id="password" >
                 <label>Password*</label>
-                {{-- <p class="text-warning">@error('repassword'){{ $message }}@enderror</p> --}}
             </div>
             <p class="text-warning">@error('password'){{ $message }}@enderror</p>
             <div class="txt_field">
-                <input type="password" name="repassword" id="password" >
+                <input type="repassword" name="rerepassword" id="repassword" >
                 <label>Re-Password*</label>
-                {{-- <p class="text-warning">@error('repassword'){{ $message }}@enderror</p> --}}
-           
             </div>
-            {{-- <p class="text-warning" style="margin-top: -15px">  @error('password')  {{ $message }} @enderror</p> --}}
             <p id="message" style="color:black !important ; "></p>
             <div style="padding: 20px">
                 <input type="submit" onclick="checkpassword" value="SIGN UP">
