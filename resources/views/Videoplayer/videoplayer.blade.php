@@ -4,9 +4,13 @@
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/videoplayer.css') }}">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://raw.githubusercontent.com/Ahmetaksungur/aksvideoplayer/main/aks-video-player.js"></script>
 
-    <div class=" video-view" style="margin-bottom: 100px">
-        <video id="video-player" controls controlslist='nodownload'>
+
+
+  
+    <div class=" video-player" style="margin-bottom: 100px">
+        <video id="video" controls controlslist='nodownload'>
             <source src="{{ asset('image/video.mp4') }}" type="video/mp4">
         </video>
 

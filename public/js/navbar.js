@@ -1,9 +1,13 @@
+const { auto } = require("@popperjs/core");
+
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
   document.getElementById("mySidenav").style.display = "block";
-  document.getElementById("mySidenav").style.width = "270px";
-
+   document.getElementById("mySidenav").style.width = auto;
+  document.getElementById("mySidenav").style.minWidth='270px';
+  document.getElementById('mySidenav').style.maxWidth='800px';
   document.getElementById('mydownload').style.display = 'block';
+  // document.getElementById('mydownload').style.width=auto;
 }
 
 

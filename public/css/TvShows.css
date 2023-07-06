@@ -1,6 +1,6 @@
 
 .ekta-view {
-    display: contents;
+    position: unset;
     top: 32px;
     min-height: 500px;
     background-color: #00021c;
@@ -116,14 +116,21 @@ img {
     font-family: OpenSansRegular;
     font-size: 25px;
     color: #fff;
-    margin-left: 30px;
+    margin-left: 15px;
 }
-.videoNav{
+.videonav{
     margin-bottom: 20px;
 }
 .videonav .videolinks li:first-child {
     padding-left: 0;
     margin-left: -30px;
+}
+.viewersnav .viewerslinks li:first-child {
+    padding-left: 0;
+}
+.switch {
+    position: relative;
+    display: inline-block;
 }
 .videolinks li {
     padding: 0 20px;
@@ -131,12 +138,17 @@ img {
     text-decoration: none;
     display: inline-block;
 }
+
 .channel-object {
     font-family: OpenSansRegular;
     font-size: 18px;
     color: rgba(255,255,255,.5);
     text-align: left;
     margin-bottom: 15px;
+}
+.channel-object
+ {
+    margin-left: 0;
 }
 .content-grading {
     color: rgba(255,255,255,.5);
@@ -148,8 +160,8 @@ img {
 .genre-tags {
     float: left;
     width: 60%;
+    padding: 5px;
 }
-
 .viewerslinks .genre-border {
     display: block;
     padding: 0 10px;
@@ -164,14 +176,15 @@ img {
     text-transform: capitalize;
     margin: 0 10px 10px 0;
 }
-.viewersnav{
-    margin-top: 25px;
-
+.viewersnav ul{
+    margin-top: 25px; 
+    padding-left: 0px;
 }
 .viewersnav .viewerslinks {
     border-bottom: 1px solid rgba(255,255,255,.15);
     border-top: 1px solid rgba(255,255,255,.15);
     text-align: center;
+    padding-left: 0px;
 }
 .description {
     margin: 37px 0;
@@ -204,21 +217,16 @@ input[type=checkbox], input[type=radio] {
 .details .viewersnav .viewerslinks li {
     display: inline-block;
     text-decoration: none;
-    padding: 0 15%;
+    padding: 0 10%;
     border-right: 1px solid rgba(255,255,255,.15);
     line-height: 65px;
     margin-left: -5px;
 }
-.fa-facebook {
-    background: #3B5998;
-    color: white;
-  }
 .viewerslinks .dropdown .dropdown-menu {
     min-width: 250px;
     padding: 15px 10px;
     margin: 0;
 }
-
 .intro {
     font-weight: 400;
     -moz-transition: height .5s;
@@ -249,7 +257,7 @@ input[type=checkbox], input[type=radio] {
     font-size: 0;
 }
 .icon-share {
-    content: "\e934";
+
     border-radius: 1px 1px 1px 1px;
     color: rgba(190,191,208,1);
     font-size: 30px;
@@ -305,42 +313,18 @@ input[type=checkbox], input[type=radio] {
     cursor: pointer;
 }
 
-  .facebook_image {
+  .share-fb {
     background: #3B5998;
-    font-size: 12px;
-    padding: 9px;
-    width: 38px!important;
-    padding: 0px!important;
-    border-radius: 50%;
-    margin: 5px!important;
-    font-weight: 700;
-    cursor: pointer;
+   
 }
-.twitter_image {
-    background: #55ACEE;
-    font-size: 12px;
-    padding: 9px;
-    width: 38px!important;
-    padding: 0px!important;
-    border-radius: 50%;
-    margin: 5px!important;
-    font-weight: 700;
-    cursor: pointer;
-}
-.envelope_image {
+
+.share-mail {
     background: #dd4b39;
-    font-size: 12px;
-    padding: 9px;
-    width: 38px!important;
-    padding: 5px!important;
-    border-radius: 50%;
-    margin: 5px!important;
-    font-weight: 700;
-    cursor: pointer;
+    
 }
   .dropdown-content a {
     color: #fff;
-    padding: 2px 2px 12px 5px;  
+    padding: 0px 0px 0px 0px;  
     margin-top: 12px;
     font-weight: 700;
     margin-left: 12px;
@@ -354,8 +338,13 @@ input[type=checkbox], input[type=radio] {
     text-align: center;
     margin-left: -40px
 }
+.viewersnav .viewerslinks li:last-child {
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+}
 .wl-indicator {
-    color: gray;
+    color: rgb(192, 188, 188);
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -374,22 +363,10 @@ input[type=checkbox], input[type=radio] {
     width: 38px!important;
     padding: 7px!important;
     border-radius: 50%;
-    margin: 5px!important;
+    margin: 0px!important;
     font-weight: 700;
     cursor: pointer;
 }
-/* @media (min-width: 1200px){
-.container {
-    width: 1170px;
-}}
-@media (min-width: 992px){
-.container {
-    width: 970px;
-}}
-@media (min-width: 768px){
-.container {
-    width: 750px;
-}} */
 .copy_text {
     position: absolute;
     top: 0;
@@ -429,4 +406,69 @@ input[type=checkbox], input[type=radio] {
 .video-thumbnail-play {
     height: 30px;
 }
+.ekta-view{
+    top: 100px;
 }
+.list-container{
+    margin-top: 9px !important;
+}
+ .main-container{
+    margin-top: 0;
+ }
+ .saranyu_player_wrapper{
+    position: fixed !important;
+    top: 60px;
+    z-index: 10;
+    width: 100%;
+ }
+ .image-size-reduce{
+    height: 200px !important;
+ }
+ .details .title-holder {
+    padding-top: 200px;
+ }
+ .details .title-holder h1{
+    font-size: 20px !important;
+    padding-left:10px;
+ }
+ .video-date{
+    font-size: 12px;
+ }
+ .meta-golden-bar{
+    margin-top: 0;
+    margin-right: 0;
+ }
+ .videonav{
+    margin-bottom: 10px;
+ }
+ .right-margin-alter {
+    margin-right: -15px;
+}
+.videolinks li{
+    padding: 0 10px;
+    /* border-radius: 2px solid; */
+}
+.content-grading{
+    margin-left: 15px;
+}
+.videolinks .genre-tags{
+    padding-left: 5px;
+}
+.videolinks .genre-border{
+    margin: 0 1px 10px 10px ;
+    font-size: 11px;
+}
+.viewersnav {
+    margin-top: 10px;
+}
+.viewersnav{
+    width: 370px;
+}
+.icon-share{
+    top: auto;
+}
+}
+@media screen and (max-width: 464px){
+.viewerslinks .dropdown .dropdown-menu {
+    left: -65px;
+}}

@@ -142,8 +142,8 @@
 
 
 {{-- Sign in page popup --}}
-
-{{-- <div class="SignIn-overlay" id="SignIN">
+{{-- 
+<div class="SignIn-overlay" id="SignIN">
     <div class="center">
         <span class="closebtn" onclick="SigninClose()" title="Close ">×</span>
         <h2> Sign in</h2>

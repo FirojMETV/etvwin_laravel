@@ -74,78 +74,103 @@
                                             <input type="checkbox" ng-disabled="detCtrl.isLikeDisabled"
                                                 ng-checked="detCtrl.isAddedToLike" class="like-checkbox"
                                                 disabled="disabled">
-                                            <em class="icon-like like-indicator fa fa-thumbs-up" aria-hidden="true">
+                                            <em class="fa fa-thumbs-up" style="font-size:25px" aria-hidden="true">
                                             </em>
                                             <span class="like-count ng-binding ng-hide" aria-hidden="true">233</span>
                                         </label>
                                     </li>
                                     <li class="dropdown share-dropdown comment_padding">
                                         <a data-toggle="dropdown ">
-                                            <span class="icon-share fa fa-share-alt icon-video-share"></span>
+                                            <span class="icon-share fa fa-share-alt icon-video-share"
+                                                style='font-size:25px'>
+
+                                            </span>
                                         </a>
+
                                         <div class="dropdown-menu dropdown-content ng-social-container ng-isolate-scope"
-                                            data-url="detCtrl.videoData.dynamic_url" data-title="detCtrl.videoData.title"
+                                            ng-social-buttons="" data-url="detCtrl.videoData.dynamic_url"
+                                            data-title="detCtrl.videoData.title"
                                             data-image="detCtrl.videoData.thumbnails.medium_4_3.url">
                                             <ul class="ng-social" ng-transclude="">
-                                                <p class="ng-scope">
-                                                    Share This Video
-                                                </p>
-                                                <li class="ng-social-facebook ng-scope" data-toggle="tooltip"
-                                                    title="Facebook" role="button" tabindex="0">
-                                                    <a ng-href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ff66tr.app.goo.gl%2FM2AC72gqh7vg6oX27"
+                                                <p class="ng-scope"> Share This Video</p>
+                                                <li class="ng-social-facebook ng-scope"
+                                                    ng-click="detCtrl.sendShareAnalytics('Facebook')" data-toggle="tooltip"
+                                                    title="Facebook" role="button" tabindex="0"><a
+                                                        ng-href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ff66tr.app.goo.gl%2FLg2sZaNBvCu7WtwY6"
                                                         target="_blank" ng-click="ctrl.clickShare($event, options)"
                                                         class="ng-social-button"
-                                                        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ff66tr.app.goo.gl%2FM2AC72gqh7vg6oX27">
-                                                        <img src="{{ asset('image/facebook-new.png') }}"
-                                                            class="facebook_image">
-                                                        <span id="selecturl">
-                                                    </a>
-                                                    <span ng-show="count" class="ng-social-counter ng-binding ng-hide"
+                                                        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ff66tr.app.goo.gl%2FLg2sZaNBvCu7WtwY6"><span
+                                                            class="ng-social-icon"></span><span class="ng-social-text"
+                                                            ng-transclude=""><em class="fa fa-facebook share-fb ng-scope"
+                                                                aria-hidden="true"></em></span></a><span ng-show="count"
+                                                        class="ng-social-counter ng-binding ng-hide"
                                                         aria-hidden="true"></span>
                                                 </li>
-                                                <div class="copy_text ng-scope ng-hide" aria-hidden="true">
+                                                <div class="copy_text ng-scope ng-hide" ng-show="detCtrl.copy_text"
+                                                    aria-hidden="true">
                                                     <p>Copied website URL</p>
                                                 </div>
-                                                <li data-toggle="tooltip" title="copy" class="ng-scope" role="button"
-                                                    tabindex="0">
-                                                    <img src="{{ asset('image/copy.png') }}" class="copy_image">
-                                                    <span id="selecturl"></span>
-                                                </li>
+                                                <li ng-click="detCtrl.copyUrl()" data-toggle="tooltip" title="copy"
+                                                    class="ng-scope" role="button" tabindex="0"> <img
+                                                        src="{{ asset('image/copy.png') }}" class="copy_image"><span
+                                                        id="selecturl"></span></li>
                                                 <li class="ng-social-twitter ng-scope"
                                                     ng-click="detCtrl.sendShareAnalytics('Twitter')" data-toggle="tooltip"
-                                                    title="Twitter" role="button" tabindex="0">
-                                                    <a ng-href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ff66tr.app.goo.gl%2FM2AC72gqh7vg6oX27&amp;text=Dear%20Megha"
+                                                    title="Twitter" role="button" tabindex="0"><a
+                                                        ng-href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ff66tr.app.goo.gl%2FLg2sZaNBvCu7WtwY6&amp;text=Asalu"
                                                         target="_blank" ng-click="ctrl.clickShare($event, options)"
                                                         class="ng-social-button"
-                                                        href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ff66tr.app.goo.gl%2FM2AC72gqh7vg6oX27&amp;text=Dear%20Megha">
-
-                                                        <img src="{{ asset('image/twitter-new.png') }}"
-                                                            class="twitter_image">
-                                                    </a>
-                                                    <span ng-show="count" class="ng-social-counter ng-binding ng-hide"
-                                                        aria-hidden="true"></span>
-                                                </li>
-                                                <li data-toggle="tooltip" title="Mail" class="ng-scope">
-                                                    <a href="mailto:?subject=Check this video&amp;body=Dear Megha https://f66tr.app.goo.gl/M2AC72gqh7vg6oX27"
-                                                        title="Mail">
-                                                        <img src="{{ asset('image/mail.png') }}" class="envelope_image">
-                                                    </a>
+                                                        href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ff66tr.app.goo.gl%2FLg2sZaNBvCu7WtwY6&amp;text=Asalu"><span
+                                                            class="ng-social-icon"></span><span class="ng-social-text"
+                                                            ng-transclude=""><em class=" fa fa-twitter share-tw ng-scope"
+                                                                aria-hidden="true"></em></span></a> <span ng-show="count"
+                                                        class="ng-social-counter ng-binding ng-hide"
+                                                        aria-hidden="true"></span></li>
+                                                <li data-toggle="tooltip" title="Mail" class="ng-scope"><a
+                                                        href="mailto:?subject=Check this video&amp;body=Asalu https://f66tr.app.goo.gl/Lg2sZaNBvCu7WtwY6"
+                                                        title="Mail"><em data-toggle="tooltip" title="Mail"
+                                                            class="fa fa-envelope share-mail" aria-hidden="true"></em></a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
+                                    <li class="follow-item li-item">
+                                         <span class="float-left">Follow</span>
+                                        <label class="float-left ng-pristine ng-untouched ng-valid ng-empty"
+                                            ng-model="landCtrl.isFollowed"
+                                            ng-change="landCtrl.followShow(landCtrl.isFollowed)" aria-label="Switch 1"
+                                            tabindex="0" >
+                                            <input type="checkbox" role="checkbox" aria-checked="false"
+                                            aria-invalid="false">
+                                            {{-- <div class="md-container" style="touch-action: pan-x;">
+                                                <div class="md-bar"></div>
+                                                <div class="md-thumb-container">
+                                                    <div class="md-thumb md-ink-ripple" md-ink-ripple=""
+                                                        md-ink-ripple-checkbox=""></div>
+                                                </div>
+                                            </div>
+                                            <div ng-transclude="" class="md-label"></div> --}}
+                                            <span class="slider round"></span>
+                                        </label>
+                                        {{-- <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label> --}}
+                                    </li>
                                     <li ng-class="{comment_padding: !detCtrl.gb_commentable}" class="comment_padding">
                                         <label ng-click="detCtrl.addToPlaylist('watchlater')" class="switch"
-                                            role="button" tabindex="0">
-                                            <input type="checkbox" class="watchlater-checkbox " disabled="disabled">
-                                            <span class=" far fa-clock wl-indicator" aria-hidden="true">
-                                            </span></label>
+                                            role="button" tabindex="0"><input type="checkbox"
+                                                ng-disabled="detCtrl.isWatchLaterDisabled"
+                                                ng-checked="detCtrl.isAddedToWatchLater" class="watchlater-checkbox"><span
+                                                class="fa fa-clock-o wl-indicator" aria-hidden="true"
+                                                style='font-size:25px'></span></label>
                                     </li>
                                 </ul>
                             </div>
+
                             <div class="clear"></div>
                             <div class="description">
-                                <input type="checkbox" class="read-more-state" id="post-1">
+                                {{-- <input type="checkbox" class="read-more-state" id="post-1"> --}}
                                 <p class="read-more-wrap intro">
                                     <span class="firstline ng-binding">Dear
                                         Megha is a romantic drama which will make you lose yourself in the emotional journey

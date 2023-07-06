@@ -75,5 +75,8 @@
         </ul>
     </div>
     <h6 class="footer-text ng-binding">
-        © Eenadu Television Pvt. Ltd. 2023. All Rights Reserved</h6>
+        © Eenadu Television Pvt. Ltd. <span id="spanYear"> 1990</span> . All Rights Reserved.
+    </h6>
 </div>
+
+<script src="{{asset('js/footer.js')}}"></script>
