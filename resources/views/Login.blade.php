@@ -1,6 +1,8 @@
 
-@section('title', 'LOGIN')
+
 <link rel='stylesheet' href="{{ asset('css/login.css') }}">
+
+    
 
 
     <div class="container-fluid">
@@ -47,6 +49,6 @@
             </form>
         </div>
     </div>
-
     <script src="{{ asset('js/navbar.js') }}"></script>
 
+   

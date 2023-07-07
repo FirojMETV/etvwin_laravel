@@ -75,3 +75,7 @@ Route::get('session/get',[CookieController::class,'Session_get']);
 Route::get('Videotv',function(){
     return view('TvShows/TvShows');
 });
+
+Route::get('usertab', function () {
+    return view('UserTab/userTab');
+});

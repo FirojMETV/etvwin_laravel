@@ -23,9 +23,9 @@
                             <ul class="radiolinks subscribe-radiolinks">
                                 <li class="subscribe-radiobuttons md-checked">
                                     <div style="display: inline-flex">
-                                        <input class="subscribe-radio md-checked" ng-value="pricing" id="radio_11"
-                                            role="radio" name="plan" value="365" aria-label="₹365₹499"
-                                            type="radio">
+                                        <input class="subscribe-radio md-checked" ng-value="pricing" id="Basic"
+                                            role="radio" name="plan" value="Basic" aria-label="₹365₹499"
+                                            type="radio" onclick="showSelectedPlan(this)"> 
                                         <div ng-transclude="" class="md-label">
                                             <span class="plan-price ng-binding ng-scope">₹365
                                             </span>
@@ -54,8 +54,8 @@
                             <ul class="radiolinks subscribe-radiolinks">
                                 <li class="subscribe-radiobuttons">
                                     <div style="display: inline-flex">
-                                        <input class="subscribe-radio" name="plan" value="99" aria-label="₹99"
-                                            type="radio">
+                                        <input class="subscribe-radio" id="premiumMonthly" name="plan" value="premiumMonthly" aria-label="₹99"
+                                            type="radio" onclick="showSelectedPlan(this)">
                                         <div ng-transclude="" class="md-label"><span
                                                 class="plan-price ng-binding ng-scope">₹99</span>
                                         </div>
@@ -73,8 +73,8 @@
                             <ul class="radiolinks subscribe-radiolinks">
                                 <li class="subscribe-radiobuttons">
                                     <div style="display: inline-flex">
-                                        <input ng-value="pricing" id="radio_13" type="radio" name="plan"
-                                            value="499" aria-label="₹499₹699">
+                                        <input ng-value="pricing" id="PremiumYearly" type="radio" name="plan"
+                                            value="PremiumYearly" aria-label="₹499₹699" onclick="showSelectedPlan(this)">
                                         <div ng-transclude="" class="md-label">
                                             <span class="plan-price ng-binding ng-scope">₹499
                                             </span>
@@ -210,12 +210,13 @@
     </div>
 </div>
 
-<script>
+{{-- <script>
     $(document).ready(function() {
         $('input[type=radio][name=plan]').change(function() {
             var selectedValue = $(this).val();
             $('#selectedValue').text('Selected Plan : ' + selectedValue + '/-');
         });
     });
-</script>
+</script> --}}
+<script src="{{ asset('js/footer.js') }}"></script>
 @endsection
