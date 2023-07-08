@@ -20,7 +20,7 @@
 
         {{-- center text  --}}
         <div class="main-menu" >
-            <ul class="nav navbar-nav hidden-xs " style="display: inline-flex" >
+            <ul class="nav navbar-nav nav-pills hidden-xs " style="display: inline-flex" >
                 <li class="active">
                     <a class="nav-link " href="{{ url('/home') }}">HOME</a>
                 </li>

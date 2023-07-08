@@ -7,7 +7,7 @@
   top: 0%;
 }
 
-.nav.split { 
+.nav.split {
   float: right;
   background-color: #04AA6D;
   color: white;
@@ -18,17 +18,47 @@
   font-size: xx-large;
 }
 
+.main-menu .nav-pills li a {
+  justify-content: center;
+  line-height: 35px;
+  display: inline-block;
+  color: rgba(255, 255, 255, .75);
+  padding: 0 16px;
+  text-transform: uppercase;
+  font-size: 14px;
+  min-width: auto;
+  font-family: OpenSansRegular;
+}
+
+.main-menu .nav-pills li a:hover {
+  color: #ffc908;
+}
+
+.main-menu .nav-pills li.active a,
+.my-profile-nav .nav-pills li.active a:focus,
+.my-profile-nav .nav-pills li.active a:hover {
+  color: #fff;
+  box-shadow: 0 4px 19px 0 rgba(0, 0, 0, .2), 0 6px 19px 0 rgba(0, 0, 0, .1);
+  background-color: #7249bf;
+  border: 2px solid #7249bf;
+  border-radius: 0;
+  font-size: 14px;
+  border-radius: 35px;
+  
+}
+
+
 .signin {
   background-image: url('../image/guest-user-background.png');
-    margin-bottom: 10px; 
-    min-height: 70px;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    top: 0;
-    left: 0;
-    display: inline-block;
-    border-bottom: 1px solid rgba(255,255,255,.3);
+  margin-bottom: 10px;
+  min-height: 70px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
 
 .blue-button {
@@ -55,14 +85,17 @@
   display: table;
   color: #fff;
 }
-.main-menu{
+
+.main-menu {
   display: table;
 }
-.mobile-os-list{
+
+.mobile-os-list {
   position: absolute;
   float: right;
   right: 50px;
 }
+
 .button:hover,
 :active {
 
@@ -101,9 +134,11 @@
   transition: .3s;
   overflow: auto;
 }
+
 .download-button h3 {
   font-size: 22px;
 }
+
 .hidden-xs {
   align-content: center !important;
   align-items: center !important;
@@ -111,7 +146,7 @@
   font-size: 20px
 }
 
-.dropdown-menu{
+.dropdown-menu {
   position: absolute;
   background: #191D4F !important;
   min-width: 240px;
@@ -121,8 +156,9 @@
   float: right;
   z-index: 1000;
 }
-.dropdown-menu li a:hover{
-    color:#fff;
+
+.dropdown-menu li a:hover {
+  color: #fff;
 }
 
 /* The side navigation menu */
@@ -145,7 +181,7 @@
   /* Place content 60px from the top */
   transition: 0.5s;
   /* 0.5 second transition effect to slide in the sidenav */
-  
+
 }
 
 /* The navigation menu links */
@@ -201,7 +237,7 @@
   left: 0;
   background-color: #00021C;
   background-color: #00021C;
- 
+
 }
 
 .overlay-content {
@@ -211,7 +247,7 @@
   text-align: center;
   margin-top: 30px;
   margin: auto;
-  
+
 }
 
 .overlay .closebtn {
@@ -233,6 +269,7 @@
   border: 1px solid #101340 !important;
   border-radius: 5px;
 }
+
 .overlay input[type=text] {
   padding: 15px;
   font-size: 17px;
@@ -261,8 +298,9 @@
   left: 0;
   background-color: #00021C;
   background-color: #00021C;
- 
+
 }
+
 .SignIn-overlay .closebtn {
   position: fixed;
   top: 0;
@@ -271,10 +309,12 @@
   cursor: pointer;
   color: #e4edf0;
 }
-.SignIn-overlay .closebtn :hover{
+
+.SignIn-overlay .closebtn :hover {
   color: red;
 }
-.SignIn-overlay .center{
+
+.SignIn-overlay .center {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -282,29 +322,33 @@
   width: 400px;
   background: #191d4f;
   border-radius: 10px;
-  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
   scroll-behavior: auto;
   max-width: 320px;
   min-height: 300px;
 }
-.center h2{
+
+.center h2 {
   text-align: center;
   padding: 20px 0;
   border-bottom: .5px solid rgb(248, 248, 248);
   color: #fff;
   font-size: 22px;
 }
-.center form{
+
+.center form {
   padding: 0 40px;
   box-sizing: border-box;
 }
-form .txt_field{
+
+form .txt_field {
   position: relative;
   border-bottom: 2px solid #adadad;
   margin: 30px 0;
   color: #ffff;
 }
-.txt_field input{
+
+.txt_field input {
   width: 100%;
   padding: 0 5px;
   height: 40px;
@@ -313,7 +357,8 @@ form .txt_field{
   background: transparent;
   outline: none;
 }
-.txt_field label{
+
+.txt_field label {
   position: absolute;
   top: 50%;
   left: 5px;
@@ -323,7 +368,8 @@ form .txt_field{
   pointer-events: none;
   transition: .5s;
 }
-.txt_field span::before{
+
+.txt_field span::before {
   content: '';
   position: absolute;
   top: 40px;
@@ -333,25 +379,30 @@ form .txt_field{
   background: #e9bb6b;
   transition: .5s;
 }
-.txt_field input:focus ~ label,
-.txt_field input:valid ~ label{
+
+.txt_field input:focus~label,
+.txt_field input:valid~label {
   top: -5px;
   color: #9c9a8c;
 }
-.txt_field input:focus ~ span::before,
-.txt_field input:valid ~ span::before{
+
+.txt_field input:focus~span::before,
+.txt_field input:valid~span::before {
   width: 100%;
 }
-.pass{
+
+.pass {
   margin: -25px 0 20px 5px;
   color: #a6a6a6;
   cursor: pointer;
 }
-.pass:hover{
-  text-decoration:none;
+
+.pass:hover {
+  text-decoration: none;
   cursor: pointer;
 }
-input[type="submit"]{
+
+input[type="submit"] {
   width: 50%;
   height: 40px;
   border: .1px solid;
@@ -364,11 +415,13 @@ input[type="submit"]{
   cursor: pointer;
   outline: none;
 }
-input[type="submit"]:hover{
+
+input[type="submit"]:hover {
   border-color: #efe44e;
   transition: .5s;
 }
-input[type="sign-up"]{
+
+input[type="sign-up"] {
   width: 50%;
   height: 40px;
   border: .1px solid;
@@ -382,24 +435,29 @@ input[type="sign-up"]{
   outline: none;
   text-align: center;
 }
-input[type="sign-up"]:hover{
+
+input[type="sign-up"]:hover {
   border-color: #efe44e;
   transition: .5s;
 }
-.signup_link{
+
+.signup_link {
   margin: 30px 0;
   text-align: center;
   font-size: 16px;
   color: #666666;
 }
-.signup_link a{
+
+.signup_link a {
   color: #2691d9;
   text-decoration: none;
 }
-.signup_link a:hover{
+
+.signup_link a:hover {
   text-decoration: underline;
 }
-.hr-lines{
+
+.hr-lines {
   position: relative;
   max-width: 500px;
   margin: 10px auto;
@@ -408,8 +466,9 @@ input[type="sign-up"]:hover{
   font-size: 20px;
   font-weight: 200;
 }
-.hr-lines:before{
-  content:" ";
+
+.hr-lines:before {
+  content: " ";
   height: 1px;
   width: 80px;
   background: #818597;
@@ -418,8 +477,9 @@ input[type="sign-up"]:hover{
   top: 50%;
   left: 0;
 }
-.hr-lines:after{
-  content:" ";
+
+.hr-lines:after {
+  content: " ";
   height: 1px;
   width: 80px;
   background: #818597;
@@ -428,21 +488,23 @@ input[type="sign-up"]:hover{
   top: 50%;
   right: 0;
 }
-.social{
+
+.social {
   margin-top: 5px;
   display: inline-flex;
   margin-left: 85px;
-  }
-  .social div{
+}
+
+.social div {
   width: 20px;
   border-radius: 3px;
   padding: 1px 30px 3px 5px;
   color: #d68c47;
   text-align: center;
-  }
+}
 
-  /* Sign up form navbar  */
-.SignUP-Overlay{
+/* Sign up form navbar  */
+.SignUP-Overlay {
   height: 100%;
   width: 100%;
   display: none;
@@ -452,8 +514,9 @@ input[type="sign-up"]:hover{
   left: 0;
   background-color: #00021C;
   background-color: #00021C;
- 
+
 }
+
 .SignUP-Overlay .closebtn {
   position: fixed;
   top: 0;
@@ -462,11 +525,12 @@ input[type="sign-up"]:hover{
   cursor: pointer;
   color: #e4edf0;
 }
-.SignIn-overlay .closebtn :hover{
+
+.SignIn-overlay .closebtn :hover {
   color: red;
 }
 
-.SignUP-Overlay .center{
+.SignUP-Overlay .center {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -474,29 +538,33 @@ input[type="sign-up"]:hover{
   width: 400px;
   background: #191d4f;
   border-radius: 10px;
-  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
- 
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+
   max-width: 320px;
   min-height: 300px;
 }
-.center h2{
+
+.center h2 {
   text-align: center;
   padding: 20px 0;
   border-bottom: .5px solid rgb(248, 248, 248);
   color: #fff;
   font-size: 22px;
 }
-.center form{
+
+.center form {
   padding: 0 40px;
   box-sizing: border-box;
 }
-form .txt_field{
+
+form .txt_field {
   position: relative;
   border-bottom: 2px solid #adadad;
   margin: 30px 0;
   color: #ffff;
 }
-.txt_field input{
+
+.txt_field input {
   width: 100%;
   padding: 0 5px;
   height: 40px;
@@ -505,7 +573,8 @@ form .txt_field{
   background: none;
   outline: none;
 }
-.txt_field label{
+
+.txt_field label {
   position: absolute;
   top: 50%;
   left: 5px;
@@ -515,7 +584,8 @@ form .txt_field{
   pointer-events: none;
   transition: .5s;
 }
-.txt_field span::before{
+
+.txt_field span::before {
   content: '';
   position: absolute;
   top: 40px;
@@ -525,25 +595,30 @@ form .txt_field{
   background: #e9bb6b;
   transition: .5s;
 }
-.txt_field input:focus ~ label,
-.txt_field input:valid ~ label{
+
+.txt_field input:focus~label,
+.txt_field input:valid~label {
   top: -5px;
   color: #9c9a8c;
 }
-.txt_field input:focus ~ span::before,
-.txt_field input:valid ~ span::before{
+
+.txt_field input:focus~span::before,
+.txt_field input:valid~span::before {
   width: 100%;
 }
-.pass{
+
+.pass {
   margin: -25px 0 20px 5px;
   color: #a6a6a6;
   cursor: pointer;
 }
-.pass:hover{
-  text-decoration:none;
+
+.pass:hover {
+  text-decoration: none;
   cursor: pointer;
 }
-input[type="submit"]{
+
+input[type="submit"] {
   width: 50%;
   height: 40px;
   border: .1px solid;
@@ -556,21 +631,25 @@ input[type="submit"]{
   cursor: pointer;
   outline: none;
 }
-input[type="submit"]:hover{
+
+input[type="submit"]:hover {
   border-color: #efe44e;
   transition: .5s;
 }
-.signup_link{
+
+.signup_link {
   margin: 30px 0;
   text-align: center;
   font-size: 16px;
   color: #666666;
 }
-.signup_link a{
+
+.signup_link a {
   color: #2691d9;
   text-decoration: none;
 }
-.signup_link a:hover{
+
+.signup_link a:hover {
   text-decoration: underline;
 }
 
@@ -583,18 +662,20 @@ input[type="submit"]:hover{
   .sidenav a {
     font-size: 18px;
   }
-  .SignIn-overlay .center{
+
+  .SignIn-overlay .center {
     scroll-behavior: auto;
     margin-top: 150px;
     bottom: 20%;
-   width: 300px;
-   height: 450px;
+    width: 300px;
+    height: 450px;
   }
-  .SignUP-Overlay  .center{
+
+  .SignUP-Overlay .center {
     margin-top: 150px;
     bottom: 20%;
-   width: 300px;
-   height: 450px;
+    width: 300px;
+    height: 450px;
   }
 }
 
