@@ -20,11 +20,11 @@
     font-size: 30px;
     font-weight: 400;
     color: #ffff;
-
+    font-family: 'Montserrat', sans-serif;
 }
 
 .policy-content p {
-    font-family: OpenSansRegular;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     color: rgba(255,255,255,.5);
     text-align: justify;

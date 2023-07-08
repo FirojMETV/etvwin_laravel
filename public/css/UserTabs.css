@@ -95,7 +95,7 @@ input[type=file] {
     /* height: 50px; */
     width: 20px;
     border-bottom: 1px solid rgba(255,255,255,.15);
-    font-family: OpenSansRegular;
+    font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     color: rgba(255,255,255,1);
     text-align: left;
@@ -595,7 +595,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     line-height: 16px;
 }
 .plan-value h5{
-    font-family: fangsong;
+    font-family: 'Montserrat', sans-serif;
     color:#fff;
     font-size: 20px;
 }

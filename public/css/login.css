@@ -38,6 +38,7 @@
   border-bottom: .5px solid rgb(248, 248, 248);
   color: #fff;
   font-size: 22px;
+  font-family: 'Montserrat', sans-serif;
 }
 .center form{
   padding: 0 40px;
@@ -48,6 +49,7 @@ form .txt_field{
   border-bottom: 2px solid #adadad;
   margin: 30px 0;
   color: #ffff;
+  font-family: 'Montserrat', sans-serif;
 }
 .txt_field input{
   width: 100%;

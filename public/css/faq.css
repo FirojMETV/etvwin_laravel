@@ -32,7 +32,7 @@
     color: rgba(255,255,255,.8);
 }
 .policy-content p {
-    font-family: fangsong;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     color: rgba(255,255,255,.5);
     text-align: justify;
@@ -40,13 +40,13 @@
     margin-bottom: 10px;
 }
 .policy-content h1 {
-    font-family: fangsong;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 600;
     color: rgba(255,255,255,1);
 }
 .faq-headings {
-    font-family: fangsong;
+    font-family: 'Montserrat', sans-serif;
     display: table;
     margin: auto;
     font-size: 28px!important;

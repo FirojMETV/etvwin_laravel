@@ -68,7 +68,7 @@
     margin-bottom: 20px;
 }
 .title-holder h1 {
-    font-family: OpenSansRegular;
+    font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     color: #fff;
     text-align: left;
@@ -113,7 +113,7 @@ img {
     max-width: 100%;
 }
 .video-date {
-    font-family: OpenSansRegular;
+    font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     color: #fff;
     margin-left: 15px;
@@ -140,7 +140,7 @@ img {
 }
 
 .channel-object {
-    font-family: OpenSansRegular;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     color: rgba(255,255,255,.5);
     text-align: left;
@@ -166,7 +166,7 @@ img {
     display: block;
     padding: 0 10px;
     text-decoration: none;
-    font-family: OpenSansRegular;
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 600;
     color: rgba(255,255,255,.5);
@@ -237,7 +237,7 @@ input[type=checkbox], input[type=radio] {
     height: auto;
     overflow: hidden;
     margin-top: 10px;
-    font-family: OpenSansRegular;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     color: rgba(172,172,187,1);
     text-align: left;
@@ -245,7 +245,7 @@ input[type=checkbox], input[type=radio] {
 }
 .firstline {
     white-space: pre-line;
-    font-family: OpenSansRegular;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     color: #808197;
     text-align: left;

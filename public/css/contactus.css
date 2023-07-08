@@ -20,7 +20,7 @@
     margin-bottom: 20px;
 }
 .policy-header h1 {
-    font-family:fangsong;
+    font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     font-weight: 700;
     color: #fff;
@@ -30,7 +30,7 @@
     margin: auto;
 }
 .aboutus-content h1 {
-    font-family:fangsong;
+    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: 600;
     color: rgba(255,255,255,1);
@@ -40,7 +40,7 @@
     margin-bottom: 18px;
 }
 .aboutus-content h2 {
-    font-family:fangsong;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     color: rgba(255,255,255,.5);
     text-align: center;

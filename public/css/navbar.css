@@ -27,7 +27,7 @@
   text-transform: uppercase;
   font-size: 14px;
   min-width: auto;
-  font-family: OpenSansRegular;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .main-menu .nav-pills li a:hover {
