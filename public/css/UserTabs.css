@@ -39,8 +39,8 @@
     opacity: .4;
 }
 .profile-image-section {
-    top: 30%;
-    left: 35%;
+    top: 28%;
+    left: 33%;
     position: absolute;
 }
 #rounded-image-mob {
@@ -111,8 +111,8 @@ input[type=file] {
     float: right;
     top: 0;
     cursor: pointer;
-    margin-top: 55px;
-    margin-left: -30px;
+    margin-top: 35px;
+    margin-left: -20px;
     z-index: 4;
     position: relative;
 }
@@ -318,8 +318,6 @@ a {
 	border: none;
 	border-bottom: 2px solid #D1D1D4;
 	background: none;
-	/* padding: 10px;
-	padding-left: 24px; */
 	font-weight: 700;
 	width: 75%;
 	transition: .2s;
@@ -350,12 +348,6 @@ a {
 input[type="date"]::-webkit-calendar-picker-indicator {
     color: #b82d2d; /* Change the color of the calendar picker icon */
 }
-
-
-
-
-
-
 
 @media screen and (max-width: 500px){
 .profile-header {
@@ -472,11 +464,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
    font-size: 2rem !important;
 }
 }
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], 
-.ng-cloak, .x-ng-cloak, 
-.ng-hide:not(.ng-hide-animate) {
-    display: none !important;
-}
 
 @media screen and (max-width: 628px){
 .profile-header {
@@ -511,130 +498,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .container {
     width: 100%;
 }}
-/* ._md-datepicker-floating-label .md-datepicker {
-    overflow: visible;
-}
-._md-datepicker-floating-label .md-datepicker 
-.md-datepicker-button {
-    float: right;
-    position: absolute;
-    right: 0;
-    z-index: 9999;
-}
-._md-datepicker-floating-label .md-datepicker 
-.md-datepicker-input-container {
-    width: 100%;
-    margin: 0;
-    border-bottom: 1px solid rgba(255,255,255,.08);
-}
-.md-whiteframe-1dp, .md-whiteframe-z1 {
-    box-shadow: 0px 1px 3px 0px rgba(190, 155, 155, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
-}
-.md-datepicker-button:before, .md-datepicker-triangle-button.md-button.md-icon-button, md-datepicker .md-button.md-icon-button .md-ripple-container, md-datepicker md-icon svg {
-    display: none!important;
-}
-.md-datepicker-triangle-button.md-button.md-icon-button {
-}
 
-.md-button.md-icon-button {
-    margin: 0 6px;
-    height: 40px;
-    min-width: 0;
-    line-height: 24px;
-    padding: 8px;
-}
-.md-datepicker-triangle-button {
-    position: absolute;
-    right: 0;
-    top: 5px;
-    -webkit-transform: translateY(-25%) translateX(45%);
-    transform: translateY(-25%) translateX(45%);
-}
-.md-button {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    min-height: 36px;
-    min-width: 88px;
-    line-height: 36px;
-    vertical-align: middle;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-grid-row-align: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 3px;
-    box-sizing: border-box;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    outline: none;
-    border: 0;
-    padding: 0 6px;
-    margin: 6px 8px;
-    background: transparent;
-    color: currentColor;
-    white-space: nowrap;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 14px;
-    font-style: inherit;
-    font-variant: inherit;
-    font-family: inherit;
-    text-decoration: none;
-    overflow: hidden;
-    -webkit-transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-._md-datepicker-floating-label .md-datepicker {
-    overflow: visible;
-}
-._md-datepicker-floating-label .md-datepicker .md-datepicker-button {
-    float: right;
-    position: absolute;
-    right: 0;
-    z-index: 9999;
-}
-.md-datepicker {
-    white-space: nowrap;
-    overflow: hidden;
-    padding-right: 18px;
-    margin-right: -18px;
-    vertical-align: middle;
-}
-.md-button.md-icon-button .md-icon, button.md-button.md-fab .md-icon {
-    display: block;
-}
-
-.md-icon {
-    margin: auto;
-    background-repeat: no-repeat no-repeat;
-    display: inline-block;
-    vertical-align: middle;
-    fill: currentColor;
-    height: 24px;
-    width: 24px;
-    min-height: 24px;
-    min-width: 24px;
-}
-.md-icon {
-    color: #FFC908;
-}
-.md-button.md-icon-button {
-    margin: 0 6px;
-    height: 40px;
-    min-width: 0;
-    line-height: 24px;
-    padding: 8px;
-}
-.md-icon.md-datepicker-calendar-icon.ng-scope:before {
-    content: "\e910";
-    font-family: icomoon!important;
-    font-size: 19px;
-    margin-right: -18px;
-    color: rgba(190,191,208,1);
-}  */
 
 
 .subscription-top-margin {

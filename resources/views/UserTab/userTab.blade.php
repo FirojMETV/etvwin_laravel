@@ -54,14 +54,15 @@
                                 <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 blur-container">
                                     <div class="blur-bg" style="background-image:url('{{ asset('image/usericon.png') }}')">
                                     </div>
-                                    <div class="image-section profile-image-section"> <img alt="image" class="img-circle"
-                                            id="rounded-image" src="{{ asset('image/usericon.png') }}"
-                                            lazy-img="{{ asset('image/usericon.png') }}"> <input type="file"
-                                            name="imageselect" class="inputfile" id="imageselect"
+                                    <div class="image-section profile-image-section">
+                                        <img alt="image" class="img-circle" id="rounded-image"
+                                            src="{{ asset('image/usericon.png') }}"
+                                            lazy-img="{{ asset('image/usericon.png') }}" height="200px" width="200px">
+                                        <input type="file" name="imageselect" class="inputfile" id="imageselect"
                                             onchange="angular.element(this).scope().profileCtrl.imageChanged(this)"><label
                                             for="imageselect" class="upload-label"><span
                                                 class="glyphicon glyphicon-pencil edit-button"
-                                                style="left: 8px;top: 4px; color:#000"></span></label> <button
+                                                style="left: 7px;top: 5px; color:#000"></span></label> <button
                                             ng-disabled="profileCtrl.isRemoveDisabled" ng-click="profileCtrl.removeImage()"
                                             class="form-button remove-btn-web" disabled="disabled">REMOVE</button>
                                         <div class="cropArea">
@@ -77,18 +78,24 @@
                                     <form method="POST">
                                         <div class="login__field">
                                             <label for="name">NAME</label>
-                                            <input type="text" id="name" name="name" class="login__input"
-                                                required>
+                                            <input type="text" id="name" name="name"
+                                                class="login__input required-input">
+                                            <span class="error-message" style="display: none;"> This field cannot be
+                                                blank.</span>
                                         </div>
                                         <div class="login__field">
                                             <label for="dob">DOB</label>
-                                            <input type="date" id="dob" name="dob" class="login__input "
-                                                required>
+                                            <input type="date" id="dob" name="dob"
+                                                class="login__input required-input">
+                                            <span class="error-message" style="display: none;"> This field cannot be
+                                                blank.</span>
                                         </div>
                                         <div class="login__field">
                                             <label for="location">LOCATION *</label>
-                                            <input type="text" id="location" name="location" class="login__input"
-                                                required>
+                                            <input type="text" id="location" name="location"
+                                                class="login__input required-input">
+                                            <span class="error-message" style="display: none;"> This field cannot be
+                                                blank.</span>
                                         </div>
                                         <div class="login__field">
                                             <label for="gender-select">GENDER</label>
@@ -131,12 +138,12 @@
 
                                             <img alt="image" class="img-circle ng-scope"
                                                 src="{{ asset('image/usericon.png') }}"
-                                                lazy-img="{{ asset('image/usericon.png') }}">
+                                                lazy-img="{{ asset('image/usericon.png') }}" height="200px" width="200px">
 
                                             <input type="file" name="imageselect" class="inputfile" id="imageselect">
                                             <label for="imageselect" class="upload-label">
                                                 <span class="glyphicon glyphicon-pencil edit-button"
-                                                    style="left: 8px;top: 5px; color:#000 ;">
+                                                    style="left:7px;top: 5px; color:#000 ;">
                                                 </span>
                                             </label>
                                             <div class="cropArea">
@@ -234,20 +241,22 @@
                                                     <ul class="radiolinks subscribe-radiolinks">
                                                         <li class="subscribe-radiobuttons md-checked">
                                                             <div style="display: inline-flex">
-                                                                <input class="subscribe-radio md-checked" ng-value="pricing" id="Basic"
-                                                                    role="radio" name="plan" value="Basic" aria-label="₹365₹499"
-                                                                    type="radio" onclick="showSelectedPlan(this)" >
+                                                                <input class="subscribe-radio md-checked"
+                                                                    ng-value="pricing" id="Basic" role="radio"
+                                                                    name="plan" value="Basic" aria-label="₹365₹499"
+                                                                    type="radio" onclick="showSelectedPlan(this)">
                                                                 <div ng-transclude="" class="md-label">
                                                                     <span class="plan-price ng-binding ng-scope">₹365
                                                                     </span>
                                                                     <span ng-if="pricing.strikedPrice"
                                                                         class="striked-value ng-binding ng-scope">₹499
                                                                     </span>
-                                                                    
+
                                                                 </div>
                                                             </div>
                                                             <div class="plans-period-description">
-                                                                <h3 class="plans-period ng-binding ng-scope">(Inaugural Offer)
+                                                                <h3 class="plans-period ng-binding ng-scope">(Inaugural
+                                                                    Offer)
                                                                 </h3>
                                                                 <h3 class="plans-period ng-binding">per Year
                                                                 </h3>
@@ -266,14 +275,16 @@
                                                     <ul class="radiolinks subscribe-radiolinks">
                                                         <li class="subscribe-radiobuttons">
                                                             <div style="display: inline-flex">
-                                                                <input class="subscribe-radio" id="premiumMonthly" name="plan" value="premiumMonthly" aria-label="₹99"
-                                                                    type="radio" onclick="showSelectedPlan(this)">
+                                                                <input class="subscribe-radio" id="premiumMonthly"
+                                                                    name="plan" value="premiumMonthly"
+                                                                    aria-label="₹99" type="radio"
+                                                                    onclick="showSelectedPlan(this)">
                                                                 <div ng-transclude="" class="md-label"><span
                                                                         class="plan-price ng-binding ng-scope">₹99</span>
                                                                 </div>
                                                             </div>
                                                             <div class="plans-period-description">
-                        
+
                                                                 <h3 class="plans-period ng-binding">per Month</h3>
                                                             </div>
                                                         </li>
@@ -285,8 +296,10 @@
                                                     <ul class="radiolinks subscribe-radiolinks">
                                                         <li class="subscribe-radiobuttons">
                                                             <div style="display: inline-flex">
-                                                                <input ng-value="pricing" id="PremiumYearly" type="radio" name="plan"
-                                                                    value="PremiumYearly" aria-label="₹499₹699" onclick="showSelectedPlan(this)">
+                                                                <input ng-value="pricing" id="PremiumYearly"
+                                                                    type="radio" name="plan" value="PremiumYearly"
+                                                                    aria-label="₹499₹699"
+                                                                    onclick="showSelectedPlan(this)">
                                                                 <div ng-transclude="" class="md-label">
                                                                     <span class="plan-price ng-binding ng-scope">₹499
                                                                     </span>
@@ -307,7 +320,7 @@
                                         </div>
                                     </div>
                                 </div>
-                        
+
                                 <div class="free-days-text">
                                 </div>
                                 <div class="subsciption-details text-color-white">
@@ -316,15 +329,15 @@
                                             <tr>
                                                 <th class="plan-category ng-binding ng-scope text-left" style="">
                                                     Features</th>
-                        
+
                                                 <th class="plan-category ng-binding ng-scope" style="">
                                                     Basic</th>
                                                 <th class="plan-category ng-binding ng-scope"> Premium</th>
-                        
+
                                             </tr>
                                         </thead>
                                         <tbody>
-                        
+
                                             <tr class="pack-item ng-scope" style="">
                                                 <td class="plan-info">
                                                     <h4 ng-bind="feature.info" class="ng-binding">Video Quality</h4>
@@ -335,8 +348,9 @@
                                                 </td>
                                                 <td class="plan-value ng-scope">
                                                     <h5 ng-if="feature.premiumValue!=='yes' &amp;&amp; feature.premiumValue!=='no'"
-                                                        ng-bind="feature.premiumValue" class="ng-binding ng-scope">Full HD</h5>
-                        
+                                                        ng-bind="feature.premiumValue" class="ng-binding ng-scope">Full HD
+                                                    </h5>
+
                                                 </td>
                                             </tr>
                                             <tr class="pack-item ng-scope">
@@ -344,10 +358,10 @@
                                                     <h4 ng-bind="feature.info" class="ng-binding">Before TV</h4>
                                                 </td>
                                                 <td class="plan-value">
-                        
-                                                    <img ng-if="feature.value=='yes'" alt="image" src="{{ asset('image/tick.png') }}"
-                                                        class="ng-scope">
-                        
+
+                                                    <img ng-if="feature.value=='yes'" alt="image"
+                                                        src="{{ asset('image/tick.png') }}" class="ng-scope">
+
                                                 </td>
                                                 <td class="plan-value ng-scope">
                                                     <img ng-if="feature.premiumValue=='yes'" alt="image"
@@ -359,8 +373,8 @@
                                                     <h4 ng-bind="feature.info" class="ng-binding">Live TV </h4>
                                                 </td>
                                                 <td class="plan-value">
-                                                    <img ng-if="feature.value=='yes'" alt="image" src="{{ asset('image/tick.png') }}"
-                                                        class="ng-scope">
+                                                    <img ng-if="feature.value=='yes'" alt="image"
+                                                        src="{{ asset('image/tick.png') }}" class="ng-scope">
                                                 </td>
                                                 <td class="plan-value ng-scope">
                                                     <img ng-if="feature.premiumValue=='yes'" alt="image"
@@ -372,8 +386,9 @@
                                                     <h4 ng-bind="feature.info" class="ng-binding">Screens</h4>
                                                 </td>
                                                 <td class="plan-value">
-                                                    <h5 ng-if="feature.value!=='yes' &amp;&amp; feature.value!=='no'" ng-bind="feature.value"
-                                                        class="ng-binding ng-scope">1 (Mobile only)</h5>
+                                                    <h5 ng-if="feature.value!=='yes' &amp;&amp; feature.value!=='no'"
+                                                        ng-bind="feature.value" class="ng-binding ng-scope">1 (Mobile
+                                                        only)</h5>
                                                 </td>
                                                 <td class="plan-value ng-scope">
                                                     <h5 ng-if="feature.premiumValue!=='yes' &amp;&amp; feature.premiumValue!=='no'"
@@ -385,16 +400,16 @@
                                                     <h4 ng-bind="feature.info" class="ng-binding">Exclusive</h4>
                                                 </td>
                                                 <td class="plan-value">
-                        
-                                                    <img ng-if="feature.value=='yes'" alt="image" src="{{ asset('image/tick.png') }}"
-                                                        class="ng-scope">
-                        
+
+                                                    <img ng-if="feature.value=='yes'" alt="image"
+                                                        src="{{ asset('image/tick.png') }}" class="ng-scope">
+
                                                 </td>
                                                 <td class="plan-value ng-scope" ng-if="feature.premiumValue">
-                        
+
                                                     <img ng-if="feature.premiumValue=='yes'" alt="image"
                                                         src="{{ asset('image/tick.png') }}" class="ng-scope">
-                        
+
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -402,7 +417,8 @@
                                 </div>
                                 <div class="subscription-bottom-div">
                                     <div class="note-div">
-                                        <p style=" color: #fff;">HD, Full HD, 4K (2160p) Video Qualities are available only when content is supported in their
+                                        <p style=" color: #fff;">HD, Full HD, 4K (2160p) Video Qualities are available only
+                                            when content is supported in their
                                             respective resolutions</p>
                                     </div>
                                     <div class="selected-plan-details">
@@ -413,7 +429,7 @@
                                         <button class="subscribe-button">
                                             <span>
                                                 <img src="{{ asset('image/crown-subscribe.png') }}"
-                                                 class="crown-subscribe" alt="Crown">
+                                                    class="crown-subscribe" alt="Crown">
                                             </span>
                                             Subscribe
                                         </button>
@@ -429,6 +445,4 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="{{ asset('js/tabs.js') }}"></script>
-
-  
 @endsection

@@ -41,8 +41,6 @@ tabs.forEach((tab, index) => {
 
 
 
-
-
   const userProfile = document.getElementById('user-profile');
   const editProfile = document.getElementById('editprofile');
   const editButton = document.getElementById('edit-button');
