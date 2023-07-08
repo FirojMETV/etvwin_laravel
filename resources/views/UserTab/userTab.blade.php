@@ -118,7 +118,7 @@
                             {{-- current user data like profile or subscribtion plan  --}}
                             <div class="profile-section ng-scope" id='user-profile'>
                                 <div class="row edit-area">
-                                    <button id="edit-button" class="form-button profile-edit-button">
+                                    <button id="edit-button" class="form-buttons profile-edit-button">
                                         EDIT
                                     </button>
                                 </div>

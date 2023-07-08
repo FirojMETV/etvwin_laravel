@@ -251,13 +251,14 @@ a {
     overflow: hidden;
     background: #000;
 }
-.edit-area .form-button {
+.edit-area .form-buttons {
     width: 60px;
-    background: rgba(255,255,255,.2);
+    background: transparent;
     border: none;
     font-size: 12px;
     height: 30px;
     z-index: 10;
+    color: #fff;
 }
 .edit-area {
     padding: 20px 20px 0 0;

@@ -60,6 +60,7 @@ tabs.forEach((tab, index) => {
 
   // Add event listeners
   editButton.addEventListener('click', switchToEditProfile);
-  saveButton.addEventListener('click', switchToUserProfile);
 
 
+// userProfile.style.display='none';
+editProfile.style.display='none';
