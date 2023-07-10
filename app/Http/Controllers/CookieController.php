@@ -5,8 +5,14 @@ use Illuminate\Http\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Str;
+use App\Models\User;
+use App\Services\ApiService;
+
 class CookieController extends Controller
 {
+    public $BASE_URL = "https://stagingott.etvwin.com/";
+    public $AUTHTOKEN = "q5u8JMWTd2698ncg7q4Q ";
+
     public function setCookie(Request $request) {
       
     $authToken = 'q5u8JMWTd2698ncg7q4Q'; //auth_token
@@ -236,4 +242,33 @@ class CookieController extends Controller
         ]);
        
      }
+    
+     public function apitesting(){
+        $url = $this->BASE_URL."?auth_token=".$this->AUTHTOKEN;
+         $user_model= new User;
+        echo ($user_model) ;   
+        $data =$this->$user_model->APIMODEL($url);
+
+        return $data;
+       
+        //return APIMODEL($url);
+     }
 }
+
+
+    // public function __construct(ApiService $apiService)
+    // {
+    //     $this->apiService = $apiService;
+    // }
+
+    // public function index()
+    // {
+    //     $url = 'https://api.example.com';
+    //     $response = $this->apiService->makeApiRequest($url);
+
+    //     // Process the response
+    //     // ...
+
+    //     return view('users.index', ['response' => $response]);
+    // }
+

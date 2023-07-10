@@ -19,8 +19,8 @@
         </div>
 
         {{-- center text  --}}
-        <div class="main-menu" >
-            <ul class="nav navbar-nav nav-pills hidden-xs " style="display: inline-flex" >
+        <div class="main-menu">
+            <ul class="nav navbar-nav nav-pills hidden-xs " style="display: inline-flex">
                 <li class="active">
                     <a class="nav-link " href="{{ url('/home') }}">HOME</a>
                 </li>
@@ -86,16 +86,18 @@
 
 <div id="mySidenav" class="sidenav " style="display:none;">
     <div class="signin">
-        <h5 style="padding-left: 010px; color:#dddd "> hey guest user !! </h5>
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="d-inline" style="margin-bottom:30px;">
-            <button href="{{ asset('login') }}" onclick="openSignIN()" type="button"
-                class="col-sm-2 col-xs-4 btn form-button blue-button" style="margin-right: 4px ">
-                SIGN IN</button>
-            <button href="{{ asset('registration') }}" type="button"
-                class="col-sm-2 col-xs-4 btn form-button blue-button" onclick="SignUPopen()">
-                SIGN UP
-            </button>
+        <div class="guest-user-option">
+            <h5 style="padding-left:  10px; color:#dddd "> hey guest user !! </h5>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="d-inline" style="margin-bottom:30px;">
+                <button href="{{ asset('login') }}" onclick="openSignIN()" type="button"
+                    class="col-sm-6 col-xs-6 btn form-button blue-button" style="margin-right: 4px ">
+                    SIGN IN</button>
+                <button href="{{ asset('registration') }}" type="button"
+                    class="col-sm-6 col-xs-6 btn guest-sign-up form-button" onclick="SignUPopen()">
+                    SIGN UP
+                </button>
+            </div>
         </div>
     </div>
     <div style="margin-bottom: 60px; margin-top:10px;">
@@ -115,7 +117,7 @@
         <hr class="hr">
 
     </div>
-    <div class="download-button" id="mydownload">
+    <div class="download-button" id="mydownload" style="width: 70%; visibility: visible;">
         <h3 style="color: #888888dd">
             DOWNLOAD APP
             <span class="fa fa-apple" style="font-size:26px">

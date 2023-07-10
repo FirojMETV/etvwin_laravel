@@ -79,3 +79,11 @@ Route::get('Videotv',function(){
 Route::get('usertab', function () {
     return view('UserTab/userTab');
 });
+Route::get('navbar',function(){
+    return view('Cookies/navbar');
+});
+Route::get('apitsting',[CookieController::class, 'apitesting']);
+
+Route::get('watchlater',function(){
+    return view('WatchLater/watchlater');
+});

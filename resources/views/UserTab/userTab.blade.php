@@ -41,7 +41,7 @@
                         <li class="tab">
                             <a data-toggle="tab" class="profile-tab">SUBSCRIPTION</a>
                         </li class='tab'>
-                        <li>
+                        <li class="tab">
                             <a data-toggle="tab" class="profile-tab">TRANSACTIONS</a>
                         </li>
                     </ul>
@@ -138,7 +138,8 @@
 
                                             <img alt="image" class="img-circle ng-scope"
                                                 src="{{ asset('image/usericon.png') }}"
-                                                lazy-img="{{ asset('image/usericon.png') }}" height="200px" width="200px">
+                                                lazy-img="{{ asset('image/usericon.png') }}" height="200px"
+                                                width="200px">
 
                                             <input type="file" name="imageselect" class="inputfile" id="imageselect">
                                             <label for="imageselect" class="upload-label">
@@ -438,6 +439,70 @@
                             </div>
                         </div>
 
+
+                        {{-- Transaction pages --}}
+
+                        <div class="content row transaction-division">
+                            <h1 class="transaction-heading">
+                                Transaction Details
+                            </h1>
+                            <div class="subsciption-details">
+                                <table class="features">
+                                    <thead class="features-head-transactions">
+                                        <tr>
+                                            <th class="plan-category-transaction text-left" style="">
+                                                Date
+                                            </th>
+
+                                            <th class="plan-category-transaction" style="">
+                                                Description
+                                            </th>
+
+                                            <th class="plan-category-transaction ">
+                                                Plan Duration </th>
+                                            <th class="plan-category-transaction ">
+                                                Status </th>
+                                            <th class="plan-category-transaction ">
+                                                Amount  </th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="pack-item ng-scope" >
+                                            <td class="plan-info-transactions">
+                                                <h4>Date</h4>
+                                            </td>
+                                            <td class="plan-value-details">
+                                                <h4>
+                                                    Plan Details
+                                                </h4>
+                                            </td>
+                                            <td class="plan-value-details" >
+                                              <h4>
+                                                Duration time
+                                                </h4> 
+                                            </td>
+                                            <td class="plan-value-details" >
+                                                <h4>
+                                                    Status
+                                                  </h4> 
+                                              </td>
+                                              <td class="plan-value-details" >
+                                                <h4>
+                                                    &#8377; 
+                                                  </h4> 
+                                              </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            {{-- <div>
+                                <p class="transaction-null">
+                                    No records to show
+                                </p>
+                            </div> --}}
+                        </div>
                     </div>
                 </div>
             </div>

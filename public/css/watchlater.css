@@ -1,0 +1,157 @@
+.ekta-view {
+    top: 80px;
+    position: relative;
+    min-height: 500px;
+    background-color: #00021c;
+   margin-bottom: 70px;
+}
+.custom-margin-container {
+    margin-right: 35px;
+    margin-left: 50px;
+}
+.watch-later-header {
+    position: absolute;
+    top: 30px;
+}
+.watch-later-header h1, .watch-live-header h1 {
+    position: relative;
+    font-size: 24px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+.watchlater-button-area {
+    position: relative;
+    width: 100%;
+    text-align: right;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.watchlater-button-area a {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 15px;
+    text-decoration: none;
+}
+.watch-later-item {
+    padding: 0 15px 20px 0;
+}
+.card-item {
+    position: relative;
+    border-radius: 3px;
+    display: block;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+}
+.card-item .image-holder {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.card-item .image-holder img {
+    transition: all .2s ease-in-out;
+}
+
+.card-item .premium-badge {
+    width: 20px!important;
+    position: absolute;
+    top: 8px;
+    left: 10px;
+}
+
+img.premium-badge {
+    width: 40px!important;
+    position: absolute;
+    top: 12px;
+    left: 15px;
+}
+.card-item img {
+    width: 100%;
+    border-radius: 3px 3px 0 0;
+}
+img{
+    max-width: 100%;
+}
+[role=button] {
+    cursor: pointer;
+}
+
+#small-play-btn {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 12px;
+    bottom: 10px;
+}
+.card-item h6, .card-item .thumbnail-content h6 {
+    font-size: 14px;
+    position: relative;
+    color: #b6b5b5;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 10px 0 10px;
+    text-overflow: ellipsis;
+}
+@media screen and (max-width: 800px){
+.ekta-view.top-large {
+    top: 115px!important;
+}}
+
+@media screen and (max-width: 500px){
+.ekta-view {
+    top: 100px;
+}
+.container {
+    padding: 0;
+    overflow: hidden;
+}
+.custom-margin-container {
+    margin-right: 6px;
+    margin-left: 6px;
+}
+.watch-later-header {
+    margin-left: 0;
+}
+.watch-later-header h1 {
+    font-size: 18px;
+    margin-left: 18px;
+}
+.watchlater-button-area a {
+    font-size: 14px;
+    margin-right: 20px;
+}
+}
+@media screen and (max-width: 862px){
+.container {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+.col-xs-6, .list-container .col-sm-3 {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+#small-play-btn {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.card-item .premium-badge {
+    width: 20px!important;
+    top: 8px!important;
+    left: 5px!important;
+}
+.card-item h4, 
+.card-item h6,
+ .card-item .thumbnail-content h4,
+  .card-item .thumbnail-content h6,
+   .event-item h6 {
+    font-size: 12px;
+    padding-bottom: 2px;
+}
+}
+a{
+    text-decoration: none;
+}

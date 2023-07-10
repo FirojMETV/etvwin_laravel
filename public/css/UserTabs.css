@@ -349,6 +349,33 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: #b82d2d; /* Change the color of the calendar picker icon */
 }
 
+.features-head-transactions {
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.plan-category-transaction {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #ffc908;
+    font-size: 20px;
+    text-align: center;
+}
+.plan-category-transaction.text-left {
+    text-align: left;
+    padding-left: 30px;
+}
+.plan-info-transactions {
+    padding: 10px;
+    padding-left: 40px;
+    color: #f9f8fb;
+}
+.plan-value-details {
+    text-align: center;
+    color: #fff;
+}
+.plans-period {
+    font-size: 16px;
+    color: #caaeff;
+}
 @media screen and (max-width: 500px){
 .profile-header {
     margin-top: 40px;
@@ -484,7 +511,39 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 @media screen and (max-width: 800px){
 .ekta-view.top-small {
     top: 46px!important;
-}}
+}
+.transaction-heading {
+    font-size: 18px;
+    margin-top: 12px;
+    margin-left: 35px;
+    margin-bottom: 12px;
+}
+.plan-category-transaction {
+    font-size: 14px;
+    text-align: center;
+}
+.plan-info-transactions {
+    padding: 0px;
+    padding-left: 34px;
+    color: #f9f8fb;
+}
+.plan-value-details {
+    text-align: center;
+    color: #fff;
+}
+.plan-value-details h4{
+    font-size: 13px;
+}
+.plan-info-transactions {
+    padding: 0px;
+    padding-left: 30px;
+    color: #f9f8fb;
+}
+.plan-info-transactions h4 {
+   font-size: 13px;
+    color: #f9f8fb;
+}
+}
 @media screen and (max-width: 862px){
 .container {
     padding-right: 38px;
@@ -587,7 +646,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     text-align: center;
 }
 .plans-period {
-    font-size: 15px;
+    font-size: 16px;
     color: #caaeff;
 }
 .plans-period-description {
@@ -608,7 +667,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding-top: 20px;
     padding-bottom: 20px;
     color: #fff;
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
 }
 .subscription-bottom-div {
@@ -661,6 +720,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 img {
     max-width: 100%;
+}
+.transaction-division {
+    background: #00021c;
+}
+.transaction-heading {
+    font-size: 24px;
+    color: #fff;
+}
+.transaction-null {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 80px;
 }
 @media only screen and (max-width: 600px) {
     .subscription-plans-list{

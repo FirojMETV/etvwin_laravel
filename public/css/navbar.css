@@ -3,7 +3,7 @@
   background-color: #00021C;
   width: 100%;
   border-radius: 0%;
-  height: 80px;
+  height: 80px; 
   top: 0%;
 }
 
@@ -61,6 +61,16 @@
   border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
 
+.guest-user-option button {
+  width: 75px!important;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  white-space: nowrap;
+  font-size: 12px;
+  height: 35px;
+}
 .blue-button {
   background: #7249bf;
   font-size: 100%;
@@ -72,7 +82,11 @@
   transform: scale(1);
 
 }
-
+.guest-sign-up {
+  border: 2px solid #7249bf;
+  background: 0 0;
+  color: #fff;
+}
 .from-button {
   font-size: 100%;
   background: #7249bf;
@@ -85,7 +99,11 @@
   display: table;
   color: #fff;
 }
-
+@media screen and (max-width: 862px){
+.col-xs-6, .list-container .col-sm-3 {
+    padding-right: 5px;
+    padding-left: 5px;
+}}
 .main-menu {
   display: table;
 }
@@ -122,18 +140,17 @@
 }
 
 .download-button {
-  width: 233px;
+  width: 0;
   position: fixed;
-  background: #020018;
+  background: #00021c;
   bottom: 0;
   z-index: 1990;
   left: 0;
-  min-height: 35px;
-  /* min-width: 200px; */
-  max-width: 800px;
+  min-height: 80px;
   transition: .3s;
   overflow: auto;
 }
+
 
 .download-button h3 {
   font-size: 22px;
