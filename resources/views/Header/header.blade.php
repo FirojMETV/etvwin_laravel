@@ -17,30 +17,61 @@
                     class="logo-img sm:pd-6 ">
             </a>
         </div>
-
+    </div>
         {{-- center text  --}}
         <div class="main-menu">
-            <ul class="nav navbar-nav nav-pills hidden-xs " style="display: inline-flex">
-                <li class="active">
-                    <a class="nav-link " href="{{ url('/home') }}">HOME</a>
+            <ul class="nav navbar-nav nav-pills">
+                <li class="dropdown ng-scope active" role="button" tabindex="0" style="">
+                    <a ng-href="/home" ng-click="openDropDown(tab.display_title.toLowerCase())" class="dropbtn ng-binding"
+                        href="/home">HOME</a>
+                    <span aria-hidden="true"></span>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="{{ url('/tv-shows') }}">TV SHOWS</a>
+                <li class="dropdown " role="button" tabindex="0" style="">
+                    <a ng-href="/tv-shows" class="dropbtn ng-binding" href="/tv-shows">TV SHOWS
+                    </a>
+                    <span aria-hidden="true"></span>
+    
+                    <ul class="dropdown-content drop-center-aligned ng-scope">
+                    </ul>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="{{ url('/movies') }}">MOVIES</a>
+                <li class="dropdown " role="button" tabindex="0">
+                    <a class="dropbtn ng-binding" href="/telugu-movies">MOVIES</a>
+                    <span aria-hidden="true">
+                    </span>
+    
+                    <ul class="dropdown-content drop-center-aligned ng-scope">
+                    </ul>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="{{ url('/live-tv') }}">LIVE TV</a>
+                <li class="dropdown ng-scope" role="button" tabindex="0">
+                    <a class="dropbtn ng-binding" href="/live">LIVE TV</a>
+                    <span aria-hidden="true"></span>
+    
+                    <ul ng-if="tab.friendly_id!='home'" class="dropdown-content drop-center-aligned ng-scope">
+    
+                    </ul>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="{{ url('/news') }}">NEWS</a>
+                <li class="dropdown ng-scope" role="button" tabindex="0">
+                    <a class="dropbtn ng-binding" href="/news">NEWS</a>
+                    <span aria-hidden="true"></span>
+                    <ul class="dropdown-content drop-center-aligned ng-scope">
+    
+                    </ul>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="{{ url('/food') }}">FOOD</a>
+                <li class="dropdown ng-scope" role="button" tabindex="0">
+                    <a class="dropbtn ng-binding" href="/recipes">FOOD</a>
+                    <span aria-hidden="true">
+                    </span>
+                    <ul class="dropdown-content drop-center-aligned ng-scope">
+    
+                    </ul>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="{{ url('/health') }}">HEALTH</a>
+                <li class="dropdown ng-scope" role="button" tabindex="0">
+                    <a class="dropbtn ng-binding" href="/health">HEALTH
+                    </a>
+                    <span ng-class="{'more-icon':tab.display_title == 'MORE'}" aria-hidden="true">
+                    </span>
+                    <ul class="dropdown-content drop-center-aligned ng-scope">
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -79,12 +110,17 @@
 
             </ul>
         </div>
+    
     </div>
 </div>
-{{-- Side-Drawer for menu --}}
+
+    {{-- Side-Drawer for menu --}}
 
 
-<div id="mySidenav" class="sidenav " style="display:none;">
+
+
+
+    <div id="mySidenav" class="sidenav " style="display:none;">
     <div class="signin">
         <div class="guest-user-option">
             <h5 style="padding-left:  10px; color:#dddd "> hey guest user !! </h5>

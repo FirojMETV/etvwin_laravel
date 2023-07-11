@@ -1,20 +1,27 @@
-<link rel="stylesheet" href="{{asset('css/newcss.css')}}">
+<link rel="stylesheet" href="{{ asset('css/newcss.css') }}">
+
+
+
+
 <nav class="main-nav-opaque">
     <div class="hamburger-button-div">
         <ul>
             <li>
-                <span ng-click="OpenNavBar()" class="icon-menu hamburger-button" aria-hidden="true" role="button"
-                    tabindex="0"></span>
+                <span ng-click="OpenNavBar()" class=" hamburger-button" aria-hidden="true" role="button" tabindex="0"
+                    style="font-size:30px;cursor:pointer ;
+                    color:aliceblue;left: -13px; top: -18px;">
+                    &#9776;</span>
             </li>
             <li class="logo-margin">
                 <a ng-click="onLogoClicked()">
-                    <img class="logo" alt="icon" src="{{ asset('image/logo.png') }} " width="50px" height="50px">
+                    <img class="logo sm:pd-6" alt="icon" src="{{ asset('image/logo.png') }} " width="50px"
+                        height="50px">
                 </a>
             </li>
         </ul>
     </div>
     <div class="main-menu">
-        <ul class="nav navbar-nav nav-pills">
+        <ul class="navs navbar-nav nav-pills">
             <li class="dropdown ng-scope active" role="button" tabindex="0" style="">
                 <a ng-href="/home" ng-click="openDropDown(tab.display_title.toLowerCase())" class="dropbtn ng-binding"
                     href="/home">HOME</a>
@@ -29,8 +36,7 @@
                 </ul>
             </li>
             <li class="dropdown ng-scope" role="button" tabindex="0">
-                <a class="dropbtn ng-binding"
-                    href="/telugu-movies">MOVIES</a>
+                <a class="dropbtn ng-binding" href="/telugu-movies">MOVIES</a>
                 <span aria-hidden="true">
                 </span>
 
@@ -76,27 +82,86 @@
             <li>
                 <a ng-if="showSubscriptionIcon" ng-click="openSubscription()" class="ng-scope">
                     <span aria-hidden="true">
-                        <img src="{{asset('image/subscribe-small.png')}}" class="subscribe-icon-new"
+                        <img src="{{ asset('image/subscribe-small.png') }}" class="subscribe-icon-new"
                             alt="Subscribe-icon"></span>
                 </a>
 
             </li>
-            <li class="right-margin-search-icon"><a>
-                    <span class="icon-search" ng-click="SearchVideos()" aria-hidden="true" role="button"
-                        tabindex="0"></span></a>
-            </li>
-            <li class="dropdown non-mobile" ng-mouseleave="usermenuLeave()">
-                <a>
-                    <img alt="" id="menu-profile-img" ng-src="{{asset('image/usericon.png')}}"
-                        src="{{asset('image/usericon.png')}}">
+            <li class="right-margin-search-icon">
+                <a class="icon-search">
+                    <img src="{{ asset('image/search.png') }}" alt="" style="    height: 30px; width: 30px;">
                 </a>
-                <div ng-if="isGuestUser &amp;&amp; !isPageLoading"
-                    class="dropdown-content user drop-right-aligned ng-scope" style="">
-                    <a ng-click="OpenSignIn()">SIGN IN</a>
-                    <a ng-click="OpenSignUp()">SIGN UP</a>
-                </div>
+            </li>
+            <li class="dropdown non-mobile">
+                <a class="dropdown">
+                    <img alt="" id="menu-profile-img" ng-src="{{ asset('image/usericon.png') }}"
+                        src="{{ asset('image/usericon.png') }}">
+                </a>
+                <ul ng-if="!isGuestUser &amp;&amp; !isPageLoading"
+                    class="dropdown-content user drop-right-aligned ng-scope" style="display: block">
+                    <li><a ng-click="openProfile('/profile')" class="my-profile-tab">
+                            <span class="drop-down-icons my-profile-icon" aria-hidden="true">
+                                <img src="{{ asset('image/usericon.png') }}" alt="">
+                            </span>
+                            <span class="drop-text">My Profile
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a ng-click="openSubscription()" class="subscription-tab">
+                            <span class="drop-down-icons subscription-icon" aria-hidden="true">
+                                <img src="{{ asset('image/subscription-icon-dark.png') }}" alt="">
+                            </span>
+                            <span class="drop-text subscribe-text" style="    margin-left: -16px;">Subscription
+                            </span>
+                        </a>
+                    </li>
+                    <li><a ng-click="gotoPage('/watchlater')">
+                            <span class="icon-watch-later 	 drop-down-icons" aria-hidden="true">
+                                <img src="{{ asset('image/hide.png') }}" alt="">
+                            </span>
+                            <span class="drop-text">Watch Later
+
+                            </span>
+                        </a>
+                    </li>
+                    <li><a ng-click="gotoPage('/active')" class="activate-tv">
+                            <span class="drop-down-icons activate-change" aria-hidden="true">
+                               
+                                <img src="{{ asset('image/activate-tv-new-dark.png') }}" alt="">
+                            </span>
+                            <span class="drop-text activate-tv-text">Activate TV</span>
+                        </a>
+                    </li>
+                    <li><a ng-click="gotoPage('/preference')">
+                            <span class="icon-following drop-down-icons" aria-hidden="true">
+                                <img src="{{ asset('image/ajust.png') }}" alt="">
+                            </span>
+                            <span class="drop-text">My Preferences</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a ng-click="logOut()">
+                            <span class="icon-signout drop-down-icons" aria-hidden="true">
+                                <img src="{{asset('image/logout.png')}}" alt="" style="transform: rotate(270deg);">
+                            </span>
+                            <span class="drop-text">Sign Out</span></a>
+                    </li>
+                    <li>
+                        <a ng-click="logOutAll()">
+                            <span class="icon-signout drop-down-icons" aria-hidden="true">
+                                <img src="{{asset('image/logout.png')}}" alt="" style="transform: rotate(270deg);">
+                            </span>
+                            <span class="drop-text">Sign Out all devices
+
+                            </span>
+                        </a>
+                    </li>
+                </ul>
 
             </li>
         </ul>
     </div>
 </nav>
+
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>

@@ -43,6 +43,9 @@
 .nav-pills li {
     float: left;
 }
+.main-menu .nav-pills li a:hover {
+    color: #ffc908;
+  }
 .main-menu .nav-pills li a {
     line-height: 35px;
     display: inline-block;
@@ -52,6 +55,13 @@
     font-size: 14px;
     min-width: auto;
     font-family: OpenSansRegular;
+    text-decoration: none;
+}
+.nav-pills li.active a,
+ .nav-pills li.active a:focus,
+  .nav-pills li.active a:hover {
+    color: #fff;
+    background-color: #337ab7;
 }
 .main-menu .nav-pills li.active a,
  .main-menu .nav-pills li.active a:focus {
@@ -61,6 +71,14 @@
     color: #fff;
     font-family: OpenSansBold;
 }
+.main-menu .nav-pills li.active a:hover {
+    color: #ffc908;
+}
+.main-menu .nav-pills li.active a:hover{
+    border-radius: 2px solid #7249bf;
+    cursor: pointer;
+    background-color: transparent;
+}
 
 .nav li a {
     position: relative;
@@ -68,19 +86,23 @@
     border-radius: 4px;
     padding: 10px 15px;
 }
+ul {
+    list-style: none;
+    padding: 0;
+}
 .nav-pills li+li {
     margin-left: 2px;
 }
 .mobile-os-list {
     position: absolute;
     float: right;
-    right: 50px;
-    top: 15px;
+    right: 20px;
+    top: 10px;
 }
 .mobile-os-list ul li {
     float: left;
     margin: 5px 0 0 5px;
-    padding-bottom: 25px;
+    padding-bottom: 10px;
     padding-left: 20px;
 }
 .mobile-os-list ul li a img {
@@ -108,6 +130,13 @@ img {
     border-radius: 50%;
     background: #191d4f;
 }
+.drop-text {
+    top: -6px;
+    position: relative;
+}
+.drop-center-aligned {
+    margin-left: -50px!important;
+}
 .drop-right-aligned {
     right: 0!important;
 }
@@ -121,9 +150,18 @@ img {
     z-index: 1;
     margin-top: 14px;
 }
+.dropdown-content li {
+    background: #2f357e;
+    overflow: auto;
+    margin-bottom: 1px;
+}
+.drop-down-icons {
+    font-size: 32px;
+    margin-right: 20px;
+}
 .dropdown-content a {
     color: #fff;
-    padding: 2px 2px 12px 5px;
+    padding: 0px 0px 0px 0px;
     margin-top: 12px;
     font-weight: 700;
     margin-left: 12px;
@@ -132,11 +170,54 @@ img {
     text-align: left;
     cursor: pointer;
 }
+.dropdown-content a:hover,
+.my-profile-icon img:hover{
+    color: #ffc908;
+}
+.my-profile-icon {
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 30px!important;
+    width: 36px!important;
+    margin-bottom: -4px;
+    margin-right: 0px;
+     display: inline-block;
+}
+.subscription-icon {
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 32px!important;
+    width: 36px!important;
+    margin-left: -1px;
+    margin-top: 2px;
+    display: inline-block;
+}
+.activate-change {
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 29px!important;
+    width: 32px!important;
+    margin-left: 0;
+    display: inline-block;
+}
 @media screen and (min-width: 981px){
 .logo-margin {
     margin: 8px 0 0 45px;
 }}
-
+@media screen and (max-width: 980px){
+.main-menu .navs {
+    display: none;
+}
+.hamburger-button {
+    display: inline-block;
+}
+.logo-margin{
+    margin-left: 35px;
+}
+}
 @media screen and (min-width: 1456px){
 .nav-pills li {
     float: left;
@@ -151,7 +232,12 @@ img {
     margin-left: 40px;
     margin-right: 40px;
 }
+
 }
+@media screen and (max-width: 500px){
+.mobile-os-list ul li {
+    margin: 0;
+}}
 
 a{
     text-decoration: none;

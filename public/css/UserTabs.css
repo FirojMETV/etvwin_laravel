@@ -186,7 +186,7 @@ button[disabled] {
     margin-bottom: 0;
     list-style: none;
 }
-.my-profile-nav .nav-pills>li+li {
+.my-profile-nav .nav-pills li+li {
     margin-left: 2px;
     padding-bottom: 0;
 }
@@ -208,10 +208,10 @@ a {
     padding: 10px 22px;
     white-space: nowrap;
 }
-.my-profile-nav .nav-pills>li.active>a, 
-.my-profile-nav .nav-pills>li.active>a:focus,
+.my-profile-nav .nav-pills li.active a, 
+.my-profile-nav .nav-pills li.active a:focus,
  .my-profile-nav 
-.nav-pills>li.active>a:hover  {
+.nav-pills li.active a:hover  {
     color: #fff;
     box-shadow: 0 4px 19px 0 rgba(0,0,0,.2), 0 6px 19px 0 rgba(0,0,0,.1);
     background-color: #7249bf;
@@ -436,7 +436,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 100%;
     display: inline-block;
 }
-.my-profile-nav .nav-pills li a {
+.my-profile-nav .tab-list li a {
     font-size: 9px;
     padding: 8px 0;
 }

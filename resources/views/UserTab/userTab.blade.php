@@ -1,5 +1,6 @@
 @extends('layout');
 @section('content')
+
     <link rel="stylesheet" href="{{ asset('css/UserTabs.css') }}">
 
     <div class="ekta-view ng-scope top-small" id="view_begin" ng-class="{'top-large':heightst, 'top-small':!heightst}"

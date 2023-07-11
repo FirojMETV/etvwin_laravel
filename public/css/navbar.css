@@ -17,7 +17,10 @@
   color: brown;
   font-size: xx-large;
 }
-
+.main-menu {
+  display: table;
+  margin-left: 15%;
+}
 .main-menu .nav-pills li a {
   justify-content: center;
   line-height: 35px;
@@ -44,7 +47,6 @@
   border-radius: 0;
   font-size: 14px;
   border-radius: 35px;
-  
 }
 
 
@@ -99,6 +101,10 @@
   display: table;
   color: #fff;
 }
+@media screen and (max-width: 980px){
+.main-menu .nav-pills {
+    display: none;
+}}
 @media screen and (max-width: 862px){
 .col-xs-6, .list-container .col-sm-3 {
     padding-right: 5px;

@@ -29,7 +29,7 @@
 </head>
 
 <body >
-    @include('Header.header')
+    @include('Cookies.navbar')
     @yield('content')
     @include('Footer.footer')
 </body>
