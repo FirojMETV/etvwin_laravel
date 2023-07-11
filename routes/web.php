@@ -87,3 +87,6 @@ Route::get('apitsting',[CookieController::class, 'apitesting']);
 Route::get('watchlater',function(){
     return view('WatchLater/watchlater');
 });
+Route::get('header',function(){
+    return view('Header/header');
+});
