@@ -18,109 +18,109 @@
             </a>
         </div>
     </div>
-        {{-- center text  --}}
-        <div class="main-menu">
-            <ul class="nav navbar-nav nav-pills">
-                <li class="dropdown ng-scope active" role="button" tabindex="0" style="">
-                    <a ng-href="/home" ng-click="openDropDown(tab.display_title.toLowerCase())" class="dropbtn ng-binding"
-                        href="/home">HOME</a>
-                    <span aria-hidden="true"></span>
-                </li>
-                <li class="dropdown " role="button" tabindex="0" style="">
-                    <a ng-href="/tv-shows" class="dropbtn ng-binding" href="/tv-shows">TV SHOWS
-                    </a>
-                    <span aria-hidden="true"></span>
-    
-                    <ul class="dropdown-content drop-center-aligned ng-scope">
-                    </ul>
-                </li>
-                <li class="dropdown " role="button" tabindex="0">
-                    <a class="dropbtn ng-binding" href="/telugu-movies">MOVIES</a>
-                    <span aria-hidden="true">
-                    </span>
-    
-                    <ul class="dropdown-content drop-center-aligned ng-scope">
-                    </ul>
-                </li>
-                <li class="dropdown ng-scope" role="button" tabindex="0">
-                    <a class="dropbtn ng-binding" href="/live">LIVE TV</a>
-                    <span aria-hidden="true"></span>
-    
-                    <ul ng-if="tab.friendly_id!='home'" class="dropdown-content drop-center-aligned ng-scope">
-    
-                    </ul>
-                </li>
-                <li class="dropdown ng-scope" role="button" tabindex="0">
-                    <a class="dropbtn ng-binding" href="/news">NEWS</a>
-                    <span aria-hidden="true"></span>
-                    <ul class="dropdown-content drop-center-aligned ng-scope">
-    
-                    </ul>
-                </li>
-                <li class="dropdown ng-scope" role="button" tabindex="0">
-                    <a class="dropbtn ng-binding" href="/recipes">FOOD</a>
-                    <span aria-hidden="true">
-                    </span>
-                    <ul class="dropdown-content drop-center-aligned ng-scope">
-    
-                    </ul>
-                </li>
-                <li class="dropdown ng-scope" role="button" tabindex="0">
-                    <a class="dropbtn ng-binding" href="/health">HEALTH
-                    </a>
-                    <span ng-class="{'more-icon':tab.display_title == 'MORE'}" aria-hidden="true">
-                    </span>
-                    <ul class="dropdown-content drop-center-aligned ng-scope">
-                    </ul>
-                </li>
-            </ul>
+    {{-- center text  --}}
+    <div class="main-menu">
+        <ul class="nav navbar-nav nav-pills">
+            <li class="dropdown ng-scope active" role="button" tabindex="0" style="">
+                <a ng-href="/home" ng-click="openDropDown(tab.display_title.toLowerCase())" class="dropbtn ng-binding"
+                    href="/home">HOME</a>
+                <span aria-hidden="true"></span>
+            </li>
+            <li class="dropdown " role="button" tabindex="0" style="">
+                <a ng-href="/tv-shows" class="dropbtn ng-binding" href="/tv-shows">TV SHOWS
+                </a>
+                <span aria-hidden="true"></span>
+
+                <ul class="dropdown-content drop-center-aligned ng-scope">
+                </ul>
+            </li>
+            <li class="dropdown " role="button" tabindex="0">
+                <a class="dropbtn ng-binding" href="/telugu-movies">MOVIES</a>
+                <span aria-hidden="true">
+                </span>
+
+                <ul class="dropdown-content drop-center-aligned ng-scope">
+                </ul>
+            </li>
+            <li class="dropdown ng-scope" role="button" tabindex="0">
+                <a class="dropbtn ng-binding" href="/live">LIVE TV</a>
+                <span aria-hidden="true"></span>
+
+                <ul ng-if="tab.friendly_id!='home'" class="dropdown-content drop-center-aligned ng-scope">
+
+                </ul>
+            </li>
+            <li class="dropdown ng-scope" role="button" tabindex="0">
+                <a class="dropbtn ng-binding" href="/news">NEWS</a>
+                <span aria-hidden="true"></span>
+                <ul class="dropdown-content drop-center-aligned ng-scope">
+
+                </ul>
+            </li>
+            <li class="dropdown ng-scope" role="button" tabindex="0">
+                <a class="dropbtn ng-binding" href="/recipes">FOOD</a>
+                <span aria-hidden="true">
+                </span>
+                <ul class="dropdown-content drop-center-aligned ng-scope">
+
+                </ul>
+            </li>
+            <li class="dropdown ng-scope" role="button" tabindex="0">
+                <a class="dropbtn ng-binding" href="/health">HEALTH
+                </a>
+                <span ng-class="{'more-icon':tab.display_title == 'MORE'}" aria-hidden="true">
+                </span>
+                <ul class="dropdown-content drop-center-aligned ng-scope">
+                </ul>
+            </li>
+        </ul>
+    </div>
+    {{-- right content --}}
+    <div class="mobile-os-list" style="display:inline-flex; ">
+        <div style="display:inline; margin:10px 5px 10px 10px ">
+            <a class="nav-link" href="javascript:void(0)">
+                <img src="{{ asset('image/subscribe.png') }}" height="50px" width="120px" alt=""
+                    class="subscription-img" onclick="openSubcription()">
         </div>
-        {{-- right content --}}
-        <div class="mobile-os-list" style="display:inline-flex; ">
-            <div style="display:inline; margin:10px 5px 10px 10px ">
-                <a class="nav-link" href="javascript:void(0)">
-                    <img src="{{ asset('image/subscribe.png') }}" height="50px" width="120px" alt=""
-                        class="subscription-img" onclick="openSubcription()">
-            </div>
-            <div style="display: inline; margin:20px 5px 10px 10px">
-                <a class="nav-link  " href="javascript:void(0);">
-                    <img src="{{ asset('image/search.png') }}" height="35px" width="35px" alt=""
-                        class="" onclick="openSearch()" />
-                </a>
-            </div>
-            <div class="dropdown hidden-xs" style="display:inline;">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#" href="{{ url('/profile') }}">
-                    <img src="{{ asset('image/profile.png') }}" height="45px" width="45px" alt=""
-                        class="profile-img" />
-                </a>
-                <ul class="dropdown-menu"
-                    style="background: #191D4F !important ;
+        <div style="display: inline; margin:20px 5px 10px 10px">
+            <a class="nav-link  " href="javascript:void(0);">
+                <img src="{{ asset('image/search.png') }}" height="35px" width="35px" alt="" class=""
+                    onclick="openSearch()" />
+            </a>
+        </div>
+        <div class="dropdown hidden-xs" style="display:inline;">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" href="{{ url('/profile') }}">
+                <img src="{{ asset('image/profile.png') }}" height="45px" width="45px" alt=""
+                    class="profile-img" />
+            </a>
+            <ul class="dropdown-menu"
+                style="background: #191D4F !important ;
                              min-width:280px ; font-size:15px; 
                              right:0 !important ">
-                    <li style="padding-bottom:22px">
-                        <a href="#" style="color: #e7b851; background:#191D4F !important"
-                            onclick="openSignIN()">SIGN IN</a>
-                    </li>
-                    <li>
-                        <a href="#" style="color:#e7b851; ; background:#191D4F !important;"
-                            onclick="SignUPopen()">SIGN UP</a>
-                    </li>
-                </ul>
-            </div>
-
+                <li style="padding-bottom:22px">
+                    <a href="#" style="color: #e7b851; background:#191D4F !important"
+                        onclick="openSignIN()">SIGN IN</a>
+                </li>
+                <li>
+                    <a href="#" style="color:#e7b851; ; background:#191D4F !important;"
+                        onclick="SignUPopen()">SIGN UP</a>
+                </li>
             </ul>
         </div>
-    
+
+        </ul>
     </div>
+
+</div>
 </div>
 
-    {{-- Side-Drawer for menu --}}
+{{-- Side-Drawer for menu --}}
 
 
 
 
 
-    <div id="mySidenav" class="sidenav " style="display:none;">
+<div id="mySidenav" class="sidenav " style="display:none;">
     <div class="signin">
         <div class="guest-user-option">
             <h5 style="padding-left:  10px; color:#dddd "> hey guest user !! </h5>

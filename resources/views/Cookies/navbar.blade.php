@@ -9,7 +9,7 @@
             <li>
                 <span ng-click="OpenNavBar()" class=" hamburger-button" aria-hidden="true" role="button" tabindex="0"
                     style="font-size:30px;cursor:pointer ;
-                    color:aliceblue;left: -13px; top: -18px;">
+                    color:aliceblue;left: -13px; top: -18px;" onclick="openNav()">
                     &#9776;</span>
             </li>
             <li class="logo-margin">
@@ -98,7 +98,7 @@
                         src="{{ asset('image/usericon.png') }}">
                 </a>
                 <ul ng-if="!isGuestUser &amp;&amp; !isPageLoading"
-                    class="dropdown-content user drop-right-aligned ng-scope" style="display: block">
+                    class="dropdown-content user drop-right-aligned ng-scope" >
                     <li><a ng-click="openProfile('/profile')" class="my-profile-tab">
                             <span class="drop-down-icons my-profile-icon" aria-hidden="true">
                                 <img src="{{ asset('image/usericon.png') }}" alt="">
@@ -164,4 +164,52 @@
     </div>
 </nav>
 
+
+<div id="mySidenav" class="sidenav " style="display:none;">
+    <div class="signin">
+        <div class="guest-user-option">
+            <h5 style="padding-left:  10px; color:#dddd "> hey guest user !! </h5>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="d-inline" style="margin-bottom:30px;">
+                <button href="{{ asset('login') }}" onclick="openSignIN()" type="button"
+                    class="col-sm-6 col-xs-6 btn form-button blue-button" style="margin-right: 4px ">
+                    SIGN IN</button>
+                <button href="{{ asset('registration') }}" type="button"
+                    class="col-sm-6 col-xs-6 btn guest-sign-up form-button" onclick="SignUPopen()">
+                    SIGN UP
+                </button>
+            </div>
+        </div>
+    </div>
+    <div style="margin-bottom: 60px; margin-top:10px;">
+        <a href="#" class="active">Home</a>
+        <hr class="hr">
+        <a href="#">TV SHOWS</a>
+        <hr class="hr">
+        <a href="#">MOVIES</a>
+        <hr class="hr">
+        <a href="#">LIVE TV</a>
+        <hr class="hr">
+        <a href="#">NEWS</a>
+        <hr class="hr">
+        <a href="#">FOOD</a>
+        <hr class="hr">
+        <a href="#">HEALTH</a>
+        <hr class="hr">
+
+    </div>
+    <div class="download-button" id="mydownload" style="width: 70%; visibility: visible;">
+        <h3 style="color: #888888dd">
+            DOWNLOAD APP
+            <span class="fa fa-apple" style="font-size:26px">
+
+            </span>
+            <span class="fa fa-android" style="font-size: 26px">
+
+            </span>
+        </h3>
+    </div>
+</div>
+
+<script src="{{ asset('js/navbar.js') }}"></script>
 <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
