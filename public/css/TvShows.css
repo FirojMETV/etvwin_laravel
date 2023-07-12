@@ -123,7 +123,7 @@ img {
 }
 .videonav .videolinks li:first-child {
     padding-left: 0;
-    margin-left: -30px;
+    margin-left: 0px;
 }
 .viewersnav .viewerslinks li:first-child {
     padding-left: 0;

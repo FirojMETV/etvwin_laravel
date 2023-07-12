@@ -1,6 +1,8 @@
-
+@extends('layout')
 
 <link rel='stylesheet' href="{{ asset('css/login.css') }}">
+@section('content')
+    
 
     
 
@@ -37,10 +39,12 @@
                     <h3 class="hr-lines"><span>OR</span></h3>
 
                     <div class="social" style="display: inline-flex">
-                        <div class="fb"><img src="{{ asset('image/facebook-new.png') }}" width="27px" height="27px"
-                                style="margin-top: -2px" />
+                        <div class="fb">
+                            {{-- <img src="{{ asset('image/facebook-new.png') }}" width="27px" height="27px"
+                                style="margin-top: -2px" /> --}}
                         </div>
-                        <div class="go"><img src="{{ asset('image/google.png') }}" width="20px" height="20px" />
+                        <div class="go">
+                            {{-- <img src="{{ asset('image/google.png') }}" width="20px" height="20px" /> --}}
                         </div>
                     </div>
                     <a href="{{ asset('registration') }}" style="padding-top: 10px">
@@ -51,4 +55,4 @@
     </div>
     <script src="{{ asset('js/navbar.js') }}"></script>
 
-   
+    @endsection

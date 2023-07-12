@@ -1727,7 +1727,7 @@
 
         {{-- Health & Fitness --}}
         <div class="Health & Fitness carousel-list">
-            <a href="" class="section-title">Food</a>
+            <a href="" class="section-title">Health & Fitness</a>
             <a href="" class="see-all-link left-margin-episode " style="text-decoration: none">+More</a>
             <div class="owl-carousel owl-theme fluid" id="Health-FitNess">
                 <div class="item ">

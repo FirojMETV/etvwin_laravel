@@ -1,32 +1,33 @@
+
 <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
 
-{{-- navbar code  --}}
-<div class="navbar-inverse " style="justify-content:space-between">
-    <div class="container-fluid" style="display:inline-flex;">
-        {{-- menu icon --}}
-        <div class="visible-xs" style="margin-top:10px">
-            <span style="font-size:30px;cursor:pointer ;
-             color:aliceblue" onclick="openNav()">
-                &#9776;
-            </span>
-        </div>
-        {{-- left image --}}
-        <div class="header mr-auto" style=" justify-content:space-around">
-            <a class="navbar-brand ml-5" href="#">
-                <img src="{{ asset('image/logo.png') }}" height="40px" width="50px" alt=""
-                    class="logo-img sm:pd-6 ">
-            </a>
-        </div>
+
+<nav class="main-nav-opaque">
+    <div class="hamburger-button-div">
+        <ul>
+            <li>
+                <span ng-click="OpenNavBar()" class=" hamburger-button" aria-hidden="true" role="button" tabindex="0"
+                    style="font-size:30px;cursor:pointer ;
+                    color:aliceblue;left: -13px; top: -18px;"
+                    onclick="openNav()">
+                    &#9776;</span>
+            </li>
+            <li class="logo-margin">
+                <a href="home">
+                    <img class="logo sm:pd-6" alt="icon" src="{{ asset('image/logo.png') }} " width="50px"
+                        height="50px">
+                </a>
+            </li>
+        </ul>
     </div>
-    {{-- center text  --}}
     <div class="main-menu">
-        <ul class="nav navbar-nav nav-pills">
+        <ul class="navs navbar-nav nav-pills">
             <li class="dropdown ng-scope active" role="button" tabindex="0" style="">
                 <a ng-href="/home" ng-click="openDropDown(tab.display_title.toLowerCase())" class="dropbtn ng-binding"
                     href="/home">HOME</a>
                 <span aria-hidden="true"></span>
             </li>
-            <li class="dropdown " role="button" tabindex="0" style="">
+            <li class="dropdown ng-scope" role="button" tabindex="0" style="">
                 <a ng-href="/tv-shows" class="dropbtn ng-binding" href="/tv-shows">TV SHOWS
                 </a>
                 <span aria-hidden="true"></span>
@@ -34,12 +35,13 @@
                 <ul class="dropdown-content drop-center-aligned ng-scope">
                 </ul>
             </li>
-            <li class="dropdown " role="button" tabindex="0">
+            <li class="dropdown ng-scope" role="button" tabindex="0">
                 <a class="dropbtn ng-binding" href="/telugu-movies">MOVIES</a>
                 <span aria-hidden="true">
                 </span>
 
-                <ul class="dropdown-content drop-center-aligned ng-scope">
+                <ul ng-if="tab.friendly_id!='home'" class="dropdown-content drop-center-aligned ng-scope"
+                    ng:class="{channels:tab.display_title.toLowerCase()==='channels'}">
                 </ul>
             </li>
             <li class="dropdown ng-scope" role="button" tabindex="0">
@@ -75,51 +77,104 @@
             </li>
         </ul>
     </div>
-    {{-- right content --}}
-    <div class="mobile-os-list" style="display:inline-flex; ">
-        <div style="display:inline; margin:10px 5px 10px 10px ">
-            <a class="nav-link" href="javascript:void(0)">
-                <img src="{{ asset('image/subscribe.png') }}" height="50px" width="120px" alt=""
-                    class="subscription-img" onclick="openSubcription()">
-        </div>
-        <div style="display: inline; margin:20px 5px 10px 10px">
-            <a class="nav-link  " href="javascript:void(0);">
-                <img src="{{ asset('image/search.png') }}" height="35px" width="35px" alt="" class=""
-                    onclick="openSearch()" />
-            </a>
-        </div>
-        <div class="dropdown hidden-xs" style="display:inline;">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" href="{{ url('/profile') }}">
-                <img src="{{ asset('image/profile.png') }}" height="45px" width="45px" alt=""
-                    class="profile-img" />
-            </a>
-            <ul class="dropdown-menu"
-                style="background: #191D4F !important ;
+    <div class="mobile-os-list">
+        <ul>
+            <li>
+                <a href="subscription-plans" class="ng-scope">
+                    <span aria-hidden="true">
+                        <img src="{{ asset('image/subscribe-small.png') }}" class="subscribe-icon-new"
+                            alt="Subscribe-icon"></span>
+                </a>
+
+            </li>
+            <li class="right-margin-search-icon">
+                <a class="icon-search">
+                    <img src="{{ asset('image/search.png') }}" alt="" style="    height: 30px; width: 30px;"
+                        onclick="openSearch()">
+                </a>
+            </li>
+            <li class="dropdown non-mobile">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <img alt="" id="menu-profile-img" src="{{ asset('image/usericon.png') }}">
+                </a>
+                {{-- <ul  class="dropdown-content user drop-right-aligned " >
+                    <li>
+                        <a  class="my-profile-tab">
+                            <span class="drop-down-icons my-profile-icon" aria-hidden="true">
+                            </span>
+                            <span class="drop-text">My Profile
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a ng-click="openSubscription()" class="subscription-tab">
+                            <span class="drop-down-icons subscription-icon" aria-hidden="true">                            </span>
+                            <span class="drop-text subscribe-text" style="    margin-left: -16px;">Subscription
+                            </span>
+                        </a>
+                    </li>
+                    <li><a >
+                            <span class="icon-watch-later 	 drop-down-icons" aria-hidden="true">
+                                <img src="{{ asset('image/hide.png') }}" alt="">
+                            </span>
+                            <span class="drop-text">Watch Later
+
+                            </span>
+                        </a>
+                    </li>
+                    <li><a class="activate-tv">
+                            <span class="drop-down-icons activate-change" aria-hidden="true">
+                            </span>
+                            <span class="drop-text activate-tv-text">Activate TV</span>
+                        </a>
+                    </li>
+                    <li><a >
+                            <span class="icon-following drop-down-icons" aria-hidden="true">
+                                <img src="{{ asset('image/ajust.png') }}" alt="">
+                            </span>
+                            <span class="drop-text">My Preferences</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <span class="icon-signout drop-down-icons" aria-hidden="true">
+                                <img src="{{asset('image/logout.png')}}" alt="" style="transform: rotate(270deg);">
+                            </span>
+                            <span class="drop-text">Sign Out</span></a>
+                    </li>
+                    <li>
+                        <a >
+                            <span class="icon-signout drop-down-icons" aria-hidden="true">
+                                <img src="{{asset('image/logout.png')}}" alt="" style="transform: rotate(270deg);">
+                            </span>
+                            <span class="drop-text">Sign Out all devices
+
+                            </span>
+                        </a>
+                    </li>
+                </ul> --}}
+
+
+                <ul
+                    class="dropdown-menu"style="background: #191D4F !important ;
                              min-width:280px ; font-size:15px; 
                              right:0 !important ">
-                <li style="padding-bottom:22px">
-                    <a href="#" style="color: #e7b851; background:#191D4F !important"
-                        onclick="openSignIN()">SIGN IN</a>
-                </li>
-                <li>
-                    <a href="#" style="color:#e7b851; ; background:#191D4F !important;"
-                        onclick="SignUPopen()">SIGN UP</a>
-                </li>
-            </ul>
-        </div>
+                    <li style="padding-bottom:22px">
+                        <a href="#" style="color: #e7b851; background:#191D4F !important"
+                            onclick="openSignIN()">SIGN IN</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color:#e7b851; ; background:#191D4F !important;"
+                            onclick="SignUPopen()">SIGN UP</a>
+                    </li>
+                </ul>
 
+            </li>
         </ul>
     </div>
+</nav>
 
-</div>
-</div>
-
-{{-- Side-Drawer for menu --}}
-
-
-
-
-
+{{-- side menu with responsive --}}
 <div id="mySidenav" class="sidenav " style="display:none;">
     <div class="signin">
         <div class="guest-user-option">
@@ -127,7 +182,7 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="d-inline" style="margin-bottom:30px;">
                 <button href="{{ asset('login') }}" onclick="openSignIN()" type="button"
-                    class="col-sm-6 col-xs-6 btn form-button blue-button" style="margin-right: 4px ">
+                    class="col-sm-6 col-xs-6 btn form-button blue-button">
                     SIGN IN</button>
                 <button href="{{ asset('registration') }}" type="button"
                     class="col-sm-6 col-xs-6 btn guest-sign-up form-button" onclick="SignUPopen()">
@@ -137,7 +192,7 @@
         </div>
     </div>
     <div style="margin-bottom: 60px; margin-top:10px;">
-        <a href="#" class="active">Home</a>
+        <a href="/home" class="active">Home</a>
         <hr class="hr">
         <a href="#">TV SHOWS</a>
         <hr class="hr">
@@ -153,7 +208,7 @@
         <hr class="hr">
 
     </div>
-    <div class="download-button" id="mydownload" style="width: 70%; visibility: visible;">
+    <div class="download-button" id="mydownload" style="width: 80%; visibility: visible;">
         <h3 style="color: #888888dd">
             DOWNLOAD APP
             <span class="fa fa-apple" style="font-size:26px">
@@ -165,7 +220,6 @@
         </h3>
     </div>
 </div>
-
 
 
 {{-- searching code  --}}
@@ -180,8 +234,8 @@
 
 
 {{-- Sign in page popup --}}
-{{-- 
-<div class="SignIn-overlay" id="SignIN">
+
+{{-- <div class="SignIn-overlay" id="SignIN">
     <div class="center">
         <span class="closebtn" onclick="SigninClose()" title="Close ">×</span>
         <h2> Sign in</h2>
@@ -236,49 +290,7 @@
 </div> --}}
 
 
-{{-- Sign up page popup --}}
-
-<div class="SignUP-Overlay" id="SignUPForm">
-    <div class="center">
-        <span class="closebtn" onclick="CloseSignUP()" title="Close ">×</span>
-        <h2> Sign Up</h2>
-        <form method="post" action="{{ route('register-user') }}">
-            @if (Session::has('success'))
-                <div class="alert alert-success">{{ Session::get('success') }}</div>
-            @endif
-            @if (Session::has('fail'))
-                <div class="alert alert-danger ">{{ Session::get('failed') }}</div>
-            @endif
-            @csrf
-            <div class="txt_field">
-                <input type="text" name="name" value="{{ old('name') }} ">
-                <span></span>
-                <label>Name*</label>
-            </div>
-            {{-- <p class="text-warning">@error('name'){{$message}}@enderror</p> --}}
-
-            <div class="txt_field">
-                <input type="text" name="Email" value="{{ old('Email') }}">
-                <label>Email / Mobile*</label>
-            </div>
-            {{-- <p class="text-warning">  @error('Email') {{ $message }}@enderror</p> --}}
-            <div class="txt_field">
-                <input type="password" name="password" id="password" value="{{ old('password') }}">
-                <label>Password*</label>
-            </div>
-            {{-- <p class="text-warning">@error('password'){{ $message }}@enderror</p> --}}
-            <div class="txt_field">
-                <input type="password" name="repassword" id="confirm-password" value="{{ old('repassword') }}">
-                <label>Re-Password*</label>
-            </div>
-            {{-- <p class="text-warning" style="margin-top: -15px">  @error('password')  {{ $message }} @enderror</p> --}}
-            <p id="message" style="color:black !important ; "></p>
-            <div>
-                <input type="submit" onclick="checkpassword" value="SIGN UP">
-            </div>
-
-        </form>
-    </div>
-</div>
-
 <script src="{{ asset('js/navbar.js') }}"></script>
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+
