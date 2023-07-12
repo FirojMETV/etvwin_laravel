@@ -1,0 +1,134 @@
+.ekta-view {
+    top: 42px;
+    position: relative;
+    min-height: 500px;
+    background-color: #00021c;
+    padding-bottom: 70px;
+}
+.tvactive_box {
+    width: 100%;
+    height: 100vh;
+}
+.tvactive_box .outer_box {
+    width: 408px;
+    margin: auto;
+    display: table;
+}
+.tvactive_box .codebox {
+    background-color: #00021c;
+}
+.activation-success {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 40px!important;
+    color: rgba(255,255,255,.5)!important;
+    font-weight: 700;
+}
+.tvactive_box .outer_box h4 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    padding-top: 35px;
+    text-align: center;
+    margin-top: -50px;
+}
+
+.success h4 {
+    text-align: center;
+    padding: 0!important;
+}
+.try-again-text {
+    color: #ffc908!important;
+    font-weight: 700;
+    margin-top: 40px !important;
+}
+img{
+    width: 100%;
+}
+
+.codebox h6 {
+    font-size: 13px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+}
+.enter-code-text{
+    margin-bottom: 15px !important;
+}
+.center-align {
+    display: table;
+    margin: auto;
+}
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}
+.text-center {
+    text-align: center;
+}
+.codebox .verify_txt {
+    width: 130px;
+    color: #fff;
+    border: 1px solid #7249bf;
+    border-radius: 5px;
+    margin: 18px 12px;
+    padding: 8px 14px;
+    background: #7249bf;
+}
+
+.tvactive_box .codebox input[type=text] {
+    color: #fff;
+    font-family: condensed-regular;
+    height: 48px;
+    margin-bottom: 10px;
+    padding: 0;
+    text-align: center;
+    width: 48px;
+    border-bottom: none;
+    border: none;
+}
+input:focus{
+    outline: none;
+}
+#fromDate, #toDate, input {
+    background-color: rgba(65,77,189,0);
+    border: none;
+    height: 50px;
+    width: 260px;
+    border-bottom: 1px solid rgba(255,255,255,.15);
+    font-family: OpenSansRegular;
+    font-size: 24px;
+    color: rgba(255,255,255,1);
+    text-align: left;
+    line-height: 32px;
+}
+
+@media screen and (max-width: 435px){
+.tvactive_box {
+    overflow: hidden;
+}
+.tvactive_box .outer_box h4 {
+    font-size: 16px;
+    margin-right: 40px;
+}
+.activation-success {
+    font-size: 16px!important;
+}
+.center-align{
+    margin-left: 40px;
+}
+.text-center {
+    margin-right: 50px;
+}
+}
+@media screen and (max-width: 800px){
+.ekta-view.top-large {
+    top: 115px!important;
+}}
+@media screen and (max-width: 500px){
+.ekta-view {
+    top: 100px;
+}}

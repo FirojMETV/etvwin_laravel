@@ -3,12 +3,14 @@
   width: 100%;
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
   top: 0;
   left: 0;
-  background-color: #00021C;
-  background-color: #00021C;
+  background-color: #9097f776;
  
+}
+.container-fluid{
+  background:#9097f776;
 }
 .SignIn-overlay .closebtn {
   position: absolute;
@@ -176,18 +178,19 @@ input[type="sign-up"]:hover{
   top: 50%;
   right: 0;
 }
-.social{
+.socials{
   margin-top: 5px;
   display: inline-flex;
-  margin-left: 85px;
+  margin-left: 80px;
   }
-  .social div{
-  width: 20px;
+  .socials div{
+  width: 40px;
   border-radius: 3px;
-  padding: 1px 10px 3px 5px;
+  padding: -11px 1px 3px 5px;
   color: #d68c47;
   text-align: center;
   }
+ 
  
   @media screen and (max-height: 450px) {
     .center{

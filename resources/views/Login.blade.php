@@ -1,13 +1,11 @@
-@extends('layout')
 
 <link rel='stylesheet' href="{{ asset('css/login.css') }}">
-@section('content')
-    
 
     
 
 
-    <div class="container-fluid">
+
+    <div class="container-fluid ">
         <div class="center">
             <h2> Sign in</h2>
             <form method="post" action="{{ route('login-user') }}">
@@ -38,13 +36,13 @@
                     <input type="submit" value="SIGN IN">
                     <h3 class="hr-lines"><span>OR</span></h3>
 
-                    <div class="social" style="display: inline-flex">
+                    <div class="socials" style="display: inline-flex">
                         <div class="fb">
-                            {{-- <img src="{{ asset('image/facebook-new.png') }}" width="27px" height="27px"
-                                style="margin-top: -2px" /> --}}
+                            <img src="{{ asset('image/facebook-new.png') }}" width="35px" height="35px"
+                                style="margin-top: -2px" />
                         </div>
                         <div class="go">
-                            {{-- <img src="{{ asset('image/google.png') }}" width="20px" height="20px" /> --}}
+                            <img src="{{ asset('image/google.png') }}" width="30px" height="30px" />
                         </div>
                     </div>
                     <a href="{{ asset('registration') }}" style="padding-top: 10px">
@@ -54,5 +52,3 @@
         </div>
     </div>
     <script src="{{ asset('js/navbar.js') }}"></script>
-
-    @endsection

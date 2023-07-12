@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
 
 
@@ -94,43 +93,47 @@
                 </a>
             </li>
             <li class="dropdown non-mobile">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <a class=" dropdown-toggle" data-toggle="dropdown" href="#">
                     <img alt="" id="menu-profile-img" src="{{ asset('image/usericon.png') }}">
                 </a>
-                {{-- <ul  class="dropdown-content user drop-right-aligned " >
+
+                <ul class="dropdown-content user drop-right-aligned ">
                     <li>
-                        <a  class="my-profile-tab">
+                        <a class="my-profile-tab" href="usertab">
                             <span class="drop-down-icons my-profile-icon" aria-hidden="true">
                             </span>
-                            <span class="drop-text">My Profile
+                            <span class="drop-text">
+                                My Profile
                             </span>
                         </a>
                     </li>
                     <li>
-                        <a ng-click="openSubscription()" class="subscription-tab">
-                            <span class="drop-down-icons subscription-icon" aria-hidden="true">                            </span>
-                            <span class="drop-text subscribe-text" style="    margin-left: -16px;">Subscription
+                        <a class="subscription-tab">
+                            <span class="drop-down-icons subscription-icon" aria-hidden="true">
+                            </span>
+                            <span class="drop-text subscribe-text" style="    margin-left: -16px;">
+                                Subscription
                             </span>
                         </a>
                     </li>
-                    <li><a >
+                    <li><a href="watchlater">
                             <span class="icon-watch-later 	 drop-down-icons" aria-hidden="true">
-                                <img src="{{ asset('image/hide.png') }}" alt="">
+                             
                             </span>
-                            <span class="drop-text">Watch Later
+                            <span class="drop-text">
+                                Watch Later
 
                             </span>
                         </a>
                     </li>
-                    <li><a class="activate-tv">
+                    <li><a class="activate-tv" href="active">
                             <span class="drop-down-icons activate-change" aria-hidden="true">
                             </span>
                             <span class="drop-text activate-tv-text">Activate TV</span>
                         </a>
                     </li>
-                    <li><a >
+                    <li><a>
                             <span class="icon-following drop-down-icons" aria-hidden="true">
-                                <img src="{{ asset('image/ajust.png') }}" alt="">
                             </span>
                             <span class="drop-text">My Preferences</span>
                         </a>
@@ -138,37 +141,42 @@
                     <li>
                         <a>
                             <span class="icon-signout drop-down-icons" aria-hidden="true">
-                                <img src="{{asset('image/logout.png')}}" alt="" style="transform: rotate(270deg);">
+                                {{-- <img src="{{ asset('image/logout.png') }}" alt=""
+                                    style="transform: rotate(270deg);"> --}}
                             </span>
                             <span class="drop-text">Sign Out</span></a>
                     </li>
                     <li>
-                        <a >
+                        <a>
                             <span class="icon-signout drop-down-icons" aria-hidden="true">
-                                <img src="{{asset('image/logout.png')}}" alt="" style="transform: rotate(270deg);">
+                                {{-- <img src="{{ asset('image/logout.png') }}" alt=""
+                                    style="transform: rotate(270deg);"> --}}
                             </span>
                             <span class="drop-text">Sign Out all devices
 
                             </span>
                         </a>
                     </li>
-                </ul> --}}
-
-
-                <ul
-                    class="dropdown-menu"style="background: #191D4F !important ;
-                             min-width:280px ; font-size:15px; 
-                             right:0 !important ">
-                    <li style="padding-bottom:22px">
-                        <a href="#" style="color: #e7b851; background:#191D4F !important"
-                            onclick="openSignIN()">SIGN IN</a>
-                    </li>
-                    <li>
-                        <a href="#" style="color:#e7b851; ; background:#191D4F !important;"
-                            onclick="SignUPopen()">SIGN UP</a>
-                    </li>
                 </ul>
 
+                {{-- for Sign in new user user  --}}
+                {{-- <ul class="dropdown-content user drop-right-aligned"
+                 style="border-radius: 10px !important ;display:grid">
+                    <li >
+                        <a href="login" >
+                            <span class="drop-text">
+                                Sign IN
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="drop-text">
+                                Sign UP
+                            </span>
+                        </a>
+                    </li>
+                </ul> --}}
             </li>
         </ul>
     </div>
@@ -234,8 +242,8 @@
 
 
 {{-- Sign in page popup --}}
-
-{{-- <div class="SignIn-overlay" id="SignIN">
+{{-- 
+<div class="SignIn-overlay" id="SignIN">
     <div class="center">
         <span class="closebtn" onclick="SigninClose()" title="Close ">×</span>
         <h2> Sign in</h2>
@@ -292,5 +300,3 @@
 
 <script src="{{ asset('js/navbar.js') }}"></script>
 <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-
-

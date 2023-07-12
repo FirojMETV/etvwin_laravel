@@ -12,92 +12,43 @@ use App\Services\ApiService;
 class CookieController extends Controller
 {
    public $BASE_URL = "https://stagingott.etvwin.com/";
-   public $AUTHTOKEN = "q5u8JMWTd2698ncg7q4Q ";
+   public $AUTHTOKEN = "q5u8JMWTd2698ncg7q4Q";
 
-   public $UserIP = "https://stagingott.etvwin.com/regions/autodetect/ip.gzip?";
+   public $UserIP = "regions/autodetect/ip.gzip";
 
-   public $UserIP_AUTHTOKEN = 'q5u8JMWTd2698ncg7q4Q&access_token=Ay6KCkajdBzztJ4bptpW';
+   public $ACCESSTOKEN = '';
 
-   public $config = 'https://stagingott.etvwin.com/catalogs/message/items/app-config-params.gzip?';
+   public $config = 'catalogs/message/items/app-config-params.gzip';
 
-   public $Region = 'IN&auth_token=q5u8JMWTd2698ncg7q4Q&access_token=Ay6KCkajdBzztJ4bptpW&current_version=1.1';
+   public $Version = '1.1';
    public $data = "";
+   public $usermodel = "";
 
-   public function setCookie(Request $request)
-   {
-
-      $authToken = 'q5u8JMWTd2698ncg7q4Q'; //auth_token
-      $accessToken = 'Ay6KCkajdBzztJ4bptpW'; //acces token 
-      $userIP = $request->ip('');
-      $country_code2 = 'IN';
-      $country_code3 = "";
-      $country_name = 'India';
-      $continent_code = "AS";
-      $region_name = "";
-      $city_name = '';
-      $postal_code = ',';
-      $latitude = 27.9974;
-      $longitude = 79.0011;
-      $dma_code = '';
-      $area_code = "";
-      $timezone = "Asia Kolkata";
-      $real_region_name = '';
-      $state = '';
-      $state_code = '';
-      $calling_code = '0091';
-      $min_digits = 10;
-      $max_digits = 10;
+   public $request = "";
+   public $userIP = "";
+   public $country_code2 = '';
+   public $country_code3 = "";
+   public $country_name = '';
+   public $continent_code = "";
+   public $region_name = "";
+   public $city_name = '';
+   public $postal_code = '';
+   public $latitude = "";
+   public $longitude = "";
+   public $dma_code = '';
+   public $area_code = "";
+   public $timezone = "";
+   public $real_region_name = '';
+   public $state = '';
+   public $state_code = '';
+   public $calling_code = '';
+   public $min_digits = "";
+   public $max_digits = "";
 
 
-      $expirationTime = time() + 30;
-      $authTokenCookie = cookie('auth_token', $authToken, $expirationTime);
-      $accessTokenCookie = cookie('access_token', $accessToken, $expirationTime);
-      $userIPCookie = cookie('user_ip', $userIP, $expirationTime);
-      $country_code3_Cookie = cookie('country_code3', $country_code3, $expirationTime);
-      $country_nameCookie = cookie('Country_Name', $country_name, $expirationTime);
-      $continent_codeCookie = cookie('Continent_code', $continent_code, $expirationTime);
-      $region_nameCookie = cookie('Region_name', $region_name, $expirationTime);
-      $city_nameCookie = cookie('City_name', $city_name, $expirationTime);
-      $dma_codeCookie = cookie('Dma_Code', $dma_code, $expirationTime);
-      $area_codeCookie = cookie('Area_code', $area_code, $expirationTime);
-      $timezoneCookie = cookie('TimeZone', $timezone, $expirationTime);
-      $real_region_nameCookie = cookie('real_region_name', $real_region_name, $expirationTime);
-      $state_Cookie = cookie('State_cookies', $state, $expirationTime);
-      $state_codeCookies = cookie('State_code_cookies', $state_code, $expirationTime);
-      $calling_code_Cookie = cookie('calling_code', $calling_code, $expirationTime);
-      $min_digitsCookie = cookie('min_digits', $min_digits, $expirationTime);
-      $max_digitsCookie = cookie('max_digits', $max_digits, $expirationTime);
-      $countryCode2Cookie = cookie('country_code2', $country_code2, $expirationTime);
-      $postalCodeCookie = cookie('postal_code', $postal_code, $expirationTime);
-      $latitudeCookie = cookie('latitude', $latitude, $expirationTime);
+   // config data for api
 
-      $longitudeCookie = cookie('longitude', $longitude, $expirationTime);
-
-      // return new Response(' token access')
-      $response = new Response(' token access');
-      $response->withCookie($authTokenCookie);
-      $response->withCookie($accessTokenCookie);
-      $response->withCookie($userIPCookie);
-      $response->withCookie($countryCode2Cookie);
-      $response->withCookie($postalCodeCookie);
-      $response->withCookie($latitudeCookie);
-      $response->withCookie($longitudeCookie);
-      $response->withCookie($country_code3_Cookie);
-      $response->withCookie($country_nameCookie);
-      $response->withCookie($continent_codeCookie);
-      $response->withCookie($region_nameCookie);
-      $response->withCookie($city_nameCookie);
-      $response->withCookie($dma_codeCookie);
-      $response->withCookie($area_codeCookie);
-      $response->withCookie($timezoneCookie);
-      $response->withCookie($real_region_nameCookie);
-      $response->withCookie($state_Cookie);
-      $response->withCookie($state_codeCookies);
-      $response->withCookie($calling_code_Cookie);
-      $response->withCookie($min_digitsCookie);
-      $response->withCookie($max_digitsCookie);
-      return $response;
-   }
+   public $title="";
    public function getCookie(Request $request)
    {
 
@@ -257,40 +208,77 @@ class CookieController extends Controller
 
    }
 
-   public function apitesting()
+   public function __construct()
+   {
+      $url = $this->BASE_URL . "access_token.gzip?auth_token=" . $this->AUTHTOKEN;
+      $this->usermodel = new User;
+      $data = $this->usermodel->GETAPIMODEL($url);
+      $data = json_decode($data);
+      $this->ACCESSTOKEN = $data->data->access_token;
+   }
+   public function SecondAPI()
    {
 
-      //   $url = $this->BASE_URL."access_token.gzip?auth_token=".$this->AUTHTOKEN;
-      $ip = $this->BASE_URL.$this->UserIP.$this->UserIP_AUTHTOKEN;
+      $ip = $this->BASE_URL . $this->UserIP . "?auth_token=" . $this->AUTHTOKEN . "&access_token=" . $this->ACCESSTOKEN;
+      $data = $this->usermodel->GETAPIMODEL($ip);
+      $Datas = json_decode($data);
+      print_r($Datas);
+      //  $this->UserIP=$Datas->region->ip;
+      // $this->country_code2 = $Datas->region->country_code2;
+      // $this->country_code3 = $Datas->region->country_code3;
+      // $this->country_name = $Datas->region->country_name;
+      // $this->continent_code = $Datas->region->continent_code;
+      // $this->region_name = $Datas->region->region_name;
+      // $this->postal_code = $Datas->region->postal_code;
+      // $this->latitude = $Datas->region->latitude;
+      // $this->longitude = $Datas->region->longitude;
+      // $this->dma_code = $Datas->region->dma_code;
+      // $this->area_code = $Datas->region->area_code;
+      // $this->timezone = $Datas->region->timezone;
+      // $this->real_region_name = $Datas->region->real_region_name;
+      // $this->state = $Datas->region->state;
+      // $this->state_code = $Datas->region->state_code;
+      // $this->calling_code = $Datas->region->calling_code;
+      // $this->min_digits = $Datas->region->min_digits;
+      // $this->max_digits = $Datas->region->max_digits;
+
+      print_r($this->UserIP);
+
+   }
+   public function apitesting()
+   {
+      $ip = $this->BASE_URL . $this->UserIP . "?auth_token=" . $this->AUTHTOKEN . "&access_token=" . $this->ACCESSTOKEN;
+      $data = $this->usermodel->GETAPIMODEL($ip);
+      $Datas = json_decode($data);
+      // print_r($Datas);
+       $this->UserIP=$Datas->region->ip;
+      $this->country_code2 = $Datas->region->country_code2;
+      $this->country_code3 = $Datas->region->country_code3;
+      $this->country_name = $Datas->region->country_name;
+      $this->continent_code = $Datas->region->continent_code;
+      $this->region_name = $Datas->region->region_name;
+      $this->postal_code = $Datas->region->postal_code;
+      $this->latitude = $Datas->region->latitude;
+      $this->longitude = $Datas->region->longitude;
+      $this->dma_code = $Datas->region->dma_code;
+      $this->area_code = $Datas->region->area_code;
+      $this->timezone = $Datas->region->timezone;
+      $this->real_region_name = $Datas->region->real_region_name;
+      $this->state = $Datas->region->state;
+      $this->state_code = $Datas->region->state_code;
+      $this->calling_code = $Datas->region->calling_code;
+      $this->min_digits = $Datas->region->min_digits;
+      $this->max_digits = $Datas->region->max_digits;
+
+       $config_data = $this->BASE_URL . $this->config . "?region=" 
+      . $this->country_code2 . "&auth_token=" . $this->AUTHTOKEN . "&access_token=" . $this->ACCESSTOKEN ;
+
+      $config_data_types=$this->usermodel->GETAPIMODEL($config_data);
+      $data_config=json_decode($config_data_types);
+      $this->title= $data_config->data->title;
       
-      $user_model = new User;
-      $this->data = $user_model->GETAPIMODEL($ip);
-    
-      // $array = array("name"=>"test","job"=>"testing");
-      // $url="https://reqres.in/api/users";
-      // $this->data = $user_model->POSTAPIMODEL($url,$array);
-      $val = json_decode($this->data);
-      // print_r($val->data->UserIP);
+      print_r($this->title);
+      
 
-         return $val;
-
-      //return APIMODEL($url);
    }
 }
-
-
-// public function __construct(ApiService $apiService)
-// {
-//     $this->apiService = $apiService;
-// }
-
-// public function index()
-// {
-//     $url = 'https://api.example.com';
-//     $response = $this->apiService->makeApiRequest($url);
-
-//     // Process the response
-//     // ...
-
-//     return view('users.index', ['response' => $response]);
-// }

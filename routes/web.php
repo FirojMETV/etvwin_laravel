@@ -90,3 +90,6 @@ Route::get('watchlater',function(){
 Route::get('header',function(){
     return view('Header/header');
 });
+Route::get('/active',function(){
+    return  view('Active/ActiveTV');
+});
