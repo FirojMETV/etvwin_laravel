@@ -244,6 +244,7 @@
                 <li> <button 
                         class="form-button blue-button" disabled="disabled">DONE</button></li>
             </ul>
+            <input type="checkbox" class="buttons" id="myCheckbox" name="myCheckbox" />
         </div>
     </div>
 </div>
