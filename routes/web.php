@@ -93,3 +93,6 @@ Route::get('header',function(){
 Route::get('/active',function(){
     return  view('Active/ActiveTV');
 });
+Route::get('/preference',function(){
+    return view('Preference/preference');
+});

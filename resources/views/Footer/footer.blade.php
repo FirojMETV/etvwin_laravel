@@ -21,23 +21,27 @@
             </div>
             <div class="social-media-icons" style="display: inline-flex">
                 <h2 >Connect with us
-                    <span >
+                   
                         <a href="">
+                            <span>
                             <img src="{{ asset('image/facebook.png') }}" alt="" class="social-media-icons-new">
+                        </span>
                         </a>
-                    </span>
-                    <span>
+                  
                         <a href="">
+                        <span>
                             <img src="{{ asset('image/instagram-new-icon.png') }}" alt=""
                                 class="social-media-icons-new">
-                        </a>
-                    </span>
-                    <span>
+                            </span>
+                            </a>
+                 
                         <a href="">
+                        <span>
                             <img src="{{ asset('image/twitter-new.png') }}" alt=""
                                 class="social-media-icons-new">
-                        </a>
-                    </span>
+                            </span>
+                            </a>
+                    
                 </h2>
             </div>
         </div>

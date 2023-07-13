@@ -269,6 +269,13 @@ input[type=checkbox], input[type=radio] {
     padding: 15px 10px;
     margin: 0;
 }
+.dropdown-menu ul {
+    margin-top: -20px;
+    margin-left: 40px;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
 .share-dropdown .dropdown-content {
     line-height: 0;
 }
@@ -334,10 +341,7 @@ input[type=checkbox], input[type=radio] {
     cursor: pointer;
 }
 
-.ng-social {
-    text-align: center;
-    margin-left: -40px
-}
+
 .viewersnav .viewerslinks li:last-child {
     border-right: none;
     padding-right: 0;

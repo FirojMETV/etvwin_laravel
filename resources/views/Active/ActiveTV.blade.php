@@ -29,18 +29,18 @@
                                 id="first_char" placeholder="-" maxlength="1" style="">
                             <input type="text"
                                 class="activate-tv-input ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"
-                                placeholder="-" id="second_char">
+                                placeholder="-" id="second_char" maxlength="1" >
                             <input type="text"
                                 class="activate-tv-input ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"
-                                placeholder="-" id="third_char">
+                                placeholder="-" id="third_char" maxlength="1" >
                             <input type="text"
                                 class="activate-tv-input ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"
-                                placeholder="-" id="fourth_char">
+                                placeholder="-" id="fourth_char" maxlength="1" >
                             <input type="text"
                                 class="activate-tv-input ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"
-                                placeholder="-" id="fifth_char">
+                                placeholder="-" id="fifth_char" maxlength="1" >
                             <input
-                                oninput="javascript: if (this.value.length> this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            maxlength="1" 
                                 type="text" placeholder="-"
                                 class="activate-tv-input ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"
                                 id="sixth_char">

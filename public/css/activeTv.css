@@ -3,7 +3,7 @@
     position: relative;
     min-height: 500px;
     background-color: #00021c;
-    padding-bottom: 70px;
+    margin-bottom: 70px;
 }
 .tvactive_box {
     width: 100%;
@@ -44,9 +44,7 @@
     font-weight: 700;
     margin-top: 40px !important;
 }
-img{
-    width: 100%;
-}
+
 
 .codebox h6 {
     font-size: 13px;
@@ -77,7 +75,9 @@ img{
     margin: 18px 12px;
     padding: 8px 14px;
     background: #7249bf;
+    transition: all 0.2s ease;
 }
+
 
 .tvactive_box .codebox input[type=text] {
     color: #fff;

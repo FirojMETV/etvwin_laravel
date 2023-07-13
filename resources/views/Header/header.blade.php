@@ -132,7 +132,7 @@
                             <span class="drop-text activate-tv-text">Activate TV</span>
                         </a>
                     </li>
-                    <li><a>
+                    <li><a href="preference">
                             <span class="icon-following drop-down-icons" aria-hidden="true">
                             </span>
                             <span class="drop-text">My Preferences</span>
@@ -141,16 +141,14 @@
                     <li>
                         <a>
                             <span class="icon-signout drop-down-icons" aria-hidden="true">
-                                {{-- <img src="{{ asset('image/logout.png') }}" alt=""
-                                    style="transform: rotate(270deg);"> --}}
+                                
                             </span>
                             <span class="drop-text">Sign Out</span></a>
                     </li>
                     <li>
                         <a>
                             <span class="icon-signout drop-down-icons" aria-hidden="true">
-                                {{-- <img src="{{ asset('image/logout.png') }}" alt=""
-                                    style="transform: rotate(270deg);"> --}}
+                               
                             </span>
                             <span class="drop-text">Sign Out all devices
 
