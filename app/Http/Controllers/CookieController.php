@@ -48,53 +48,180 @@ class CookieController extends Controller
 
    // config data for api
 
-   public $title="";
-   public $platform_note="";
-   public $platform_code="";
-   public $content_id="";
-   public $text_message="";
-   public $app_code="";
-   public $params_hash='';
-   public $params_hash2='';
-   public $params_hash2_config_params='';
-   public $config_params_feedback="";
+   public $title = "";
+   public $platform_note = "";
+   public $platform_code = "";
+   public $content_id = "";
+   public $text_message = "";
+   public $app_code = "";
+   public $params_hash = '';
+   public $params_hash2 = '';
+   public $params_hash2_config_params = '';
+   public $config_params_feedback = "";
 
-   public $feedback_email="";
-   public $feedback_catalog_id="";
-   public $feedback_friendly_id='';
-   public $config_params_qa ="";
-   public $qa_catalog_id ="";
-   public $qa_friendly_id ="";
+   public $feedback_email = "";
+   public $feedback_catalog_id = "";
+   public $feedback_friendly_id = '';
+   public $config_params_qa = "";
+   public $qa_catalog_id = "";
+   public $qa_friendly_id = "";
 
-   public $config_params_recipe ="";
-   public $recipe_catalog_id ="";
-   public $recipe_friendly_id ="";
+   public $config_params_recipe = "";
+   public $recipe_catalog_id = "";
+   public $recipe_friendly_id = "";
 
-   public $config_params_show ="";
-   public $show_catalog_id ="";
-   public $show_friendly_id ="";
-   
-   public $android_version="";
-   public $android_version_current_version ="";
-   public $android_version_min_version ="";
-   public $android_version_force_upgrade ="";
-   public $android_version_message ="";
+   public $config_params_show = "";
+   public $show_catalog_id = "";
+   public $show_friendly_id = "";
 
-   public $ios_version ="";
-   public $ios_version_current_version ="";
-   public $ios_version_min_version ="";
-   public $ios_version_force_upgrade ="";
-   public $ios_version_message ="";
-   
-   public $firestick_version ="";
-   public $firestick_version_current_version ="";
-   public $firestick_version_min_version ="";
-   public $firestick_version_force_upgrade ="";
+   public $android_version = "";
+   public $android_version_current_version = "";
+   public $android_version_min_version = "";
+   public $android_version_force_upgrade = "";
+   public $android_version_message = "";
 
-   public $firestick_version_message ="";
- 
+   public $ios_version = "";
+   public $ios_version_current_version = "";
+   public $ios_version_min_version = "";
+   public $ios_version_force_upgrade = "";
+   public $ios_version_message = "";
 
-   public function getCookie(Request $request){
+   public $firestick_version = "";
+   public $firestick_version_current_version = "";
+   public $firestick_version_min_version = "";
+   public $firestick_version_force_upgrade = "";
+
+   public $firestick_version_message = "";
+
+   public $androidtv_version = "";
+   public $androidtv_version_current_version = "";
+   public $androidtv_version_min_version = "";
+   public $androidtv_version_force_upgrade = "";
+   public $androidtv_version_message = "";
+
+   // dnd
+   public $dnd = "";
+   public $dnd_start_time = "";
+   public $dnd_end_time = "";
+
+   // offline_preferences
+   public $offline_preferences = "";
+   // "win_1920x1080"
+   public $profile1920 = "";
+   public $display_name1920 = "";
+   //  "win_1280x720"
+   public $profile1280 = "";
+   public $display_name1280 = "";
+   //  "win_426x240"
+   public $profile426 = "";
+   public $display_name426 = "";
+
+   //  "High-720p"
+   public $profile720p = "";
+   public $display_name720p = "";
+   // "Medium-480p"
+   public $profile480p = "";
+   public $display_name480p = "";
+
+   // "Low-240p"
+   public $profile240p = "";
+   public $display_name240p = "";
+
+
+   public $reminder_interval = '';
+
+   public $faq = "";
+   public $contact_us = "";
+   public $t_c = "";
+   public $privacy_policy = "";
+   public $about_us = "";
+   public $web_portal_url = "";
+   public $offline_deletion_days = "";
+   public $global_view_count = "";
+
+
+   public $commentable = "";
+   public $ad_type = "";
+
+   public $constant_quality = "";
+   public $subscription_url = "";
+   public $tv_login_url = "";
+   public $qr_login_url = "";
+   public $watchhistory_interval_sec = "";
+   public $watchhistory_api = "";
+   public $popup_details = '';
+
+   public $show_popup = "";
+   public $images = "";
+   public $images_high_9_16 = "";
+   public $images_high_3_4 = "";
+   public $other_region_images = "";
+   public $other_region_images_high_9_16 = "";
+   public $other_region_images_high_3_4 = "";
+   public $redirect_type = "";
+   public $redirect_url = "";
+   public $access_control = "";
+   public $access_control_title = "";
+   public $access_control_content_id = "";
+   public $issue_list = "";
+   public $Payment_issue_title = "";
+   public $Payment_issue_key = "";
+
+   public $Subscription_issue_title = "";
+   public $Subscription_issue_key = "";
+
+   public $Content_issue_title = "";
+   public $Content_issue_key = "";
+   public $Other_issue_title = "";
+   public $Other_issue_key = "";
+
+
+   public $payment_gateway = "";
+
+   public $Billdesk_gateway = "";
+   public $Billdesk_default = "";
+
+   public $ccavenue_gateway = "";
+   public $ccavenue_default = "";
+
+   public $app_version = "";
+   public $app_version_upgrade_type = "";
+   public $app_version_message = "";
+
+   public $regions = "";
+
+   public $order = "";
+   public $type = "";
+   public $friendly_id = "";
+   public $catalog_id = "";
+   public $service = "";
+   public $service_min_android_app_version = "";
+   public $service_min_ios_app_version = "";
+   public $services = "";
+   public $catalog_name = "";
+   public $catalog_dns = "";
+   public $catalog_available = "";
+   public $name = "";
+   public $dns = "";
+   public $available = "";
+   public $users_name = "";
+   public $users_dns = "";
+   public $users_available = "";
+   public $subscriptions_name = "";
+   public $subscriptions_dns = "";
+   public $subscriptions_available = "";
+   public $search_name = "";
+   public $search_dns = "";
+   public $search_available = "";
+   public $recommendations_name = "";
+   public $recommendations_dns = "";
+   public $recommendations_available = "";
+   public $analytics_name = "";
+   public $analytics_dns = "";
+   public $analytics_available = "";
+   public $webservice = "";
+   public function getCookie(Request $request)
+   {
       // Retrieve the cookies
       $authToken = $request->cookie('auth_token');
       $accessToken = $request->cookie('access_token');
@@ -146,13 +273,13 @@ class CookieController extends Controller
    }
 
 
-   
 
 
-// public function setCookie()
+
+   // public function setCookie()
 //    {
 
-//       $authToken = 'q5u8JMWTd2698ncg7q4Q'; //auth_token
+   //       $authToken = 'q5u8JMWTd2698ncg7q4Q'; //auth_token
 //       $accessToken = 'Ay6KCkajdBzztJ4bptpW'; //acces token 
 //       $userIP = $request->ip('');
 //       $country_code2 = 'IN';
@@ -195,10 +322,10 @@ class CookieController extends Controller
 //       $postalCodeCookie = session()->put('postal_code', $postal_code, $expirationTime);
 //       $latitudeCookie = session()->put('latitude', $latitude, $expirationTime);
 
-//       // echo $request->session()->put('name','EtvWin');
+   //       // echo $request->session()->put('name','EtvWin');
 //       return new Response('Session data has been set');
 
-//    }
+   //    }
    public function Session_get(Request $request)
    {
 
@@ -288,7 +415,7 @@ class CookieController extends Controller
       $data = $this->usermodel->GETAPIMODEL($ip);
       $Datas = json_decode($data);
       // print_r($Datas);
-       $this->UserIP=$Datas->region->ip;
+      $this->UserIP = $Datas->region->ip;
       $this->country_code2 = $Datas->region->country_code2;
       $this->country_code3 = $Datas->region->country_code3;
       $this->country_name = $Datas->region->country_name;
@@ -315,7 +442,7 @@ class CookieController extends Controller
       $data = $this->usermodel->GETAPIMODEL($ip);
       $Datas = json_decode($data);
       // print_r($Datas);
-       $this->UserIP=$Datas->region->ip;
+      $this->UserIP = $Datas->region->ip;
       $this->country_code2 = $Datas->region->country_code2;
       $this->country_code3 = $Datas->region->country_code3;
       $this->country_name = $Datas->region->country_name;
@@ -337,63 +464,216 @@ class CookieController extends Controller
 
 
       // config params of api
-       $config_data = $this->BASE_URL . $this->config . "?region=" . $this->country_code2 . "&auth_token=" . $this->AUTHTOKEN . "&access_token=" . $this->ACCESSTOKEN ;
+      $config_data = $this->BASE_URL . $this->config . "?region=" . $this->country_code2 . "&auth_token=" . $this->AUTHTOKEN . "&access_token=" . $this->ACCESSTOKEN;
 
-      $config_data_types=$this->usermodel->GETAPIMODEL($config_data);
+      $config_data_types = $this->usermodel->GETAPIMODEL($config_data);
       // config api last api for website;
 
-      $data_config=json_decode($config_data_types);
+      $data_config = json_decode($config_data_types);
       //  print_r($data_config);
-      $this->title= $data_config->data->title;
-       $this->platform_note=$data_config->data->platform_note;
-      $this->platform_code=$data_config->data->platform_code;
-      $this->content_id= $data_config->data->content_id; 
-      $this->text_message=$data_config->data->text_message;
-      $this->app_code=$data_config->data->app_code;
-      $this->params_hash=$data_config->data->params_hash;
-      $this->params_hash2=$data_config->data->params_hash2;
-      $this->params_hash2_config_params=$data_config->data->params_hash2->config_params;
+      $this->title = $data_config->data->title;
+      $this->platform_note = $data_config->data->platform_note;
+      $this->platform_code = $data_config->data->platform_code;
+      $this->content_id = $data_config->data->content_id;
+      $this->text_message = $data_config->data->text_message;
+      $this->app_code = $data_config->data->app_code;
+      $this->params_hash = $data_config->data->params_hash;
+      $this->params_hash2 = $data_config->data->params_hash2;
+      $this->params_hash2_config_params = $data_config->data->params_hash2->config_params;
       // feedback api
-      $this->config_params_feedback=$data_config->data->params_hash2->config_params->feedback;
-      $this->feedback_email=$data_config->data->params_hash2->config_params->feedback->email;
-      $this->feedback_catalog_id= $data_config->data->params_hash2->config_params->feedback->catalog_id;
-      $this->feedback_friendly_id= $data_config->data->params_hash2->config_params->feedback->friendly_id;
+      $this->config_params_feedback = $data_config->data->params_hash2->config_params->feedback;
+      $this->feedback_email = $data_config->data->params_hash2->config_params->feedback->email;
+      $this->feedback_catalog_id = $data_config->data->params_hash2->config_params->feedback->catalog_id;
+      $this->feedback_friendly_id = $data_config->data->params_hash2->config_params->feedback->friendly_id;
       //  qa api
-      $this->config_params_qa= $data_config->data->params_hash2->config_params->qa;
-      $this->qa_catalog_id=$data_config->data->params_hash2->config_params->qa->catalog_id;
-      $this-> qa_friendly_id=$data_config->data->params_hash2->config_params->qa->friendly_id;
+      $this->config_params_qa = $data_config->data->params_hash2->config_params->qa;
+      $this->qa_catalog_id = $data_config->data->params_hash2->config_params->qa->catalog_id;
+      $this->qa_friendly_id = $data_config->data->params_hash2->config_params->qa->friendly_id;
       // recipe api 
       $this->config_params_recipe = $data_config->data->params_hash2->config_params->recipe;
-      $this->recipe_catalog_id= $data_config->data->params_hash2->config_params->recipe->catalog_id;
-      $this->recipe_friendly_id= $data_config->data->params_hash2->config_params->recipe->friendly_id;
+      $this->recipe_catalog_id = $data_config->data->params_hash2->config_params->recipe->catalog_id;
+      $this->recipe_friendly_id = $data_config->data->params_hash2->config_params->recipe->friendly_id;
       // show api 
-      $this->config_params_show= $data_config->data->params_hash2->config_params->show;
-      $this->show_catalog_id=$data_config->data->params_hash2->config_params->show->catalog_id;
-      $this->show_friendly_id=$data_config->data->params_hash2->config_params->show->friendly_id;
-      
+      $this->config_params_show = $data_config->data->params_hash2->config_params->show;
+      $this->show_catalog_id = $data_config->data->params_hash2->config_params->show->catalog_id;
+      $this->show_friendly_id = $data_config->data->params_hash2->config_params->show->friendly_id;
+
       // android api
-      $this->android_version=$data_config->data->params_hash2->config_params->android_version;
-      $this->android_version_current_version=$data_config->data->params_hash2->config_params->android_version->current_version;
-      $this->android_version_min_version=$data_config->data->params_hash2->config_params->android_version->min_version;
-      $this->android_version_force_upgrade=$data_config->data->params_hash2->config_params->android_version->force_upgrade;
-      $this->android_version_message=$data_config->data->params_hash2->config_params->android_version->message;
+      $this->android_version = $data_config->data->params_hash2->config_params->android_version;
+      $this->android_version_current_version = $data_config->data->params_hash2->config_params->android_version->current_version;
+      $this->android_version_min_version = $data_config->data->params_hash2->config_params->android_version->min_version;
+      $this->android_version_force_upgrade = $data_config->data->params_hash2->config_params->android_version->force_upgrade;
+      $this->android_version_message = $data_config->data->params_hash2->config_params->android_version->message;
 
       // ios api
-      $this->ios_version=$data_config->data->params_hash2->config_params->ios_version;
-      $this->ios_version_current_version=$data_config->data->params_hash2->config_params->ios_version->current_version;
-      $this->ios_version_min_version=$data_config->data->params_hash2->config_params->ios_version->min_version;
-      $this->ios_version_force_upgrade=$data_config->data->params_hash2->config_params->ios_version->force_upgrade;     $this->ios_version_message=$data_config->data->params_hash2->config_params->ios_version->message;
-     
-      // firestick
-      $this->firestick_version=$data_config->data->params_hash2->config_params->firestick_version;
-      $this->firestick_version_current_version=$data_config->data->params_hash2->config_params->firestick_version->current_version;
-      $this->firestick_version_min_version=$data_config->data->params_hash2->config_params->firestick_version->min_version;
-      $this->firestick_version_force_upgrade=$data_config->data->params_hash2->config_params->firestick_version->force_upgrade;
-      $this->firestick_version_message=$data_config->data->params_hash2->config_params->firestick_version->message;
-      
+      $this->ios_version = $data_config->data->params_hash2->config_params->ios_version;
+      $this->ios_version_current_version = $data_config->data->params_hash2->config_params->ios_version->current_version;
+      $this->ios_version_min_version = $data_config->data->params_hash2->config_params->ios_version->min_version;
+      $this->ios_version_force_upgrade = $data_config->data->params_hash2->config_params->ios_version->force_upgrade;
+      $this->ios_version_message = $data_config->data->params_hash2->config_params->ios_version->message;
 
-      print_r($this->firestick_version_message);
-      
+      // firestick
+      $this->firestick_version = $data_config->data->params_hash2->config_params->firestick_version;
+      $this->firestick_version_current_version = $data_config->data->params_hash2->config_params->firestick_version->current_version;
+      $this->firestick_version_min_version = $data_config->data->params_hash2->config_params->firestick_version->min_version;
+      $this->firestick_version_force_upgrade = $data_config->data->params_hash2->config_params->firestick_version->force_upgrade;
+      $this->firestick_version_message = $data_config->data->params_hash2->config_params->firestick_version->message;
+
+      // androidTv api
+      $this->androidtv_version = $data_config->data->params_hash2->config_params->androidtv_version;
+      $this->androidtv_version_current_version = $data_config->data->params_hash2->config_params->androidtv_version->current_version;
+      $this->androidtv_version_min_version = $data_config->data->params_hash2->config_params->androidtv_version->min_version;
+      $this->androidtv_version_force_upgrade = $data_config->data->params_hash2->config_params->androidtv_version->force_upgrade;
+      $this->androidtv_version_message = $data_config->data->params_hash2->config_params->androidtv_version->message;
+
+      // dnd api
+      $this->dnd = $data_config->data->params_hash2->config_params->dnd;
+      $this->dnd_start_time = $data_config->data->params_hash2->config_params->dnd[0]->start_time;
+      $this->dnd_end_time = $data_config->data->params_hash2->config_params->dnd[0]->end_time;
+
+      //offline_preferences 
+      $this->offline_preferences = $data_config->data->params_hash2->config_params->offline_preferences;
+      //size- 1920
+      $this->profile1920 = $data_config->data->params_hash2->config_params->offline_preferences[0]->profile;
+      $this->display_name1920 = $data_config->data->params_hash2->config_params->offline_preferences[0]->display_name;
+      // size-1280
+      $this->profile1280 = $data_config->data->params_hash2->config_params->offline_preferences[1]->profile;
+      $this->display_name1280 = $data_config->data->params_hash2->config_params->offline_preferences[1]->display_name;
+      // size-426
+      $this->profile426 = $data_config->data->params_hash2->config_params->offline_preferences[2]->profile;
+      $this->display_name426 = $data_config->data->params_hash2->config_params->offline_preferences[2]->display_name;
+      // size-high-720p
+      $this->profile720p = $data_config->data->params_hash2->config_params->offline_preferences[3]->profile;
+      $this->display_name720p = $data_config->data->params_hash2->config_params->offline_preferences[3]->display_name;
+
+      //size medium-480p
+      $this->profile480p = $data_config->data->params_hash2->config_params->offline_preferences[4]->profile;
+      $this->display_name480p = $data_config->data->params_hash2->config_params->offline_preferences[4]->display_name;
+
+      //size low-240p
+      $this->profile240p = $data_config->data->params_hash2->config_params->offline_preferences[5]->profile;
+      $this->display_name240p = $data_config->data->params_hash2->config_params->offline_preferences[5]->display_name;
+
+      $this->reminder_interval = $data_config->data->params_hash2->config_params->reminder_interval;
+      $this->faq = $data_config->data->params_hash2->config_params->faq;
+      $this->contact_us = $data_config->data->params_hash2->config_params->contact_us;
+
+      //  error in terms and conditions
+      //  $this->t_c=  $data_config->data->params_hash2->config_params->t&c;  
+
+      $this->privacy_policy = $data_config->data->params_hash2->config_params->privacy_policy;
+      $this->about_us = $data_config->data->params_hash2->config_params->about_us;
+      $this->web_portal_url = $data_config->data->params_hash2->config_params->web_portal_url;
+      $this->offline_deletion_days = $data_config->data->params_hash2->config_params->offline_deletion_days;
+
+      // data can't shown in this line
+      $this->global_view_count = $data_config->data->params_hash2->config_params->global_view_count;
+      $this->commentable = $data_config->data->params_hash2->config_params->commentable;
+
+      $this->ad_type = $data_config->data->params_hash2->config_params->ad_type;
+      $this->tv_login_url = $data_config->data->params_hash2->config_params->tv_login_url;
+      $this->qr_login_url = $data_config->data->params_hash2->config_params->qr_login_url;
+      $this->watchhistory_interval_sec = $data_config->data->params_hash2->config_params->watchhistory_interval_sec;
+      $this->watchhistory_api = $data_config->data->params_hash2->config_params->watchhistory_api;
+      // popup details
+      $this->popup_details = $data_config->data->params_hash2->config_params->popup_details;
+
+      // when api is false web page show only 
+      $this->show_popup = $data_config->data->params_hash2->config_params->popup_details->show_popup;
+      // image high 9/16 or 3/4
+      $this->images = $data_config->data->params_hash2->config_params->popup_details->images;
+      $this->images_high_9_16 = $data_config->data->params_hash2->config_params->popup_details->images->high_9_16;
+      $this->images_high_3_4 = $data_config->data->params_hash2->config_params->popup_details->images->high_3_4;
+      // other region image 
+      $this->other_region_images = $data_config->data->params_hash2->config_params->popup_details->other_region_images;
+      $this->other_region_images_high_9_16 = $data_config->data->params_hash2->config_params->popup_details->other_region_images->high_9_16;
+      $this->other_region_images_high_3_4 = $data_config->data->params_hash2->config_params->popup_details->other_region_images->high_3_4;
+
+      // redirect_types
+      $this->redirect_type = $data_config->data->params_hash2->config_params->popup_details->redirect_type;
+      $this->redirect_url = $data_config->data->params_hash2->config_params->popup_details->redirect_url;
+
+      // access token
+      $this->access_control = $data_config->data->params_hash2->config_params->access_control;
+      $this->access_control_title = $data_config->data->params_hash2->config_params->access_control->title;
+      $this->access_control_content_id = $data_config->data->params_hash2->config_params->access_control->content_id;
+
+      // issue list
+      $this->issue_list = $data_config->data->params_hash2->config_params->issue_list;
+      // payment issue details 
+
+      $this->Payment_issue_key = $data_config->data->params_hash2->config_params->issue_list[0]->key;
+      $this->Payment_issue_title = $data_config->data->params_hash2->config_params->issue_list[0]->title;
+      // Subscrition issue
+      $this->Subscription_issue_key = $data_config->data->params_hash2->config_params->issue_list[1]->key;
+      $this->Subscription_issue_title = $data_config->data->params_hash2->config_params->issue_list[1]->title;
+      // Content issue
+      $this->Content_issue_key = $data_config->data->params_hash2->config_params->issue_list[2]->key;
+      $this->Content_issue_title = $data_config->data->params_hash2->config_params->issue_list[2]->title;
+      // other issue
+      $this->Other_issue_key = $data_config->data->params_hash2->config_params->issue_list[3]->key;
+      $this->Other_issue_title = $data_config->data->params_hash2->config_params->issue_list[3]->title;
+
+      // payment_gateway
+      $this->payment_gateway = $data_config->data->params_hash2->config_params->payment_gateway;
+
+      $this->Billdesk_gateway = $data_config->data->params_hash2->config_params->payment_gateway[0]->gateway;
+      $this->Billdesk_default = $data_config->data->params_hash2->config_params->payment_gateway[0]->default;
+
+      $this->ccavenue_gateway = $data_config->data->params_hash2->config_params->payment_gateway[1]->gateway;
+      $this->ccavenue_default = $data_config->data->params_hash2->config_params->payment_gateway[1]->default;
+      // app version 
+      $this->app_version = $data_config->data->app_version;
+      $this->app_version_upgrade_type = $data_config->data->app_version->upgrade_type;
+      $this->app_version_message = $data_config->data->app_version->message;
+
+      // regions
+      $this->regions = $data_config->data->regions[0];
+
+      // order
+      $this->order = $data_config->data->order;
+      // type
+      $this->type = $data_config->data->type;
+      // friendly_id
+      $this->friendly_id = $data_config->data->friendly_id;
+      //  catalog_id 
+      $this->catalog_id = $data_config->data->catalog_id;
+
+      // service 
+      $this->service = $data_config->data->service;
+      $this->service_min_android_app_version = $data_config->data->service->min_android_app_version;
+      $this->service_min_ios_app_version = $data_config->data->service->min_ios_app_version;
+// services data 
+      $this->services=$data_config->data->service->services;
+
+      $this->name=$data_config->data->service->services[0]->name;
+      $this->dns= $data_config->data->service->services[0]->dns;
+      $this->available=$data_config->data->service->services[0]->available;
+
+      $this->users_name=$data_config->data->service->services[1]->name;
+      $this->users_dns= $data_config->data->service->services[1]->dns;
+      $this->users_available=$data_config->data->service->services[1]->available;
+
+      $this->subscriptions_name=$data_config->data->service->services[2]->name;
+      $this->subscriptions_dns= $data_config->data->service->services[2]->dns;
+      $this->subscriptions_available=$data_config->data->service->services[2]->available;
+
+      $this->search_name=$data_config->data->service->services[3]->name;
+      $this->search_dns= $data_config->data->service->services[3]->dns;
+      $this->search_available=$data_config->data->service->services[3]->available;
+
+      $this->recommendations_name=$data_config->data->service->services[4]->name;
+      $this->recommendations_dns= $data_config->data->service->services[4]->dns;
+      $this->recommendations_available=$data_config->data->service->services[4]->available;
+
+      $this->analytics_name=$data_config->data->service->services[5]->name;
+      $this->analytics_dns= $data_config->data->service->services[5]->dns;
+      $this->analytics_available=$data_config->data->service->services[5]->available;
+
+      // webservices 
+      $this->webservice= $data_config->data->service->webservice;
+      print_r($this->webservice);
+
 
    }
 }
