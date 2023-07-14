@@ -27,10 +27,10 @@
                         <div class="ng-scope">
                             <div class="col-md-3 col-sm-3 col-xs-6">
                                 <div>
-                                    <input type="checkbox" ng-model="value.checked"
+                                    <input type="checkbox" id="myCheckbox"
                                         class="read-more-state "
                                         aria-invalid="false">
-                                    <div class="genres ng-binding" role="button" tabindex="0">
+                                    <div class="genres followed " role="button" tabindex="0">
                                         Comedy</div>
                                 </div>
                             </div>
@@ -38,10 +38,10 @@
                         <div class="ng-scope">
                             <div class="col-md-3 col-sm-3 col-xs-6">
                                 <div>
-                                    <input type="checkbox" ng-model="value.checked"
-                                        class="read-more-state "
+                                    <input type="checkbox"
+                                        class="read-more-state "  id="myCheckbox1"
                                         aria-invalid="false">
-                                    <div class="genres ng-binding" role="button" tabindex="0">
+                                    <div class="genres followed" role="button" tabindex="0">
                                         Drama</div>
                                 </div>
                             </div>
@@ -49,10 +49,10 @@
                         <div class="ng-scope">
                             <div class="col-md-3 col-sm-3 col-xs-6">
                                 <div>
-                                    <input type="checkbox" ng-model="value.checked"
-                                        class="read-more-state "
+                                    <input type="checkbox" 
+                                        class="read-more-state " id="myCheckbox"
                                         aria-invalid="false">
-                                    <div class="genres ng-binding" role="button" tabindex="0">
+                                    <div class="genres followed" role="button" tabindex="0">
                                         Event</div>
                                 </div>
                             </div>
@@ -60,10 +60,10 @@
                         <div class="ng-scope">
                             <div class="col-md-3 col-sm-3 col-xs-6">
                                 <div>
-                                    <input type="checkbox" ng-model="value.checked"
+                                    <input type="checkbox"  id="myCheckbox"
                                         class="read-more-state "
                                         aria-invalid="false">
-                                    <div class="genres ng-binding" role="button" tabindex="0">
+                                    <div class="genres followed" role="button" tabindex="0">
                                         Food</div>
                                 </div>
                             </div>
@@ -71,10 +71,10 @@
                         <div class="ng-scope">
                             <div class="col-md-3 col-sm-3 col-xs-6">
                                 <div>
-                                    <input type="checkbox" ng-model="value.checked"
+                                    <input type="checkbox"  id="myCheckbox"
                                         class="read-more-state "
                                         aria-invalid="false">
-                                    <div class="genres ng-binding" role="button" tabindex="0">Health</div>
+                                    <div class="genres followed" role="button" tabindex="0">Health</div>
                                 </div>
                             </div>
                         </div>
@@ -91,10 +91,10 @@
                         <div class="ng-scope">
                             <div class="col-md-3 col-sm-3 col-xs-6">
                                 <div>
-                                    <input type="checkbox" ng-model="value.checked"
+                                    <input type="checkbox"  id="myCheckbox"
                                         class="read-more-state "
                                         aria-invalid="false">
-                                    <div class="genres ng-binding" role="button" tabindex="0">
+                                    <div class="genres followed" role="button" tabindex="0">
                                         Extra
                                         Jabardasth</div>
                                 </div>
@@ -103,10 +103,10 @@
                         <div class="ng-scope">
                             <div class="col-md-3 col-sm-3 col-xs-6">
                                 <div>
-                                    <input type="checkbox" ng-model="value.checked"
+                                    <input type="checkbox" id="myCheckbox"
                                         class="read-more-state "
                                         aria-invalid="false">
-                                    <div class="genres ng-binding" role="button" tabindex="0">
+                                    <div class="genres followed" role="button" tabindex="0">
                                         Dhee</div>
                                 </div>
                             </div>
@@ -114,10 +114,10 @@
                         <div class="ng-scope">
                             <div class="col-md-3 col-sm-3 col-xs-6">
                                 <div>
-                                    <input type="checkbox" ng-model="value.checked"
+                                    <input type="checkbox"  id="myCheckbox"
                                         class="read-more-state "
                                         aria-invalid="false">
-                                    <div class="genres ng-binding" role="button" tabindex="0">
+                                    <div class="genres followed" role="button" tabindex="0">
                                         Jabardasth
                                     </div>
                                 </div>
@@ -125,10 +125,10 @@
                         </div>
                         <div class="ng-scope">
                             <div class="col-md-3 col-sm-3 col-xs-6">
-                                <div> <input type="checkbox" ng-model="value.checked"
+                                <div> <input type="checkbox" id="myCheckbox"
                                         class="read-more-state "
                                         aria-invalid="false">
-                                    <div class="genres ng-binding" role="button" tabindex="0">
+                                    <div class="genres followed" role="button" tabindex="0">
                                         Sridevi
                                         Drama Company</div>
                                 </div>
@@ -136,20 +136,20 @@
                         </div>
                         <div class="ng-scope">
                             <div class="col-md-3 col-sm-3 col-xs-6">
-                                <div> <input type="checkbox" ng-model="value.checked"
+                                <div> <input type="checkbox"  id="myCheckbox"
                                         class="read-more-state "
                                         aria-invalid="false">
-                                    <div class="genres ng-binding" role="button" tabindex="0">Suma Adda
+                                    <div class="genres followed" role="button" tabindex="0">Suma Adda
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="ng-scope">
                             <div class="col-md-3 col-sm-3 col-xs-6">
-                                <div> <input type="checkbox" ng-model="value.checked"
+                                <div> <input type="checkbox"  id="myCheckbox"
                                         class="read-more-state "
                                         aria-invalid="false">
-                                    <div class="genres ng-binding" role="button" tabindex="0">Padutha
+                                    <div class="genres followed" role="button" tabindex="0">Padutha
                                         Theeyaga</div>
                                 </div>
                             </div>
@@ -165,72 +165,61 @@
                     <div class="row">
                         <div class="ng-scope">
                             <div class="col-md-3 col-sm-3 col-xs-6">
-                                <div> <input type="checkbox" ng-model="value.checked"
+                                <div> <input type="checkbox"  id="myCheckbox"
                                         class="read-more-state "
                                         aria-invalid="false">
-                                    <div class="genres ng-binding" ng-bind="value.title"
-                                        ng-click="value.isgray =!value.isgray;value.checked =!value.checked;preCtrl.IfChecked(value)"
-                                        ng-class="{followed : value.isgray}" role="button" tabindex="0">Rangula
+                                    <div class="genres followed"  role="button" tabindex="0">Rangula
                                         Ratnam</div>
                                 </div>
                             </div>
                         </div>
                         <div ng-repeat="(key,value) in item.catalog_list_items" class="ng-scope">
                             <div class="col-md-3 col-sm-3 col-xs-6">
-                                <div> <input type="checkbox" ng-model="value.checked"
+                                <div> <input type="checkbox"  id="myCheckbox"
                                         class="read-more-state"
                                         aria-invalid="false">
-                                    <div class="genres ng-binding" ng-bind="value.title"
-                                        ng-click="value.isgray =!value.isgray;value.checked =!value.checked;preCtrl.IfChecked(value)"
-                                        ng-class="{followed : value.isgray}" role="button" tabindex="0">Manasantha
+                                    <div class="genres followed"  role="button" tabindex="0">Manasantha
                                         Nuvve</div>
                                 </div>
                             </div>
                         </div>
                         <div ng-repeat="(key,value) in item.catalog_list_items" class="ng-scope">
                             <div class="col-md-3 col-sm-3 col-xs-6">
-                                <div> <input type="checkbox" ng-model="value.checked"
+                                <div> <input type="checkbox"   id="myCheckbox"
                                         class="read-more-state ng-pristine ng-untouched ng-valid ng-empty"
                                         aria-invalid="false">
-                                    <div class="genres ng-binding" ng-bind="value.title"
-                                        ng-click="value.isgray =!value.isgray;value.checked =!value.checked;preCtrl.IfChecked(value)"
-                                        ng-class="{followed : value.isgray}" role="button" tabindex="0">
+                                    <div class="genres followed" 
+                                        role="button" tabindex="0">
                                         Shatamanambhavati</div>
                                 </div>
                             </div>
                         </div>
                         <div ng-repeat="(key,value) in item.catalog_list_items" class="ng-scope">
                             <div class="col-md-3 col-sm-3 col-xs-6">
-                                <div> <input type="checkbox" ng-model="value.checked"
+                                <div> <input type="checkbox" id="myCheckbox"
                                         class="read-more-state ng-pristine ng-untouched ng-valid ng-empty"
                                         aria-invalid="false">
-                                    <div class="genres ng-binding" ng-bind="value.title"
-                                        ng-click="value.isgray =!value.isgray;value.checked =!value.checked;preCtrl.IfChecked(value)"
-                                        ng-class="{followed : value.isgray}" role="button" tabindex="0">Geetha
+                                    <div class="genres followed"  role="button" tabindex="0">Geetha
                                         Govindam</div>
                                 </div>
                             </div>
                         </div>
                         <div ng-repeat="(key,value) in item.catalog_list_items" class="ng-scope">
                             <div class="col-md-3 col-sm-3 col-xs-6">
-                                <div> <input type="checkbox" ng-model="value.checked"
+                                <div> <input type="checkbox"  id="myCheckbox"
                                         class="read-more-state ng-pristine ng-untouched ng-valid ng-empty"
                                         aria-invalid="false">
-                                    <div class="genres ng-binding" ng-bind="value.title"
-                                        ng-click="value.isgray =!value.isgray;value.checked =!value.checked;preCtrl.IfChecked(value)"
-                                        ng-class="{followed : value.isgray}" role="button" tabindex="0">Ravoyi
+                                    <div class="genres followed" role="button" tabindex="0">Ravoyi
                                         Chandamama</div>
                                 </div>
                             </div>
                         </div>
                         <div ng-repeat="(key,value) in item.catalog_list_items" class="ng-scope">
                             <div class="col-md-3 col-sm-3 col-xs-6">
-                                <div> <input type="checkbox" ng-model="value.checked"
+                                <div> <input type="checkbox"  id="myCheckbox"
                                         class="read-more-state ng-pristine ng-untouched ng-valid ng-empty"
                                         aria-invalid="false">
-                                    <div class="genres ng-binding" ng-bind="value.title"
-                                        ng-click="value.isgray =!value.isgray;value.checked =!value.checked;preCtrl.IfChecked(value)"
-                                        ng-class="{followed : value.isgray}" role="button" tabindex="0">Guvva
+                                    <div class="genres followed" role="button" tabindex="0">Guvva
                                         Gorinka</div>
                                 </div>
                             </div>
@@ -244,9 +233,9 @@
                 <li> <button 
                         class="form-button blue-button" disabled="disabled">DONE</button></li>
             </ul>
-            <input type="checkbox" class="buttons" id="myCheckbox" name="myCheckbox" />
+           
         </div>
     </div>
 </div>
-
+<script src="{{asset('js/preferences.js')}}"></script>
 @endsection
