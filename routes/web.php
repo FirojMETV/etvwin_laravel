@@ -96,3 +96,6 @@ Route::get('/active',function(){
 Route::get('/preference',function(){
     return view('Preference/preference');
 });
+Route::get('rating',function(){
+    return view('Cookies/rating');
+});

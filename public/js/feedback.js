@@ -1,3 +1,9 @@
+$(document).ready(function() {
+    $('#openFormButton').click(function() {
+        $('.form').toggleClass('show'); // Toggle the "show" class to display/hide the feedback form
+        $('.overlay').toggleClass('show'); // Toggle the "show" class to display/hide the overlay
+    });
+});
 
 function countCharactersAndUpdateCount() {
     // Get the input field value
@@ -14,3 +20,5 @@ function countCharactersAndUpdateCount() {
     var characterCountElement = document.getElementById('characterCount');
     characterCountElement.textContent = characterCount;
 }
+
+  

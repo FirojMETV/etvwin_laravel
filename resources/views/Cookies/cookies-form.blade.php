@@ -52,7 +52,7 @@ body{
 }
 .popup{
     background-color: #191d4f;
-    width: 420px;
+    width: 320px;
     padding: 30px 40px;
     position: absolute;
     transform: translate(-50%,-50%);
@@ -62,28 +62,17 @@ body{
     font-family: "Poppins",sans-serif;
     display: none; 
     text-align: center;
+    max-width: 250px;
+    max-height: 210px;
 }
-/* .popup {
-    display: block;
-    margin:  0 0 20px auto;
-    background-color: transparent;
-    font-size: 30px;
-    color: #ffffff;
-    background: #03549a;
-    border-radius: 100%;
-    width: 40px;
-    height: 40px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-} */
+
 .popup h2{
   margin-top: 0px;
   color: #fff;
-
+    font-size: 15px;
 }
 .popup p{
-    font-size: 12px;
+    font-size: 10px;
    color: #fff;
 }
 .popup a{
@@ -97,6 +86,10 @@ body{
     color: #ffffff;
     text-decoration: none;
     padding: 8px 0;
+}
+img{
+    width: 70px;
+    height: 50px;
 }
     </style>
 </head>

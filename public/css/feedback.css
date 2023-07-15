@@ -1,4 +1,4 @@
-.login-form-dialog {
+/* .login-form-dialog {
     background-color: #1e2257;
     border-radius: 9px;
     width: 450px;
@@ -114,4 +114,158 @@
     background: transparent;
     width: 100%;
     cursor: ns-resize;
+} */
+
+
+.form {
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #191d4f;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+    max-width: 220px;
+    min-height: 400px;
+    margin-bottom: 25%;
+    position: relative;
+    min-width: 320px;
+    display: none;  
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 450px;
+    padding: 20px;
+    border-radius: 10px; 
+    z-index: 2;
+}
+
+.form.show {
+    display: flex;
+    /* Show the feedback form when the button is clicked */
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    /* Set the overlay below the form */
+    display: none;
+    /* Initially hide the overlay */
+}
+
+.overlay.show {
+    display: block;
+    /* Show the overlay when the form is opened */
+}
+
+.header {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    margin: 0px;
+    background-color: #191d4f;
+}
+
+.form .title {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.form input {
+    outline: 0;
+    border: none;
+    border: 1px solid rgb(219, 213, 213);
+    padding: 0px 10px 0 15px;
+    border: none;
+    border-bottom: 1px solid #454558;
+    width: 100%;
+    height: 40px;
+    color: #ffdd;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.form textarea {
+    border: none;
+    color: #fff;
+    height: 100px;
+    width: 100%;
+    resize: none;
+    outline: 0;
+    padding: 6px 10px 0 15px;
+    overflow: auto;
+    border-radius: 5px;
+    border-bottom: 1px solid #454558;
+    font-size: 15px;
+}
+
+input[type="email"],
+textarea {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #101340;
+
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.form button {
+    align-self: center;
+    padding: 8px;
+    outline: 0;
+    border: 0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #7249bf;
+    color: #fff;
+    cursor: pointer;
+}
+
+select {
+    background: #101340;
+    border: 0px solid rgb(84, 73, 116);
+    width: 100%;
+    height: 40px;
+    font-size: large;
+    outline: none;
+    color: #fff;
+    padding: 2px 10px 2px 15px;
+    border-bottom: 1px solid #454558;
+    border-radius: 5px ;
+}
+
+option {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+ select option:hover{
+    color: #ffb908;
+}
+ select:focus + .arrow,
+	 select:hover + .arrow{
+			background-color: #e1ca47;
+		}
+option:checked {
+    width: 10%;
+    margin: 30px;
+    font-weight: bold;
 }

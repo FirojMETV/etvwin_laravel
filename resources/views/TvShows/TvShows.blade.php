@@ -27,14 +27,12 @@
                         </div>
                         <div class="ng-scope">
                             <div class="title-holder">
-                                <h1 ng-class="{'title-font-size': detCtrl.videoData.title.length <= 40}"
+                                <h1 
                                     class="ng-binding title-font-size">Dear Megha
                                     <span class="golden-bar meta-golden-bar white-text-color ng-scope"
                                         ng-if="detCtrl.videoData.release_date_string">
                                     </span>
-                                    <span class="video-date ng-scope date-font-size"
-                                        ng-class="{'date-font-size': detCtrl.videoData.title.length <= 40}"
-                                        ng-if="detCtrl.videoData.release_date_string">
+                                    <span class="video-date ng-scope date-font-size">
                                         <format-date date="detCtrl.videoData.release_date_string"
                                             utsdate="detCtrl.videoData.release_date_uts" class="ng-isolate-scope">
                                             <span ng-bind="formattedDate" class="ng-binding">29 Mar 23
@@ -71,8 +69,7 @@
                                 <ul class="viewerslinks">
                                     <li class="comment_padding">
                                         <label class="switch" role="button" tabindex="0">
-                                            <input type="checkbox" ng-disabled="detCtrl.isLikeDisabled"
-                                                ng-checked="detCtrl.isAddedToLike" class="like-checkbox"
+                                            <input type="checkbox" class="like-checkbox"
                                                 disabled="disabled">
                                             <em class="fa fa-thumbs-up" style="font-size:25px" aria-hidden="true">
                                             </em>
@@ -92,7 +89,6 @@
                                                 <p class="ng-scope"> Share This Video</p>
                                                 <li class="ng-social-facebook ng-scope" data-toggle="tooltip"
                                                     title="Facebook" role="button" tabindex="0"><a
-                                                      
                                                         target="_blank" 
                                                         class="ng-social-button"
                                                         href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ff66tr.app.goo.gl%2FLg2sZaNBvCu7WtwY6"><span
@@ -136,12 +132,11 @@
                                     </li>
                                     <li class="follow-item li-item">
                                         <span class="float-left">Follow</span>
-                                        <label class="float-left ng-pristine ng-untouched ng-valid ng-empty"
-                                            ng-model="landCtrl.isFollowed"
-                                            ng-change="landCtrl.followShow(landCtrl.isFollowed)" aria-label="Switch 1"
+                                        <label class="float-left "
+                                            aria-label="Switch 1"
                                             tabindex="0">
                                             <input type="checkbox" role="checkbox" aria-checked="false"
-                                                aria-invalid="false">
+                                                aria-invalid="false" style="display: none">
                                             {{-- <div class="md-container" style="touch-action: pan-x;">
                                                 <div class="md-bar"></div>
                                                 <div class="md-thumb-container">
@@ -150,12 +145,9 @@
                                                 </div>
                                             </div>
                                             <div ng-transclude="" class="md-label"></div> --}}
-                                            <span class="slider round"></span>
+                                            <span class=" toggleSwitch"></span>
                                         </label>
-                                        {{-- <label class="switch">
-                                            <input type="checkbox">
-                                            <span class="slider round"></span>
-                                          </label> --}}
+                                       
                                     </li>
                                     <li class="comment_padding">
                                         <label class="switch" role="button" tabindex="0"><input type="checkbox"
