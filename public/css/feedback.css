@@ -269,3 +269,17 @@ option:checked {
     margin: 30px;
     font-weight: bold;
 }
+
+#the-count {
+    float: right;
+    padding: 0.1rem 0 0 0;
+    font-size: 0.875rem;
+    color: #fff5;
+    float: right;
+    padding: 0.1rem 0 0 0;
+    font-size: 0.875rem;
+    color: #fff5;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 260px;
+  }

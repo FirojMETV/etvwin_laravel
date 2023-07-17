@@ -65,11 +65,15 @@
     <textarea placeholder="Your message" id="inputField" 
     oninput="countCharactersAndUpdateCount()" maxlength="1000">
     </textarea>
-    <p style="color: #a4a4a4 ;float: left;margin-left:auto">
+    {{-- <p style="color: #a4a4a4 ;float: left;margin-left:auto">
         <span id="characterCount"
             style="color: #a4a4a4">
-        </span> /1000</p>
-    <button>Submit</button>
+        </span> /1000</p> --}}
+        <div id="the-count">
+            <span id="current">0</span>
+            <span id="maximum">/ 1000</span>
+          </div>
+    <button>Submit</button> 
 </form>
 
 

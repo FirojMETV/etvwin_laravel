@@ -1,10 +1,7 @@
 
 <link rel='stylesheet' href="{{ asset('css/login.css') }}">
 
-    
-
-
-
+<div class="overlay"></div>
     <div class="container-fluid ">
         <div class="center">
             <h2> Sign in</h2>

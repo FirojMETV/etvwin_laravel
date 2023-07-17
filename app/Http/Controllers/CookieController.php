@@ -20,6 +20,8 @@ class CookieController extends Controller
 
    public $config = 'catalogs/message/items/app-config-params.gzip';
 
+   public $nested_list_items = 'catalog_lists/top-menu-web.gzip?nested_list_items=';
+   public $List_false ="false";
    public $Version = '1.1';
    public $data = "";
    public $usermodel = "";
@@ -220,6 +222,14 @@ class CookieController extends Controller
    public $analytics_dns = "";
    public $analytics_available = "";
    public $webservice = "";
+
+   public $access_tag ="";
+
+   public $ad_banner_ids="";
+   public $additional_keys="";
+   public $available_filters="";
+
+   public $catalog_list_items="";
    public function getCookie(Request $request)
    {
       // Retrieve the cookies
@@ -467,9 +477,12 @@ class CookieController extends Controller
       $config_data = $this->BASE_URL . $this->config . "?region=" . $this->country_code2 . "&auth_token=" . $this->AUTHTOKEN . "&access_token=" . $this->ACCESSTOKEN;
 
       $config_data_types = $this->usermodel->GETAPIMODEL($config_data);
-      // config api last api for website;
 
+      // config api last api for website;
+      $config_data_types = explode("t&c", $config_data_types);
+      $config_data_types = implode("t_c", $config_data_types);
       $data_config = json_decode($config_data_types);
+
       //  print_r($data_config);
       $this->title = $data_config->data->title;
       $this->platform_note = $data_config->data->platform_note;
@@ -480,6 +493,7 @@ class CookieController extends Controller
       $this->params_hash = $data_config->data->params_hash;
       $this->params_hash2 = $data_config->data->params_hash2;
       $this->params_hash2_config_params = $data_config->data->params_hash2->config_params;
+
       // feedback api
       $this->config_params_feedback = $data_config->data->params_hash2->config_params->feedback;
       $this->feedback_email = $data_config->data->params_hash2->config_params->feedback->email;
@@ -559,7 +573,7 @@ class CookieController extends Controller
       $this->contact_us = $data_config->data->params_hash2->config_params->contact_us;
 
       //  error in terms and conditions
-      //  $this->t_c=  $data_config->data->params_hash2->config_params->t&c;  
+      $this->t_c = $data_config->data->params_hash2->config_params->t_c;
 
       $this->privacy_policy = $data_config->data->params_hash2->config_params->privacy_policy;
       $this->about_us = $data_config->data->params_hash2->config_params->about_us;
@@ -568,6 +582,7 @@ class CookieController extends Controller
 
       // data can't shown in this line
       $this->global_view_count = $data_config->data->params_hash2->config_params->global_view_count;
+      //  print_r(json_encode($data_config));
       $this->commentable = $data_config->data->params_hash2->config_params->commentable;
 
       $this->ad_type = $data_config->data->params_hash2->config_params->ad_type;
@@ -580,10 +595,12 @@ class CookieController extends Controller
 
       // when api is false web page show only 
       $this->show_popup = $data_config->data->params_hash2->config_params->popup_details->show_popup;
+
       // image high 9/16 or 3/4
       $this->images = $data_config->data->params_hash2->config_params->popup_details->images;
       $this->images_high_9_16 = $data_config->data->params_hash2->config_params->popup_details->images->high_9_16;
       $this->images_high_3_4 = $data_config->data->params_hash2->config_params->popup_details->images->high_3_4;
+
       // other region image 
       $this->other_region_images = $data_config->data->params_hash2->config_params->popup_details->other_region_images;
       $this->other_region_images_high_9_16 = $data_config->data->params_hash2->config_params->popup_details->other_region_images->high_9_16;
@@ -604,12 +621,15 @@ class CookieController extends Controller
 
       $this->Payment_issue_key = $data_config->data->params_hash2->config_params->issue_list[0]->key;
       $this->Payment_issue_title = $data_config->data->params_hash2->config_params->issue_list[0]->title;
+
       // Subscrition issue
       $this->Subscription_issue_key = $data_config->data->params_hash2->config_params->issue_list[1]->key;
       $this->Subscription_issue_title = $data_config->data->params_hash2->config_params->issue_list[1]->title;
+
       // Content issue
       $this->Content_issue_key = $data_config->data->params_hash2->config_params->issue_list[2]->key;
       $this->Content_issue_title = $data_config->data->params_hash2->config_params->issue_list[2]->title;
+
       // other issue
       $this->Other_issue_key = $data_config->data->params_hash2->config_params->issue_list[3]->key;
       $this->Other_issue_title = $data_config->data->params_hash2->config_params->issue_list[3]->title;
@@ -643,37 +663,58 @@ class CookieController extends Controller
       $this->service = $data_config->data->service;
       $this->service_min_android_app_version = $data_config->data->service->min_android_app_version;
       $this->service_min_ios_app_version = $data_config->data->service->min_ios_app_version;
-// services data 
-      $this->services=$data_config->data->service->services;
+      // services data 
+      $this->services = $data_config->data->service->services;
 
-      $this->name=$data_config->data->service->services[0]->name;
-      $this->dns= $data_config->data->service->services[0]->dns;
-      $this->available=$data_config->data->service->services[0]->available;
+      $this->name = $data_config->data->service->services[0]->name;
+      $this->dns = $data_config->data->service->services[0]->dns;
+      $this->available = $data_config->data->service->services[0]->available;
 
-      $this->users_name=$data_config->data->service->services[1]->name;
-      $this->users_dns= $data_config->data->service->services[1]->dns;
-      $this->users_available=$data_config->data->service->services[1]->available;
+      $this->users_name = $data_config->data->service->services[1]->name;
+      $this->users_dns = $data_config->data->service->services[1]->dns;
+      $this->users_available = $data_config->data->service->services[1]->available;
 
-      $this->subscriptions_name=$data_config->data->service->services[2]->name;
-      $this->subscriptions_dns= $data_config->data->service->services[2]->dns;
-      $this->subscriptions_available=$data_config->data->service->services[2]->available;
+      $this->subscriptions_name = $data_config->data->service->services[2]->name;
+      $this->subscriptions_dns = $data_config->data->service->services[2]->dns;
+      $this->subscriptions_available = $data_config->data->service->services[2]->available;
 
-      $this->search_name=$data_config->data->service->services[3]->name;
-      $this->search_dns= $data_config->data->service->services[3]->dns;
-      $this->search_available=$data_config->data->service->services[3]->available;
+      $this->search_name = $data_config->data->service->services[3]->name;
+      $this->search_dns = $data_config->data->service->services[3]->dns;
+      $this->search_available = $data_config->data->service->services[3]->available;
 
-      $this->recommendations_name=$data_config->data->service->services[4]->name;
-      $this->recommendations_dns= $data_config->data->service->services[4]->dns;
-      $this->recommendations_available=$data_config->data->service->services[4]->available;
+      $this->recommendations_name = $data_config->data->service->services[4]->name;
+      $this->recommendations_dns = $data_config->data->service->services[4]->dns;
+      $this->recommendations_available = $data_config->data->service->services[4]->available;
 
-      $this->analytics_name=$data_config->data->service->services[5]->name;
-      $this->analytics_dns= $data_config->data->service->services[5]->dns;
-      $this->analytics_available=$data_config->data->service->services[5]->available;
+      $this->analytics_name = $data_config->data->service->services[5]->name;
+      $this->analytics_dns = $data_config->data->service->services[5]->dns;
+      $this->analytics_available = $data_config->data->service->services[5]->available;
 
       // webservices 
-      $this->webservice= $data_config->data->service->webservice;
-      print_r($this->webservice);
+      $this->webservice = $data_config->data->service->webservice;
+      // print_r($this->webservice);
+      $config_data = $this->BASE_URL . $this->config . "?region=" . $this->country_code2 . "&auth_token=" . $this->AUTHTOKEN . "&access_token=" . $this->ACCESSTOKEN;
+      $Top_Menu_api = $this->BASE_URL ."catalog_lists/top-menu-web.gzip?nested_list_items=" . $this->List_false . "&auth_token=" . $this->AUTHTOKEN . "&region=" . $this->country_code2 .  "&access_token=". $this->ACCESSTOKEN;
+      $Menu_items = $this->usermodel->GETAPIMODEL($Top_Menu_api);
+      $Menu_items_data=json_decode($Menu_items);
+      
+      $data_Menu_top=$Menu_items_data->data;
+      $this->access_tag= $Menu_items_data->data->access_tag;
+      $this->ad_banner_ids=$Menu_items_data->data->ad_banner_ids;
+      $this->additional_keys=$Menu_items_data->data->additional_keys;
+      $this->available_filters=$Menu_items_data->data->available_filters;
 
+      $this->catalog_list_items=$Menu_items_data->data->catalog_list_items;
+      
+      if(isset($data_Menu_top->catalog_list_items)){
+         foreach($data_Menu_top->catalog_list_items as $items){
+            if (isset($items->display_title)){
+               $displayTitle=$items->display_title;
+               echo $displayTitle  . "<br>";
+            }
+         }
+      }
+      //  print_r($data_Menu_top);
 
    }
 }

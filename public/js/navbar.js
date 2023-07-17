@@ -92,3 +92,9 @@ function checkpassword() {
     messsage.textContent="";
   }
 }
+$(document).ready(function() {
+  $('#openFormButton').click(function() {
+      $('.rating').toggleClass('show');
+      $('.overlay').toggleClass('show');
+  });
+});

@@ -188,7 +188,7 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="d-inline" style="margin-bottom:30px;">
                 <button href="{{ asset('login') }}" onclick="openSignIN()" type="button"
-                    class="col-sm-6 col-xs-6 btn form-button blue-button">
+                    class="col-sm-6 col-xs-6 btn form-button blue-button"  >
                     SIGN IN</button>
                 <button href="{{ asset('registration') }}" type="button"
                     class="col-sm-6 col-xs-6 btn guest-sign-up form-button" onclick="SignUPopen()">
