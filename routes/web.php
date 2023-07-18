@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CookieController;
+use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EtvWin;
 
@@ -58,6 +59,8 @@ Route::get('/home', function(){
     return view('home/home');
 });
 
+
+
 Route::get('/video',function(){
     return view('Videoplayer/videoplayer');
 });
@@ -98,4 +101,8 @@ Route::get('/preference',function(){
 });
 Route::get('rating',function(){
     return view('Cookies/rating');
+});
+
+Route::get('datepicker',function(){
+    return view('datepicker/datepicker');
 });
