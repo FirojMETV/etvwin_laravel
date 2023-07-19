@@ -182,7 +182,7 @@ img {
 }
 .viewersnav .viewerslinks {
     border-bottom: 1px solid rgba(255,255,255,.15);
-    border-top: 1px solid rgba(255,255,255,.15);
+    border-top: 1px solid #ffffff26;
     text-align: center;
     padding-left: 0px;
 }
@@ -194,7 +194,69 @@ input[type=checkbox], input[type=radio] {
     margin-top: 1px\9;
     line-height: normal;
 }
+.custom-toast {
+    /* Add your custom styling here */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #e1d099;
+    padding: 12px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+.switch {
+    margin-top: 5px;
+    font-size: 17px;
+    position: relative;
+    display: flex; /* Updated to flex */
+    align-items: center; /* Added to vertically center items */
+    height: 2em;
+  }
 
+  .slider {
+    position: relative; /* Updated to relative */
+    cursor: pointer;
+    flex: 0 0 3.5em; /* Added flex property */
+    height: 1.6em; /* Adjusted height */
+    margin-right: 0.5em; /* Added margin-right for spacing */
+    background-color: transparent;
+    border: 1px solid #adb5bd;
+    transition: .4s;
+    border-radius: 30px;
+  }
+
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* The slider */
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.2em; /* Adjusted height */
+    width: 1.2em; /* Adjusted width */
+    border-radius: 50%;
+    top: 0.15em; /* Adjusted top position */
+    left: 0.15em; /* Adjusted left position */
+    background-color: #adb5bd;
+    transition: .4s;
+  }
+
+  input:checked + .slider {
+    background-color: transparent;
+    border: 1px solid #adb5bd;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px transparent;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(2em); /* Updated translation value */
+    background-color: #ffc908;
+  }
 input[type=checkbox], input[type=radio] {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -261,7 +323,7 @@ input[type=checkbox], input[type=radio] {
     border-radius: 1px 1px 1px 1px;
     color: rgba(190,191,208,1);
     font-size: 30px;
-    top: 10px;
+    top: 0px;
     position: relative;
 }
 .viewerslinks .dropdown .dropdown-menu {

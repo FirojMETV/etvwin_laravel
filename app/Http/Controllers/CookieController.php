@@ -230,6 +230,9 @@ class CookieController extends Controller
    public $available_filters="";
 
    public $catalog_list_items="";
+
+
+   public $displayTitle="";
    public function getCookie(Request $request)
    {
       // Retrieve the cookies
@@ -709,12 +712,14 @@ class CookieController extends Controller
       if(isset($data_Menu_top->catalog_list_items)){
          foreach($data_Menu_top->catalog_list_items as $items){
             if (isset($items->display_title)){
-               $displayTitle=$items->display_title;
-               echo $displayTitle  . "<br>";
+               $this->displayTitle=$items->display_title;
+               print_r($this->displayTitle . "<br>")  ;
+               
             }
          }
       }
       //  print_r($data_Menu_top);
 
    }
+  
 }

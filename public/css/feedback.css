@@ -257,9 +257,20 @@ option {
     color: #fff;
     font-family: 'Montserrat', sans-serif;
 }
+.select-items {
+    position: absolute;
+    background-color: #101340;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
  select option:hover{
     color: #ffb908;
 }
+.select-items div:hover, .same-as-selected {
+    background-color: #fff5
+  }
  select:focus + .arrow,
 	 select:hover + .arrow{
 			background-color: #e1ca47;

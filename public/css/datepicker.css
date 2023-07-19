@@ -1,35 +1,208 @@
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-    display: none;
-  }
-  
-  .datepicker {
-    background: #101340;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 250px;
-    border-radius: 5px;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
-    padding: 20px;
-    z-index: 2;
-    display: none;
-    position: fixed;
-  }
-  
-  .overlay.show {
-    display: block;
-  }
-  
-  .datepicker.show {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-  }
-  
+.open-calender {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #191d4f;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  opacity: .99;
+  overflow: auto;
+  display: block;
+}
+.date-container {
+  background-color: #191d4f;
+}
+.preference-float {
+  margin-top: 35px;
+}
+.title-filter {
+  font-family: OpenSansRegular;
+  font-size: 30px;
+  font-weight: 300;
+  color: #fff;
+  text-align: left;
+  margin: 15px 0 25px 0;
+  float: left;
+}
+.open-calender .close-dialog {
+  margin-top: 15px;
+  margin-right: 10px;
+}
+.close-dialog {
+  float: right;
+  color: rgba(172,172,187,1);
+  margin-right: -10px;
+  font-size: 24px;
+}
+.clear {
+  clear: both;
+}
+.hr-gray {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 0;
+  border-top: 1px solid rgba(255,255,255,.15);
+}
+.datepicker {
+  border: none;
+  background: none;
+  outline: none;
+  color: #fff;
+  font-size:20px;
+  margin: 10px;
+}
+.error-message {
+  color: red;
+}
+.ui-datepicker {
+  background-color:#191d4f ;
+  font-size: 25px;/* Change the font size */
+  color: #fff/* Change the text color */
+ 
+}
+.ui-datepicker-header {
+  background-color:transparent;
+  color: #fff; /* Change the header text color */
+   border:none;
+}
+.ui-datepicker-prev,
+.ui-datepicker-next {
+  background-color: #999; /* Change the previous/next button background color */
+  color: #fff; /* Change the previous/next button text color */
+}
+.ui-datepicker-calendar td a {
+  color: #fff;
+background-color:#191d4f;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default,
+ .ui-widget-header .ui-state-default,
+  .ui-button, html .ui-button.ui-state-disabled:hover,
+ html .ui-button.ui-state-disabled:active{
+  border:none;
+  background-color: transparent;
+    color: #fdf4f4;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, 
+.ui-widget-header .ui-state-highlight {
+  border-radius: 10% solid #7249bf;
+  background: #7249bf;
+  color: #191d4f;
+}
+.ui-datepicker th {
+  padding: 0.7em 0.3em;
+  text-align: center;
+  font-weight: bold;
+  border: 0;
+  color: aliceblue;
+}
+.submit-question{
+  display: flex;
+  margin-left: 70%;
+  margin-bottom: 15px;
+}
+.blue-button {
+  background: #7249bf;
+  font-size: 100%;
+  color: #fff;
+  text-align: center;
+  line-height: 18px;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.form-button {
+  font-size: 100%;
+  background: #7249bf;
+  box-shadow: none;
+  border: 1px solid #7249bf;
+  border-radius: 60px;
+  width: 150px!important;
+  height: 45px;
+  margin: auto;
+  display: table;
+  color: #fff;
+}
+.input-date {
+  width: 580px;
+  margin: auto;
+  margin-top: 40px;
+}
+.select-date-msg {
+  width: 80%;
+  position: relative;
+  margin: 20% auto;
+}
+.icon-pick-date {
+  font-size: 90px;
+  color: #9c9d9e;
+  text-align: right;
+  left: 40%;
+  position: relative;
+  top: -40px;
+}
+.select-msg {
+  font-family: 'Open Sans';
+  font-size: 20px;
+  color: rgba(172,172,187,1);
+  text-align: center;
+  line-height: 40px;
+}
+.calendar-form {
+  min-height: 400px;
+}
+
+@media screen and (max-width: 500px){
+.preference-float {
+    margin-top: 0;
+}
+.title-filter {
+  font-size: 20px;
+  margin: 15px 0 0 10px;
+}
+.close-dialog {
+  font-size: 16px;
+}
+.input-date {
+  width: 255px;
+  margin-top: 15px;
+}
+.calendar-form {
+  min-height: 200px;
+}
+.icon-pick-date {
+  font-size: 50px;
+  top: 0px;
+  left: 39%;
+}
+.submit-question {
+  text-align: center;
+  margin-left: 0;
+}
+.form-button {
+  height: 35px;
+  width: 70px;
+  font-size: 12px;
+}
+.datepicker{
+  font-size: 12px;
+  margin: 5px;
+}
+.select-date-msg{
+  width: 40%;
+  margin: 5%;
+}
+}
+
+@media screen and (max-width: 756px){
+.input-date {
+    width: 320px;
+}
+.select-date-msg .select-msg {
+  font-size: 10px;
+  left: 25px;
+  position: relative;
+}
+}
