@@ -1,0 +1,157 @@
+.ngdialog.search-dialog .ngdialog-content {
+    opacity: .99;
+    background: #00021c;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    margin: 0 auto;
+    max-width: 100%;
+    height: 100%;
+    padding: 1em;
+    position: relative;
+    overflow-y: overlay;
+}
+.margin-container {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.header-filter{
+    font-size: 30px;
+    font-weight: 300;
+    color: rgba(254,254,254,1);
+    text-align: left;
+    margin: 50px 0 0 0;
+}
+.header-filter h1 {
+    font-size: 30px;
+    color: rgba(254,254,254,1);
+    font-family: OpenSansLight;
+}
+.header-filter span {
+    float: right;
+    font-size: 20px;
+    margin-top: -20px;
+    color: rgba(172,172,187,1);
+}
+.clear {
+    clear: both;
+}
+.filter hr, .recipes-data hr {
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+.radiolinks {
+    background: #101340;
+    border-radius: 2px;
+    margin-bottom: 30px;
+}
+.radiolinks li {
+    display: inline-block;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 0 20px;
+}
+.md-container {
+    position: block;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    cursor: pointer;
+    left: 0;
+    right: auto;
+}
+
+  /* Hide the browser's default radio button */
+  .md-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 2px!important;
+    border-color: #7249bf!important;
+  }
+  
+  .checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 2px!important;
+    border-color: #7249bf!important;
+  }
+  .md-container:hover input ~ .checkmark {
+    background-color: #7249bf;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .md-container input:checked ~ .checkmark {
+    background-color: #7249bf;
+
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: block;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .md input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .md-container .checkmark:after {
+       top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+.md-label {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 0;
+    vertical-align: middle;
+    white-space: normal;
+    pointer-events: none;
+    width: auto;
+}
+[roll=button]{
+    cursor: pointer;
+}
+.recipe-filter-option .filter-genre-option {
+    padding-left: 0;
+}

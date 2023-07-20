@@ -419,6 +419,7 @@ a{
   background: #101340;
   border: 1px solid #101340 !important;
   border-radius: 5px;
+  color: #fff;
 }
 
 .overlay input[type=text]:hover {

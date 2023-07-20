@@ -109,3 +109,10 @@ Route::get('rating',function(){
 Route::get('datepicker',function(){
     return view('datepicker/datepicker');
 });
+
+Route::get('payment', function(){
+    return view('Payment/payment');
+});
+Route::get('filter', function () {
+    return view('Filter/filter');
+});

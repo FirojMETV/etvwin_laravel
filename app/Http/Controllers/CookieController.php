@@ -715,9 +715,9 @@ class CookieController extends Controller
          foreach ($data_Menu_top->catalog_list_items as $items) {
             if (isset($items->display_title)) {
                $this->displayTitle = $items->display_title;
-               // print_r($this->displayTitle . "<br>");
+                print_r($this->displayTitle . "<br>");
 
-               return view('Header/header', compact('displayTitle'));
+               // return view('Header/header', compact('displayTitle'));
             }
          }
       }

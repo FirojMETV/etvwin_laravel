@@ -1,0 +1,58 @@
+.login-form-dialog {
+    background-color: #191d4f;
+    border-radius: 9px;
+    width: 450px;
+    min-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.error-dialog{
+    color: #fff;
+    margin-top: 150px;
+}
+.error-dialog-form{
+    padding: 20px;
+    margin-top: 10%;
+    font-family: 'Montserrat', sans-serif;
+}
+ p{
+    font-size: 18px ;
+    padding: 29px 14px 5px 34px;
+    font-family: 'Montserrat', sans-serif;
+}
+.ekt-submit-button{
+    padding: 30px 0 20px 0;
+}
+.decrese-font-size{
+    font-size: 16px !important;
+}
+.blue-button{
+    background: #7249bf;
+    font-size: 100%;
+    color: #fff;
+    text-align: center;
+    line-height: 18px;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+.full-width-button{
+    width: 100%;
+}
+.form-button {
+    font-size: 100%;
+    background: #7249bf;
+    box-shadow: none;
+    border: 1px solid #7249bf;
+    border-radius: 60px;
+    width: 150px!important;
+    height: 45px;
+    margin: auto;
+    display: table;
+    color: #fff;
+  }
+
+@media screen and (width:500px) {
+ 
+    
+}

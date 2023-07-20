@@ -250,8 +250,9 @@
                                                                 <div ng-transclude="" class="md-label">
                                                                     <span class="plan-price ng-binding ng-scope">₹365
                                                                     </span>
-                                                                    <span ng-if="pricing.strikedPrice"
-                                                                        class="striked-value ng-binding ng-scope">₹499
+                                                                    <span 
+                                                                        class="striked-value ng-binding ng-scope">
+                                                                        <strike>₹499</strike>
                                                                     </span>
 
                                                                 </div>
@@ -305,7 +306,8 @@
                                                                 <div ng-transclude="" class="md-label">
                                                                     <span class="plan-price ng-binding ng-scope">₹499
                                                                     </span>
-                                                                    <span class="striked-value ng-binding ng-scope">₹699
+                                                                    <span class="striked-value ng-binding ng-scope">
+                                                                        <strike>₹699</strike>
                                                                     </span>
                                                                 </div>
                                                             </div>

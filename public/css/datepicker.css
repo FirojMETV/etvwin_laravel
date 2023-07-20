@@ -17,7 +17,7 @@
   margin-top: 35px;
 }
 .title-filter {
-  font-family: OpenSansRegular;
+  font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   font-weight: 300;
   color: #fff;
@@ -144,7 +144,7 @@ background-color:#191d4f;
   top: -40px;
 }
 .select-msg {
-  font-family: 'Open Sans';
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   color: rgba(172,172,187,1);
   text-align: center;
