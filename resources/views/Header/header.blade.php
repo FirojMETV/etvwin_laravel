@@ -21,20 +21,22 @@
     </div>
     <div class="main-menu">
         <ul class="navs navbar-nav nav-pills">
+            @isset($displayTitle['home'])
             <li class="dropdown ng-scope active" role="button" tabindex="0" style="">
-                <a href="{{route('page',['displayTitle'=>'home'])}}">HOME</a>
+                <a href="{{route('home')}}">{{$displayTitle['Home']}}</a>
                 <span aria-hidden="true"></span>
             </li>
-            <li class="dropdown ng-scope" role="button" tabindex="0" style="">
-                <a href="{{route('page',['displayTitle'=>'TV Shows'])}}">TV SHOWS
-                </a>
-                <span aria-hidden="true"></span>
-
-                <ul class="dropdown-content drop-center-aligned ng-scope">
-                </ul>
-            </li>
+            @endisset
+           @isset($displayTitle['Tv Shows'])
+           <li class="dropdown ng-scope" role="button" tabindex="0" style="">
+            <a href="{{route('TV Shows')}}">Tv Shows</a>
+            <span aria-hidden="true"></span>
+            <ul class="dropdown-content drop-center-aligned ng-scope">
+            </ul>
+        </li>
+           @endisset
             <li class="dropdown ng-scope" role="button" tabindex="0">
-                <a href="{{route('page',['displayTitle'=>'Movies'])}}">MOVIES</a>
+                <a href="">MOVIES</a>
                 <span aria-hidden="true">
                 </span>
 
@@ -43,7 +45,7 @@
                 </ul>
             </li>
             <li class="dropdown ng-scope" role="button" tabindex="0">
-                <a href="{{route('page',['displayTitle'=>'Live TV'])}}" >LIVE TV</a>
+                <a href="" >LIVE TV</a>
                 <span aria-hidden="true"></span>
 
                 <ul ng-if="tab.friendly_id!='home'" class="dropdown-content drop-center-aligned ng-scope">
@@ -51,14 +53,14 @@
                 </ul>
             </li>
             <li class="dropdown ng-scope" role="button" tabindex="0">
-                <a href="{{route('page',['displayTitle'=>'News'])}}" >NEWS</a>
+                <a href="" >NEWS</a>
                 <span aria-hidden="true"></span>
                 <ul class="dropdown-content drop-center-aligned ng-scope">
 
                 </ul>
             </li>
             <li class="dropdown ng-scope" role="button" tabindex="0">
-                <a  href="{{route('page',['displayTitle'=>'Food'])}}">FOOD</a>
+                <a  href="">FOOD</a>
                 <span aria-hidden="true">
                 </span>
                 <ul class="dropdown-content drop-center-aligned ng-scope">
@@ -66,7 +68,7 @@
                 </ul>
             </li>
             <li class="dropdown ng-scope" role="button" tabindex="0">
-                <a  href="{{route('page',['displayTitle'=>'Health'])}}">HEALTH
+                <a  href="">HEALTH
                 </a>
                 <span ng-class="{'more-icon':tab.display_title == 'MORE'}" aria-hidden="true">
                 </span>

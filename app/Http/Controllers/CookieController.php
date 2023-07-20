@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Http\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
@@ -21,7 +22,7 @@ class CookieController extends Controller
    public $config = 'catalogs/message/items/app-config-params.gzip';
 
    public $nested_list_items = 'catalog_lists/top-menu-web.gzip?nested_list_items=';
-   public $List_false ="false";
+   public $List_false = "false";
    public $Version = '1.1';
    public $data = "";
    public $usermodel = "";
@@ -223,16 +224,16 @@ class CookieController extends Controller
    public $analytics_available = "";
    public $webservice = "";
 
-   public $access_tag ="";
+   public $access_tag = "";
 
-   public $ad_banner_ids="";
-   public $additional_keys="";
-   public $available_filters="";
+   public $ad_banner_ids = "";
+   public $additional_keys = "";
+   public $available_filters = "";
 
-   public $catalog_list_items="";
+   public $catalog_list_items = "";
 
 
-   public $displayTitle="";
+   public $displayTitle = "";
    public function getCookie(Request $request)
    {
       // Retrieve the cookies
@@ -398,6 +399,7 @@ class CookieController extends Controller
       $data = $this->usermodel->GETAPIMODEL($url);
       $data = json_decode($data);
       $this->ACCESSTOKEN = $data->data->access_token;
+
    }
    public function SecondAPI()
    {
@@ -697,29 +699,34 @@ class CookieController extends Controller
       $this->webservice = $data_config->data->service->webservice;
       // print_r($this->webservice);
       $config_data = $this->BASE_URL . $this->config . "?region=" . $this->country_code2 . "&auth_token=" . $this->AUTHTOKEN . "&access_token=" . $this->ACCESSTOKEN;
-      $Top_Menu_api = $this->BASE_URL ."catalog_lists/top-menu-web.gzip?nested_list_items=" . $this->List_false . "&auth_token=" . $this->AUTHTOKEN . "&region=" . $this->country_code2 .  "&access_token=". $this->ACCESSTOKEN;
+      $Top_Menu_api = $this->BASE_URL . "catalog_lists/top-menu-web.gzip?nested_list_items=" . $this->List_false . "&auth_token=" . $this->AUTHTOKEN . "&region=" . $this->country_code2 . "&access_token=" . $this->ACCESSTOKEN;
       $Menu_items = $this->usermodel->GETAPIMODEL($Top_Menu_api);
-      $Menu_items_data=json_decode($Menu_items);
-      
-      $data_Menu_top=$Menu_items_data->data;
-      $this->access_tag= $Menu_items_data->data->access_tag;
-      $this->ad_banner_ids=$Menu_items_data->data->ad_banner_ids;
-      $this->additional_keys=$Menu_items_data->data->additional_keys;
-      $this->available_filters=$Menu_items_data->data->available_filters;
+      $Menu_items_data = json_decode($Menu_items);
 
-      $this->catalog_list_items=$Menu_items_data->data->catalog_list_items;
-      
-      if(isset($data_Menu_top->catalog_list_items)){
-         foreach($data_Menu_top->catalog_list_items as $items){
-            if (isset($items->display_title)){
-               $this->displayTitle=$items->display_title;
-               print_r($this->displayTitle . "<br>")  ;
-               
+      $data_Menu_top = $Menu_items_data->data;
+      $this->access_tag = $Menu_items_data->data->access_tag;
+      $this->ad_banner_ids = $Menu_items_data->data->ad_banner_ids;
+      $this->additional_keys = $Menu_items_data->data->additional_keys;
+      $this->available_filters = $Menu_items_data->data->available_filters;
+
+      $this->catalog_list_items = $Menu_items_data->data->catalog_list_items;
+
+      if (isset($data_Menu_top->catalog_list_items)) {
+         foreach ($data_Menu_top->catalog_list_items as $items) {
+            if (isset($items->display_title)) {
+               $this->displayTitle = $items->display_title;
+               // print_r($this->displayTitle . "<br>");
+
+               return view('Header/header', compact('displayTitle'));
             }
          }
       }
+
       //  print_r($data_Menu_top);
 
    }
-  
+
+
 }
+
+// From Laravel Blade to Vue.js + API [Live-coding Example]

@@ -55,7 +55,12 @@ Route::get('/subscription-plans',function(){
     return view('footer/subscriptions');
 });
 
-Route::get('/{displayTitle}',[CookieController::class,'apitesting'])->name('page');
+//  Route::get('/home',function(){
+//     return view('Home/home');
+//  });
+Route::get('/home', function () {
+    return view('Home/home');
+})->name('home');
 
 
 
