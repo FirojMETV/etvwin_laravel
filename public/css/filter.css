@@ -31,7 +31,7 @@
 .header-filter span {
     float: right;
     font-size: 20px;
-    margin-top: -20px;
+    margin-top: -45px;
     color: rgba(172,172,187,1);
 }
 .clear {
@@ -62,82 +62,67 @@ hr {
     padding: 0 20px;
 }
 .md-container {
-    position: block;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    box-sizing: border-box;
-    display: inline-block;
-    width: 20px;
-    height: 10px;
-    cursor: pointer;
-    left: 0;
-    right: auto;
+  position: block;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  cursor: pointer;
+  left: 0;
+  right: auto;
 }
 
-  /* Hide the browser's default radio button */
-  .md-container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-  }
-  
-  /* Create a custom radio button */
-  .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    box-sizing: border-box;
-    border-style: solid;
-    border-width: 2px!important;
-    border-color: #7249bf!important;
-  }
-  
-  .checkbox {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    box-sizing: border-box;
-    border-style: solid;
-    border-width: 2px!important;
-    border-color: #7249bf!important;
-  }
-  .md-container:hover input ~ .checkmark {
-    background-color: #7249bf;
-  }
-  
-  /* When the radio button is checked, add a blue background */
-  .md-container input:checked ~ .checkmark {
-    background-color: #7249bf;
+/* Hide the browser's default radio button */
+.md-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
 
-  }
-  
-  /* Create the indicator (the dot/circle - hidden when not checked) */
-  .checkmark:after {
-    content: "";
-    position: block;
-    display: none;
-  }
-  
-  /* Show the indicator (dot/circle) when checked */
-  .md input:checked ~ .checkmark:after {
-    display: block;
-  }
-  
-  /* Style the indicator (dot/circle) */
-  .md-container .checkmark:after {
-       top: 9px;
-      left: 9px;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: white;
-  }
+/* Create a custom radio button */
+.checkcircle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 2px!important;
+  border-color: #7249bf!important;
+}
+
+/* When the radio button is checked, add a blue background */
+.md-container input:checked ~ .checkcircle {
+  background-color: #7249bf;
+
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkcircle:after {
+  content: "";
+  position: block;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.md input:checked ~ .checkcircle:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.md-container .checkcircle:after {
+     top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
 .md-label {
     box-sizing: border-box;
     position: relative;
@@ -149,9 +134,142 @@ hr {
     pointer-events: none;
     width: auto;
 }
+
+.contain {
+  position: block;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  left: 0;
+  right: auto;
+}
+
+/* Hide the browser's default checkbox */
+.contain input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border-style: solid;
+  border-width: 2px!important;
+  border-color: #7249bf!important;
+}
+/* When the checkbox is checked, add a blue background */
+.contain input:checked ~ .checkmark {
+  background-color: #7249bf;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.contain input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.contain .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 [roll=button]{
     cursor: pointer;
 }
-.recipe-filter-option .filter-genre-option {
+.recipe-filter-option ,.filter-genre-option {
     padding-left: 0;
+}
+.filter-genre-option h5 {
+  font-size: 18px;
+  color: #fff!important;
+}
+.filter-genre-option h6 {
+  font-size: 14px;
+  color: rgba(255,255,255,.5);
+}
+.md-icon {
+  box-sizing: border-box;
+  -webkit-transition: 240ms;
+  transition: 240ms;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 2px;
+}
+@media (min-width: 992px){
+.col-md-6 {
+    width: 50%;
+}}
+@media (min-width: 768px){
+.col-sm-6 {
+    width: 50%;
+}}
+.dialog-button-area {
+  text-align: center;
+  margin-top: 45px;
+  margin-bottom: 35px;
+}
+.filter-button-area {
+  display: flex;
+  float: right;
+  margin-top: 20px;
+}
+.dialog-button-area button {
+  width: 100px!important;
+}
+
+.form-button {
+  font-size: 100%;
+  background: #7249bf;
+  box-shadow: none;
+  border: 1px solid #7249bf;
+  border-radius: 60px;
+  width: 150px!important;
+  height: 45px;
+  margin: auto;
+  display: table;
+  color: #fff;
+}
+.blue-button {
+  background: #7249bf;
+  font-size: 100%;
+  color: #fff;
+  text-align: center;
+  line-height: 18px;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.filter-button-margin {
+  margin-left: 20px!important;
 }

@@ -116,3 +116,7 @@ Route::get('payment', function(){
 Route::get('filter', function () {
     return view('Filter/filter');
 });
+
+Route::get('more',function(){
+    return view('More/more');
+});

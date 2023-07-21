@@ -22,20 +22,20 @@
     <div class="main-menu">
         <ul class="navs navbar-nav nav-pills">
             @isset($displayTitle['home'])
-            <li class="dropdown ng-scope active" role="button" tabindex="0" style="">
-                <a href="{{route('home')}}">{{$displayTitle['Home']}}</a>
-                <span aria-hidden="true"></span>
-            </li>
+                <li class="dropdown ng-scope active" role="button" tabindex="0" style="">
+                    <a href="{{ route('home') }}">{{ $displayTitle['Home'] }}</a>
+                    <span aria-hidden="true"></span>
+                </li>
             @endisset
-           @isset($displayTitle['Tv Shows'])
-           <li class="dropdown ng-scope" role="button" tabindex="0" style="">
-            <a href="{{route('TV Shows')}}">Tv Shows</a>
-            <span aria-hidden="true"></span>
-            <ul class="dropdown-content drop-center-aligned ng-scope">
-            </ul>
-        </li>
-           @endisset
-            <li class="dropdown ng-scope" role="button" tabindex="0">
+            @isset($displayTitle['Tv Shows'])
+                <li class="dropdown ng-scope" role="button" tabindex="0" style="">
+                    <a href="{{ route('TV Shows') }}">Tv Shows</a>
+                    <span aria-hidden="true"></span>
+                    <ul class="dropdown-content drop-center-aligned ng-scope">
+                    </ul>
+                </li>
+            @endisset
+            <li class="dropdown" role="button" tabindex="0">
                 <a href="">MOVIES</a>
                 <span aria-hidden="true">
                 </span>
@@ -44,31 +44,31 @@
                     ng:class="{channels:tab.display_title.toLowerCase()==='channels'}">
                 </ul>
             </li>
-            <li class="dropdown ng-scope" role="button" tabindex="0">
-                <a href="" >LIVE TV</a>
+            <li class="dropdown " role="button" tabindex="0">
+                <a href="">LIVE TV</a>
                 <span aria-hidden="true"></span>
 
                 <ul ng-if="tab.friendly_id!='home'" class="dropdown-content drop-center-aligned ng-scope">
 
                 </ul>
             </li>
-            <li class="dropdown ng-scope" role="button" tabindex="0">
-                <a href="" >NEWS</a>
+            <li class="dropdown " role="button" tabindex="0">
+                <a href="">NEWS</a>
                 <span aria-hidden="true"></span>
                 <ul class="dropdown-content drop-center-aligned ng-scope">
 
                 </ul>
             </li>
-            <li class="dropdown ng-scope" role="button" tabindex="0">
-                <a  href="">FOOD</a>
+            <li class="dropdown " role="button" tabindex="0">
+                <a href="">FOOD</a>
                 <span aria-hidden="true">
                 </span>
                 <ul class="dropdown-content drop-center-aligned ng-scope">
 
                 </ul>
             </li>
-            <li class="dropdown ng-scope" role="button" tabindex="0">
-                <a  href="">HEALTH
+            <li class="dropdown " role="button" tabindex="0">
+                <a href="">HEALTH
                 </a>
                 <span ng-class="{'more-icon':tab.display_title == 'MORE'}" aria-hidden="true">
                 </span>
@@ -80,7 +80,7 @@
     <div class="mobile-os-list">
         <ul>
             <li>
-                <a href="subscription-plans" class="ng-scope">
+                <a href="subscription-plans" class="">
                     <span aria-hidden="true">
                         <img src="{{ asset('image/subscribe-small.png') }}" class="subscribe-icon-new"
                             alt="Subscribe-icon"></span>
@@ -109,17 +109,17 @@
                         </a>
                     </li>
                     <li>
-                        <a class="subscription-tab">
+                        <a href="subscription-plans">
                             <span class="drop-down-icons subscription-icon" aria-hidden="true">
                             </span>
-                            <span class="drop-text subscribe-text" style="    margin-left: -16px;">
+                            <span class="drop-text subscribe-text" style="margin-left: -16px;">
                                 Subscription
                             </span>
                         </a>
                     </li>
                     <li><a href="watchlater">
-                            <span class="icon-watch-later 	 drop-down-icons" aria-hidden="true">
-                             
+                            <span class="icon-watch-later drop-down-icons" aria-hidden="true">
+
                             </span>
                             <span class="drop-text">
                                 Watch Later
@@ -142,14 +142,14 @@
                     <li>
                         <a>
                             <span class="icon-signout drop-down-icons" aria-hidden="true">
-                                
+
                             </span>
                             <span class="drop-text">Sign Out</span></a>
                     </li>
                     <li>
                         <a>
                             <span class="icon-signout drop-down-icons" aria-hidden="true">
-                               
+
                             </span>
                             <span class="drop-text">Sign Out all devices
 
@@ -185,18 +185,76 @@
 <div id="mySidenav" class="sidenav " style="display:none;">
     <div class="signin">
         <div class="guest-user-option">
-            <h5 style="padding-left:  10px; color:#dddd "> hey guest user !! </h5>
+            {{-- for Guest User only --}}
+            {{-- <h5 style="padding-left:  10px; color:#dddd "> hey guest user !! </h5>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="d-inline" style="margin-bottom:30px;">
                 <button href="{{ asset('login') }}" onclick="openSignIN()" type="button"
-                    class="col-sm-6 col-xs-6 btn form-button blue-button"  >
+                    class="col-sm-6 col-xs-6 btn form-button blue-button">
                     SIGN IN</button>
                 <button href="{{ asset('registration') }}" type="button"
                     class="col-sm-6 col-xs-6 btn guest-sign-up form-button" onclick="SignUPopen()">
                     SIGN UP
                 </button>
+            </div> --}}
+            {{-- for user  --}}
+            <div class="signed-user-option " >
+                <img class="col-sm-3 col-xs-3" id="nav-rounded-image"
+                onclick="toggleUserData()"
+                src="{{ asset('image/usericon.png') }}">
+                <h2 class="col-sm-7 col-xs-7 ng-binding" onclick="toggleUserData()">
+                    UserName</h2>
+                <span class="arrow-down-profile " style="" size='24px' onclick="toggleUserData()">
+                </span>
             </div>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         </div>
+
+    </div>
+    <div id="usermenu"  class="sub-menu-profile " style="display:none">
+        <ul>
+            <li>
+                <a>
+                    <span class="icon-myprofile" aria-hidden="true"></span>
+                    My
+                    Profile</a>
+            </li>
+            <li >
+                <a ng-click="openSubscription()">
+                    <span aria-hidden="true">
+                        <img class="subs-icon" src="{{asset('image/subscription-icon-mobile.png')}}" alt="">
+                    </span>Subscription
+                </a>
+            </li>
+            <li >
+                <a ng-click="gotoPage('/watchlater')">
+                    <span class="icon-watch-later" aria-hidden="true">
+
+                    </span>
+                    Watch Later</a>
+            </li>
+            <li>
+                <a>
+                    <span aria-hidden="true">
+                        <img class="active-tv" src="{{asset('image/activate-tv-new-dark.png')}}" alt="">
+                    </span>Activate TV</a>
+            </li>
+            <li >
+                <a >
+                    <span class="icon-following" aria-hidden="true">
+                    </span> My Preferences</a>
+            </li>
+            <li>
+                <a >
+                    <span class="icon-signout" aria-hidden="true">
+                    </span> Sign Out</a>
+            </li>
+            <li >
+                <a >
+                    <span class="icon-signout" aria-hidden="true">
+                    </span> Sign Out alldevices</a>
+            </li>
+        </ul>
     </div>
     <div style="margin-bottom: 60px; margin-top:10px;">
         <a href="/home" class="active">Home</a>

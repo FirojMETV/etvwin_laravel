@@ -252,9 +252,34 @@ img {
 }
 /* end of user login dropdown page */
 
-
-
-
+.signed-user-option {
+  margin-left: 20px;
+  font-size: 14px;
+  margin-top: 25px;
+}
+#nav-rounded-image {
+  height: 50px;
+  width: 50px;
+  border: 1px solid gray;
+  padding: 0;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+.signed-user-option h2{
+  color: #fff;
+  font-size: 14px;
+}
+.arrow-down-profile {
+  width: 0;
+  height: 0;
+  float: right;
+  top: 26px;
+  right: 20px;
+  position: relative;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgba(255,255,255,.4);
+}
 @media screen and (min-width: 981px){
 .logo-margin {
   margin: 8px 0 0 45px;
@@ -707,3 +732,39 @@ input[type="sign-up"]:hover {
 
 
 
+.sub-menu-profile {
+  margin-top: -10px;
+}
+
+.sub-menu, .sub-menu-profile {
+  background: #101340;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+}
+.sub-menu-profile li {
+
+  float: inline-end;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.sub-menu-profile li a {
+  text-align: center;
+  text-decoration: none;
+  color: #d3d3d3;
+  font-size: 12px;
+}
+.sub-menu-profile li a span {
+  font-size: 18px;
+  margin-right: 20px;
+}
+.subs-icon {
+  height: 19px!important;
+  width: 22px!important;
+  margin-left: -3px;
+}
+.active-tv {
+  height: 19px!important;
+  width: 22px!important;
+  margin-bottom: 5px;
+  margin-right: 0;
+  margin-left: -2px;
+}

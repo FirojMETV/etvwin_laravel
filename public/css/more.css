@@ -1,0 +1,60 @@
+.ekta-view {
+    top: 50px;
+    position: relative;
+    min-height: 500px;
+    background-color: #00021c;
+    padding-bottom: 70px;
+}
+.yellow-bar {
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+.see-all-title {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    font-family: MontserratRegular;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: default;
+}
+.card-item {
+    position: relative;
+    border-radius: 3px;
+    display: block;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+}
+.card-item .image-holder {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.card-item .image-holder img {
+    transition: all .2s ease-in-out;
+}
+.card-item img {
+    width: 100%;
+    border-radius: 3px 3px 0 0;
+}
+img {
+    max-width: 100%;
+}
+.card-item .premium-badge {
+    width: 20px!important;
+    position: absolute;
+    top: 8px;
+    left: 10px;
+}
+img.premium-badge {
+    width: 40px!important;
+    position: absolute;
+    top: 12px;
+    left: 15px;
+}

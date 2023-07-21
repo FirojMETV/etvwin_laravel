@@ -1,10 +1,8 @@
 @extends('layout')
 @section('title', 'Home')
-<!-- Include the LazyLoad plugin script -->
+
 <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-{{-- <link rel="stylesheet" href="{{ URL::asset('css/owl.carousel.css') }}" /> --}}
-{{-- <link rel="stylesheet" href="{{ URL::asset('css/owl.carousel.min.css') }}" /> --}}
 <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 <script type="text/javascript" src="{{ URL::asset('js/owl.carousel.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/owl.carousel.min.js') }}"></script>
@@ -16,7 +14,7 @@
 
 
 
-    <div class="container-fluid mt-5" style="padding-top:70px;  overflow:hidden;">
+    <div class="container-fluid mt-5" style="padding-top:70px;  overflow:hidden;" >
         <div class="main-page-item">
             <div class="owl-carousel owl-theme fluid " id="main-page">
                 <div class="ms-2 me-2">

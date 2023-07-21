@@ -6,7 +6,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 @section('content')
-
+ 
 
 <div class="ekta-view ng-scope top-large" id="view_begin" ng-class="{'top-large':heightst, 'top-small':!heightst}"
     ng-view="" style="">
@@ -22,10 +22,11 @@
                         <div class="plan-amount">
                             <ul class="radiolinks subscribe-radiolinks">
                                 <li class="subscribe-radiobuttons md-checked">
-                                    <div style="display: inline-flex">
+                                    <div style="display: inline-flex"  >
                                         <input class="subscribe-radio md-checked" ng-value="pricing" id="Basic"
                                             role="radio" name="plan" value="Basic" aria-label="₹365₹499"
                                             type="radio" onclick="showSelectedPlan(this)"> 
+                                            
                                         <div ng-transclude="" class="md-label">
                                             <span class="plan-price ng-binding ng-scope">₹365
                                             </span>

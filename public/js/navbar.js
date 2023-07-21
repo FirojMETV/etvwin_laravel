@@ -54,7 +54,14 @@ window.onclick = function(event) {
   }
 }
 
-
+function toggleUserData() {
+  var userDataMenu = document.getElementById("usermenu");
+  if (userDataMenu.style.display === "none") {
+      userDataMenu.style.display = "block";
+  } else {
+      userDataMenu.style.display = "none";
+  }
+}
 // sign up or registration form popup page 
 function SignUPopen(){
   document.getElementById('SignUPForm').style.display='block';
