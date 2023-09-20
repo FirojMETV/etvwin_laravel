@@ -25,7 +25,7 @@ class EtvWin extends Controller
             'name' => 'required',
             'Email' => 'required|Email|unique:users',
             'password' => 'required|min:8|max:15',
-            'repassword' => 'required|confirmed|',
+            'repassword' => 'required|same:password',
         ]);
         $user = new User();
         $user->name = $request->name;

@@ -9,10 +9,12 @@ use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Str;
 use App\Models\User;
 use App\Services\ApiService;
+use Illuminate\View\View;
 
 class CookieController extends Controller
 {
-   public $BASE_URL = "https://stagingott.etvwin.com/";
+   public 
+   $BASE_URL = "https://stagingott.etvwin.com/";
    public $AUTHTOKEN = "q5u8JMWTd2698ncg7q4Q";
 
    public $UserIP = "regions/autodetect/ip.gzip";
@@ -233,7 +235,7 @@ class CookieController extends Controller
    public $catalog_list_items = "";
 
 
-   public $displayTitle = "";
+
    public function getCookie(Request $request)
    {
       // Retrieve the cookies
@@ -399,8 +401,11 @@ class CookieController extends Controller
       $data = $this->usermodel->GETAPIMODEL($url);
       $data = json_decode($data);
       $this->ACCESSTOKEN = $data->data->access_token;
-
+      $displayTitle = '';
+      $web_banner_url='';
+     
    }
+   
    public function SecondAPI()
    {
 
@@ -532,18 +537,19 @@ class CookieController extends Controller
       $this->ios_version_message = $data_config->data->params_hash2->config_params->ios_version->message;
 
       // firestick
-      $this->firestick_version = $data_config->data->params_hash2->config_params->firestick_version;
-      $this->firestick_version_current_version = $data_config->data->params_hash2->config_params->firestick_version->current_version;
-      $this->firestick_version_min_version = $data_config->data->params_hash2->config_params->firestick_version->min_version;
-      $this->firestick_version_force_upgrade = $data_config->data->params_hash2->config_params->firestick_version->force_upgrade;
-      $this->firestick_version_message = $data_config->data->params_hash2->config_params->firestick_version->message;
+      
+      // $this->firestick_version = $data_config->data->params_hash2->config_params->firestick_version;
+      // $this->firestick_version_current_version = $data_config->data->params_hash2->config_params->firestick_version->current_version;
+      // $this->firestick_version_min_version = $data_config->data->params_hash2->config_params->firestick_version->min_version;
+      // $this->firestick_version_force_upgrade = $data_config->data->params_hash2->config_params->firestick_version->force_upgrade;
+      // $this->firestick_version_message = $data_config->data->params_hash2->config_params->firestick_version->message;
 
       // androidTv api
-      $this->androidtv_version = $data_config->data->params_hash2->config_params->androidtv_version;
-      $this->androidtv_version_current_version = $data_config->data->params_hash2->config_params->androidtv_version->current_version;
-      $this->androidtv_version_min_version = $data_config->data->params_hash2->config_params->androidtv_version->min_version;
-      $this->androidtv_version_force_upgrade = $data_config->data->params_hash2->config_params->androidtv_version->force_upgrade;
-      $this->androidtv_version_message = $data_config->data->params_hash2->config_params->androidtv_version->message;
+      // $this->androidtv_version = $data_config->data->params_hash2->config_params->androidtv_version;
+      // $this->androidtv_version_current_version = $data_config->data->params_hash2->config_params->androidtv_version->current_version;
+      // $this->androidtv_version_min_version = $data_config->data->params_hash2->config_params->androidtv_version->min_version;
+      // $this->androidtv_version_force_upgrade = $data_config->data->params_hash2->config_params->androidtv_version->force_upgrade;
+      // $this->androidtv_version_message = $data_config->data->params_hash2->config_params->androidtv_version->message;
 
       // dnd api
       $this->dnd = $data_config->data->params_hash2->config_params->dnd;
@@ -592,9 +598,9 @@ class CookieController extends Controller
 
       $this->ad_type = $data_config->data->params_hash2->config_params->ad_type;
       $this->tv_login_url = $data_config->data->params_hash2->config_params->tv_login_url;
-      $this->qr_login_url = $data_config->data->params_hash2->config_params->qr_login_url;
+      // $this->qr_login_url = $data_config->data->params_hash2->config_params->qr_login_url;
       $this->watchhistory_interval_sec = $data_config->data->params_hash2->config_params->watchhistory_interval_sec;
-      $this->watchhistory_api = $data_config->data->params_hash2->config_params->watchhistory_api;
+      // $this->watchhistory_api = $data_config->data->params_hash2->config_params->watchhistory_api;
       // popup details
       $this->popup_details = $data_config->data->params_hash2->config_params->popup_details;
 
@@ -621,32 +627,32 @@ class CookieController extends Controller
       $this->access_control_content_id = $data_config->data->params_hash2->config_params->access_control->content_id;
 
       // issue list
-      $this->issue_list = $data_config->data->params_hash2->config_params->issue_list;
+      // $this->issue_list = $data_config->data->params_hash2->config_params->issue_list;
       // payment issue details 
 
-      $this->Payment_issue_key = $data_config->data->params_hash2->config_params->issue_list[0]->key;
-      $this->Payment_issue_title = $data_config->data->params_hash2->config_params->issue_list[0]->title;
+      // $this->Payment_issue_key = $data_config->data->params_hash2->config_params->issue_list[0]->key;
+      // $this->Payment_issue_title = $data_config->data->params_hash2->config_params->issue_list[0]->title;
 
       // Subscrition issue
-      $this->Subscription_issue_key = $data_config->data->params_hash2->config_params->issue_list[1]->key;
-      $this->Subscription_issue_title = $data_config->data->params_hash2->config_params->issue_list[1]->title;
+      // $this->Subscription_issue_key = $data_config->data->params_hash2->config_params->issue_list[1]->key;
+      // $this->Subscription_issue_title = $data_config->data->params_hash2->config_params->issue_list[1]->title;
 
       // Content issue
-      $this->Content_issue_key = $data_config->data->params_hash2->config_params->issue_list[2]->key;
-      $this->Content_issue_title = $data_config->data->params_hash2->config_params->issue_list[2]->title;
+      // $this->Content_issue_key = $data_config->data->params_hash2->config_params->issue_list[2]->key;
+      // $this->Content_issue_title = $data_config->data->params_hash2->config_params->issue_list[2]->title;
 
       // other issue
-      $this->Other_issue_key = $data_config->data->params_hash2->config_params->issue_list[3]->key;
-      $this->Other_issue_title = $data_config->data->params_hash2->config_params->issue_list[3]->title;
+      // $this->Other_issue_key = $data_config->data->params_hash2->config_params->issue_list[3]->key;
+      // $this->Other_issue_title = $data_config->data->params_hash2->config_params->issue_list[3]->title;
 
       // payment_gateway
-      $this->payment_gateway = $data_config->data->params_hash2->config_params->payment_gateway;
+      // $this->payment_gateway = $data_config->data->params_hash2->config_params->payment_gateway;
 
-      $this->Billdesk_gateway = $data_config->data->params_hash2->config_params->payment_gateway[0]->gateway;
-      $this->Billdesk_default = $data_config->data->params_hash2->config_params->payment_gateway[0]->default;
+      // $this->Billdesk_gateway = $data_config->data->params_hash2->config_params->payment_gateway[0]->gateway;
+      // $this->Billdesk_default = $data_config->data->params_hash2->config_params->payment_gateway[0]->default;
 
-      $this->ccavenue_gateway = $data_config->data->params_hash2->config_params->payment_gateway[1]->gateway;
-      $this->ccavenue_default = $data_config->data->params_hash2->config_params->payment_gateway[1]->default;
+      // $this->ccavenue_gateway = $data_config->data->params_hash2->config_params->payment_gateway[1]->gateway;
+      // $this->ccavenue_default = $data_config->data->params_hash2->config_params->payment_gateway[1]->default;
       // app version 
       $this->app_version = $data_config->data->app_version;
       $this->app_version_upgrade_type = $data_config->data->app_version->upgrade_type;
@@ -666,43 +672,47 @@ class CookieController extends Controller
 
       // service 
       $this->service = $data_config->data->service;
-      $this->service_min_android_app_version = $data_config->data->service->min_android_app_version;
-      $this->service_min_ios_app_version = $data_config->data->service->min_ios_app_version;
+      
+      
+      // $this->service_min_android_app_version = $data_config->data->service->min_android_app_version;
+      // $this->service_min_ios_app_version = $data_config->data->service->min_ios_app_version;
       // services data 
-      $this->services = $data_config->data->service->services;
+      // $this->services = $data_config->data->service->services;
+      // dd($this->services);
+      // $this->name = $data_config->data->service->services[0]->name;
+      // $this->dns = $data_config->data->service->services[0]->dns;
+      // $this->available = $data_config->data->service->services[0]->available;
 
-      $this->name = $data_config->data->service->services[0]->name;
-      $this->dns = $data_config->data->service->services[0]->dns;
-      $this->available = $data_config->data->service->services[0]->available;
+      // $this->users_name = $data_config->data->service->services[1]->name;
+      // $this->users_dns = $data_config->data->service->services[1]->dns;
+      // $this->users_available = $data_config->data->service->services[1]->available;
 
-      $this->users_name = $data_config->data->service->services[1]->name;
-      $this->users_dns = $data_config->data->service->services[1]->dns;
-      $this->users_available = $data_config->data->service->services[1]->available;
+      // $this->subscriptions_name = $data_config->data->service->services[2]->name;
+      // $this->subscriptions_dns = $data_config->data->service->services[2]->dns;
+      // $this->subscriptions_available = $data_config->data->service->services[2]->available;
 
-      $this->subscriptions_name = $data_config->data->service->services[2]->name;
-      $this->subscriptions_dns = $data_config->data->service->services[2]->dns;
-      $this->subscriptions_available = $data_config->data->service->services[2]->available;
+      // $this->search_name = $data_config->data->service->services[3]->name;
+      // $this->search_dns = $data_config->data->service->services[3]->dns;
+      // $this->search_available = $data_config->data->service->services[3]->available;
 
-      $this->search_name = $data_config->data->service->services[3]->name;
-      $this->search_dns = $data_config->data->service->services[3]->dns;
-      $this->search_available = $data_config->data->service->services[3]->available;
+      // $this->recommendations_name = $data_config->data->service->services[4]->name;
+      // $this->recommendations_dns = $data_config->data->service->services[4]->dns;
+      // $this->recommendations_available = $data_config->data->service->services[4]->available;
 
-      $this->recommendations_name = $data_config->data->service->services[4]->name;
-      $this->recommendations_dns = $data_config->data->service->services[4]->dns;
-      $this->recommendations_available = $data_config->data->service->services[4]->available;
-
-      $this->analytics_name = $data_config->data->service->services[5]->name;
-      $this->analytics_dns = $data_config->data->service->services[5]->dns;
-      $this->analytics_available = $data_config->data->service->services[5]->available;
+      // $this->analytics_name = $data_config->data->service->services[5]->name;
+      // $this->analytics_dns = $data_config->data->service->services[5]->dns;
+      // $this->analytics_available = $data_config->data->service->services[5]->available;
 
       // webservices 
-      $this->webservice = $data_config->data->service->webservice;
-      // print_r($this->webservice);
+      // $this->webservice = $data_config->data->service->webservice;
+   
+
+
       $config_data = $this->BASE_URL . $this->config . "?region=" . $this->country_code2 . "&auth_token=" . $this->AUTHTOKEN . "&access_token=" . $this->ACCESSTOKEN;
       $Top_Menu_api = $this->BASE_URL . "catalog_lists/top-menu-web.gzip?nested_list_items=" . $this->List_false . "&auth_token=" . $this->AUTHTOKEN . "&region=" . $this->country_code2 . "&access_token=" . $this->ACCESSTOKEN;
       $Menu_items = $this->usermodel->GETAPIMODEL($Top_Menu_api);
       $Menu_items_data = json_decode($Menu_items);
-
+      // print_r($Menu_items_data);
       $data_Menu_top = $Menu_items_data->data;
       $this->access_tag = $Menu_items_data->data->access_tag;
       $this->ad_banner_ids = $Menu_items_data->data->ad_banner_ids;
@@ -712,21 +722,58 @@ class CookieController extends Controller
       $this->catalog_list_items = $Menu_items_data->data->catalog_list_items;
 
       if (isset($data_Menu_top->catalog_list_items)) {
+         $displayTitle=[];
          foreach ($data_Menu_top->catalog_list_items as $items) {
             if (isset($items->display_title)) {
-               $this->displayTitle = $items->display_title;
-               //  print_r($this->displayTitle . "<br>");
-
-                return view('Header/header', compact('displayTitle'));
-            }
-         }
+               $displayTitle=$items->display_title;
+                }     
+               }
       }
 
-      //  print_r($data_Menu_top);
-
+        //   Home Gzip Page Api 
+        $HomeApi = $this->BASE_URL . "catalog_lists/home.gzip?item_language=".  "eng&region=" . "IN&auth_token=" . 
+         $this->AUTHTOKEN ."&access_token=" .
+        $this->ACCESSTOKEN . '&page=0' .'&page_size=5' . '&npage_size=10' ;
+     
+       $HomeData = $this->usermodel->GETAPIMODEL($HomeApi);
+       $Home_data_items=json_decode($HomeData);
+       $catalog_list_itmes = $Home_data_items->data->catalog_list_items; 
+   
+      //  $catalog_list_itmes0 = $Home_data_items->data->catalog_list_items[4]->catalog_list_items;
+   // print_r($catalog_list_itmes0);
+   $web_banner_url =[];
+      foreach($catalog_list_itmes as $list_itmes){
+         
+         foreach($list_itmes->catalog_list_items as $main_items){
+           if(isset($main_items ->thumbnails->web_banner->url)){
+            $web_banner_url[]=$main_items->thumbnails->high_3_4;
+          
+           }
+           
+         }
+         // print_r($web_banner_url);
+       
+      }
+      return $web_banner_url;
+       
+      //  foreach ($catalog_list_itmes as $outer_item){
+      //     foreach($outer_item ->catalog_list_items as $inner_items){
+           
+      //        if(isset($inner_items->thumbnails->web_banner->url)){
+                
+      //          $web_banner_url[]=$inner_items->thumbnails->web_banner->url;
+      //        }
+            
+      //     }
+         
+      //  }
+      //  print_r($web_banner_url);
    }
+ 
+
+   
+
 
 
 }
 
-// From Laravel Blade to Vue.js + API [Live-coding Example]

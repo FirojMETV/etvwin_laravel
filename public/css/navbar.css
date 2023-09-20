@@ -63,17 +63,18 @@ font-family: 'Montserrat', sans-serif;
 .nav-pills li.active a:hover {
   color: #fff;
   background-color: #337ab7;
+  font-weight: 900;
 }
 .main-menu .nav-pills li.active a,
 .main-menu .nav-pills li.active a:focus {
   background-color: #7249bf;
-  border: 2px solid #7249bf;
+  border: 3px solid #7249bf;
   border-radius: 35px;
   color: #fff;
-  font-family: OpenSansBold;
+  font-family: 'Montserrat', sans-serif;
 }
 .main-menu .nav-pills li.active a:hover {
-  color: #ffc908;
+  color: #ecdf2cee;
 }
 .main-menu .nav-pills li.active a:hover{
   border-radius: 2px solid #7249bf;
@@ -178,6 +179,7 @@ img {
   display: block;
   text-align: left;
   cursor: pointer;
+  font-weight: bold;
 }
 .dropdown-content a:hover,
 .my-profile-icon:hover{
@@ -256,6 +258,8 @@ img {
   margin-left: 20px;
   font-size: 14px;
   margin-top: 25px;
+  display: flex;
+  flex-direction: row;
 }
 #nav-rounded-image {
   height: 50px;
@@ -268,13 +272,14 @@ img {
 .signed-user-option h2{
   color: #fff;
   font-size: 14px;
+  margin: 20px 40px;
 }
 .arrow-down-profile {
   width: 0;
   height: 0;
   float: right;
   top: 26px;
-  right: 20px;
+  right: 0px;
   position: relative;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
@@ -359,6 +364,7 @@ a{
   color: #f1e8e8;
   display: block;
   transition: 0.3s;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -669,7 +675,7 @@ input[type="sign-up"]:hover {
   max-width: 500px;
   margin: 10px auto;
   text-align: center;
-  color: #fff;
+  background: #818597;
   font-size: 20px;
   font-weight: 200;
 }
@@ -717,14 +723,15 @@ input[type="sign-up"]:hover {
   bottom: 0;
   z-index: 1990;
   left: 0;
-  min-height: 80px;
+  min-height: 70px;
   transition: .3s;
   overflow: auto;
 }
 
 
 .download-button h3 {
-  font-size: 22px;
+  font-size: 16px;
+  margin-left: 10px;
 }
 
 

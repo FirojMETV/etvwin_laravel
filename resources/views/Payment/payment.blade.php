@@ -14,21 +14,21 @@
                 <h1 class="ng-binding">Premium
                     <span class="ng-binding">₹99</span>
                 </h1>
-                <h2 class="ng-binding">
+                <h2 class="">
                     per Month
                 </h2>
             </div>
-            <md-input-container class="md-block promo-code-box ng-scope md-input-has-value">
+            <div class="md-block promo-code-box ng-scope md-input-has-value" id="promoCodeDiv">
 
-                <label for="input-color">Enter Promo Code</label>
-                <input id="input-color" name="promocode" type="text"
-                    class="ng-valid md-input ng-not-empty ng-dirty ng-valid-parse ng-touched" style="">
+                {{-- <label for="input-color">Enter Promo Code</label> --}}
+                <input id="promoCodeInput" name="promocode" type="text" class="ng-valid md-input login__input "
+                    style="" placeholder="Enter Promo Code">
                 <div class="md-errors-spacer">
                 </div>
-                <a class="ng-binding">
+                <a class="" id="applyLink">
                     APPLY</a>
-            </md-input-container>
-            <p class="error-msg ng-binding ng-scope" style="">
+            </div>
+            <p class="error-msg  ng-scope" style="">
                 Invalid Coupon</p>
 
             <div class="discount-area">
@@ -51,18 +51,4 @@
 </div>
 
 
-{{-- <div class="login-form-dialog">
-    <div class="error-dialog ng-scope" style="">
-        <div class="ekt-dialog-form promocode-dialog">
-            <p class="">
-                Oops! You're unable to upgrade your account right now.
-                Looks like your payment is still pending. Please contact our customer support.
-            </p>
-            <div class="ekt-submit-button">
-                <button class="form-button full-width-button blue-button decrease-font-size">
-                    OK
-                </button>
-            </div>
-        </div>
-    </div>
-</div> --}}
+<script src="{{asset('js/payment.js')}}"></script>

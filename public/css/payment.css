@@ -1,32 +1,109 @@
+.ngdialog.ngdialog-theme-default {
+    z-index: 80;
+}
 .login-form-dialog {
     background-color: #191d4f;
     border-radius: 9px;
     width: 450px;
-    min-width: 320px;
     margin-left: auto;
     margin-right: auto;
 }
-.error-dialog{
+.ekt-dialog-header {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
     color: #fff;
-    margin-top: 150px;
+    padding: 20px;
+    background: #101340;
+    margin-top: 20px;
+    font-family: OpenSansLight;
 }
-.error-dialog-form{
+.ekt-dialog-form {
     padding: 20px;
     margin-top: 10%;
-    font-family: 'Montserrat', sans-serif;
 }
- p{
-    font-size: 18px ;
-    padding: 29px 14px 5px 34px;
-    font-family: 'Montserrat', sans-serif;
+.promocode-error-area {
+    text-align: center;
+    color: #ffc908;
+    margin: 10px;
 }
-.ekt-submit-button{
-    padding: 30px 0 20px 0;
+.promo-code-box a {
+    color: rgba(253,227,0,1);
+    font-size: 14px;
+    float: right;
+    margin-top: -20px;
 }
-.decrese-font-size{
-    font-size: 16px !important;
+.login-form-dialog a {
+    /* cursor: pointer;
+    color: #fff;
+    font-size: 14px; */
 }
-.blue-button{
+.promocode-dialog .error-msg {
+    color: #eb0808;
+    font-size: 12px;
+    display: none;
+}
+.login__input {
+    border: none;
+    border-bottom: 2px solid #D1D1D4;
+    background: none;
+    font-weight: 700;
+    
+    transition: .2s;
+    color: #fff;
+}
+.required-input {
+    border: 1px solid #ccc;
+}
+.plan-title-area, .signin-error-area {
+    text-align: center;
+    padding: 20px;
+    color: #ffc908;
+    font-size: 14px;
+    margin-bottom: 40px;
+    margin-left: -38px;
+    margin-right: -38px;
+}
+.plan-title-area h1 {
+    color: rgba(253,227,0,1);
+    font-size: 22px;
+    text-align: left;
+    margin-left: 20px;
+    font-family: OpenSansSemiBold;
+}
+.discount-area h1, .plan-title-area h2 {
+    font-size: 14px;
+    color: #fff;
+    text-align: left;
+    margin-left: 20px;
+    font-family: OpenSansSemiBold;
+}
+.discount-area h1 span, .plan-title-area h1 span {
+    font-size: 18px;
+    color: #fff;
+    float: right;
+    margin-right: 20px;
+}
+.discount-area {
+    margin: 20px -20px;
+}
+.discount-area h1 {
+    margin-bottom: 20px;
+}
+.ekt-submit-button {
+    padding: 30px 0 0 0;
+}
+
+.button-flex {
+    display: flex;
+    width: 400px;
+    margin: auto;
+}
+.decrease-font-size {
+    font-size: 16px!important;
+}
+
+.blue-button {
     background: #7249bf;
     font-size: 100%;
     color: #fff;
@@ -36,7 +113,7 @@
     -ms-transform: scale(1);
     transform: scale(1);
 }
-.full-width-button{
+.full-width-button {
     width: 100%;
 }
 .form-button {
@@ -50,9 +127,4 @@
     margin: auto;
     display: table;
     color: #fff;
-  }
-
-@media screen and (width:500px) {
- 
-    
 }

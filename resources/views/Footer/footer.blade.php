@@ -83,4 +83,7 @@
     </h6>
 </div>
 
+
+
 <script src="{{asset('js/footer.js')}}"></script>
+

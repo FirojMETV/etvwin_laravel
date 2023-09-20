@@ -1,3 +1,4 @@
+@inject('request', 'Illuminate\Http\Request')
 <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
 
 
@@ -6,10 +7,12 @@
         <ul>
             <li>
                 <span ng-click="OpenNavBar()" class=" hamburger-button" aria-hidden="true" role="button" tabindex="0"
-                    style="font-size:30px;cursor:pointer ;
-                    color:aliceblue;left: -13px; top: -18px;"
-                    onclick="openNav()">
-                    &#9776;</span>
+                 style="top: -18px;left: -21px;"
+                   >
+                   <img src="{{url('/image/im.png')}}" alt="Image"   style="font-size:30px;cursor:pointer ;
+                   color:aliceblue;" width="50px" height="55px"
+                   onclick="openNav()"/></span>
+                   
             </li>
             <li class="logo-margin">
                 <a href="home">
@@ -21,13 +24,56 @@
     </div>
     <div class="main-menu">
         <ul class="navs navbar-nav nav-pills">
-            @isset($displayTitle['home'])
+            {{-- @isset($displayTitle['home'])
                 <li class="dropdown ng-scope active" role="button" tabindex="0" style="">
-                    <a href="{{ route('home') }}">{{ $displayTitle['Home'] }}</a>
+                    <a href="{{ route('home') }}">{{ $displayTitle['home'] }}</a>
                     <span aria-hidden="true"></span>
                 </li>
-            @endisset
-            @isset($displayTitle['Tv Shows'])
+            @endisset --}}
+
+            @foreach ($displayTitles as $index => $title)
+            <li class="dropdown{{ $index === 0 ? ' active' : '' }}"
+                 role="button" tabindex="0"
+                 style="" data-menu-id="{{ $index }}">
+                <a 
+                href="{{ (strtolower($title)) }}"
+                   class="{{ request()->is(strtolower($title)) ? 'active' : '' }}">
+                    {{ $title }}
+                </a>
+            </li>
+        @endforeach
+        
+          
+
+            {{-- @foreach ($displayTitles as $index => $title)
+            <li class="dropdown np-scrope{{ $index === 0 ? ' active' : '' }}"
+             role="button" tabindex="0"
+                style="" data-menu-id="{{ $index }}">
+                <a 
+                href="{{strtolower($title)}}"
+                 class="{{ $request->is(strtolower($title)) ? 'active' : '' }}">
+                    {{ $title }}
+                </a>
+            </li>
+        @endforeach --}}
+                  
+
+            {{-- @if (!empty($displayTitles))
+            @foreach ($displayTitles as $index => $title)
+                <li class="dropdown ng-scope {{ $index === 0 ? 'active' : '' }}" 
+                role="button" tabindex="0" style="" 
+                data-menu-id="{{$index}}">
+                    <a 
+                     href="{{strtolower($title)}}"
+                        class="{{ $request->is(strtolower($title)) ? 'active' : '' }}">{{ $title }}</a>
+                    <span aria-hidden="true"></span>
+                </li>
+            @endforeach
+        @else
+            <li>No menu items found</li>
+        @endif --}}
+
+            {{-- @isset($displayTitle['Tv Shows'])
                 <li class="dropdown ng-scope" role="button" tabindex="0" style="">
                     <a href="{{ route('TV Shows') }}">Tv Shows</a>
                     <span aria-hidden="true"></span>
@@ -74,7 +120,7 @@
                 </span>
                 <ul class="dropdown-content drop-center-aligned ng-scope">
                 </ul>
-            </li>
+            </li> --}}
         </ul>
     </div>
     <div class="mobile-os-list">
@@ -198,10 +244,9 @@
                 </button>
             </div> --}}
             {{-- for user  --}}
-            <div class="signed-user-option " >
-                <img class="col-sm-3 col-xs-3" id="nav-rounded-image"
-                onclick="toggleUserData()"
-                src="{{ asset('image/usericon.png') }}">
+            <div class="signed-user-option ">
+                <img class="col-sm-3 col-xs-3" id="nav-rounded-image" onclick="toggleUserData()"
+                    src="{{ asset('image/usericon.png') }}">
                 <h2 class="col-sm-7 col-xs-7 ng-binding" onclick="toggleUserData()">
                     UserName</h2>
                 <span class="arrow-down-profile " style="" size='24px' onclick="toggleUserData()">
@@ -211,7 +256,7 @@
         </div>
 
     </div>
-    <div id="usermenu"  class="sub-menu-profile " style="display:none">
+    <div id="usermenu" class="sub-menu-profile " style="display:none">
         <ul>
             <li>
                 <a>
@@ -219,14 +264,15 @@
                     My
                     Profile</a>
             </li>
-            <li >
+            <li>
                 <a ng-click="openSubscription()">
                     <span aria-hidden="true">
-                        <img class="subs-icon" src="{{asset('image/subscription-icon-mobile.png')}}" alt="">
+                        <img class="subs-icon" src="{{ asset('image/subscription-icon-mobile.png') }}"
+                            alt="">
                     </span>Subscription
                 </a>
             </li>
-            <li >
+            <li>
                 <a ng-click="gotoPage('/watchlater')">
                     <span class="icon-watch-later" aria-hidden="true">
 
@@ -236,28 +282,38 @@
             <li>
                 <a>
                     <span aria-hidden="true">
-                        <img class="active-tv" src="{{asset('image/activate-tv-new-dark.png')}}" alt="">
+                        <img class="active-tv" src="{{ asset('image/activate-tv-new-dark.png') }}" alt="">
                     </span>Activate TV</a>
             </li>
-            <li >
-                <a >
+            <li>
+                <a>
                     <span class="icon-following" aria-hidden="true">
                     </span> My Preferences</a>
             </li>
             <li>
-                <a >
+                <a>
                     <span class="icon-signout" aria-hidden="true">
                     </span> Sign Out</a>
             </li>
-            <li >
-                <a >
+            <li>
+                <a>
                     <span class="icon-signout" aria-hidden="true">
                     </span> Sign Out alldevices</a>
             </li>
         </ul>
     </div>
-    <div style="margin-bottom: 60px; margin-top:10px;">
-        <a href="/home" class="active">Home</a>
+
+    <div style="margin-bottom: 90px; margin-top:10px;">
+
+
+        @foreach ($displayTitles as $index =>$title)
+            <a href="{{strtolower($title)}}"
+            class="{{request()->is(strtolower($title))}}" >
+        {{strtoupper($title)}}
+            </a>
+            <hr class="hr">
+        @endforeach
+        {{-- <a href="/home" class="active">Home</a>
         <hr class="hr">
         <a href="#">TV SHOWS</a>
         <hr class="hr">
@@ -270,11 +326,11 @@
         <a href="#">FOOD</a>
         <hr class="hr">
         <a href="#">HEALTH</a>
-        <hr class="hr">
+        <hr class="hr"> --}}
 
     </div>
     <div class="download-button" id="mydownload" style="width: 80%; visibility: visible;">
-        <h3 style="color: #888888dd">
+        <h3 style="color: #888888dd;  font-family: 'Montserrat', sans-serif;">
             DOWNLOAD APP
             <span class="fa fa-apple" style="font-size:26px">
 

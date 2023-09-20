@@ -81,7 +81,7 @@
 
 .tvactive_box .codebox input[type=text] {
     color: #fff;
-    font-family: condensed-regular;
+    font-family: 'Montserrat', sans-serif;
     height: 48px;
     margin-bottom: 10px;
     padding: 0;
@@ -99,7 +99,7 @@ input:focus{
     height: 50px;
     width: 260px;
     border-bottom: 1px solid rgba(255,255,255,.15);
-    font-family: OpenSansRegular;
+    font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     color: rgba(255,255,255,1);
     text-align: left;

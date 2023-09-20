@@ -13,18 +13,24 @@
                     <div class="alert alert-danger ">{{ Session::get('failed') }}</div>
                 @endif
                 @csrf
-                <div class="txt_field">
-                    <input type="text" name="Email" value="{{ old('Email') }}">
-                    <span></span>
-                    <label for="Email">Email / Mobile*</label>
+               
+                
+                  <div class="group">
+                    <input type="text" class="input" placeholder="">
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Email / Mobile*</label>
+                    <p class="text-warning" style="margin:-15px 1px 0px 0px; color:#ffc908">@error('Email'){{ $message }}@enderror</p>
                 </div>
-                <p class="text-warning" style="margin:-15px 1px 0px 0px; color:#ff5">@error('Email'){{ $message }}@enderror</p>
-                <div class="txt_field">
-                    <input type="password" name="password" value="">
-                    <span></span>
+                 
+                <div class="group">
+                    <input type="password" class="input" placeholder="">
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
                     <label>Password*</label>
+                    <p class="text-warning" style="margin: -20px 0px 25px 1px; color:#ffc908">@error('password'){{ $message }}@enderror</p>
                 </div>
-                <p class="text-warning" style="margin: -20px 0px 25px 1px; color:#ff5">@error('password'){{ $message }}@enderror</p>
+                 
                 <div class="pass">
                     Forget Password?
                 </div>

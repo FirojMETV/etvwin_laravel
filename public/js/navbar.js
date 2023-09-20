@@ -1,5 +1,7 @@
 // const { auto } = require("@popperjs/core");
 
+const { auto } = require("@popperjs/core");
+
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
   document.getElementById("mySidenav").style.display = "block";
@@ -99,9 +101,19 @@ function checkpassword() {
     messsage.textContent="";
   }
 }
-$(document).ready(function() {
-  $('#openFormButton').click(function() {
-      $('.rating').toggleClass('show');
-      $('.overlay').toggleClass('show');
+// $(document).ready(function() {
+//   $('#openFormButton').click(function() {
+//       $('.rating').toggleClass('show');
+//       $('.overlay').toggleClass('show');
+//   });
+// });
+
+$(document).ready(function () {
+  $(".dropdown").click(function () {
+      // Remove 'active' class from all menu items
+      $(".dropdown").removeClass("active");
+
+      // Add 'active' class to the clicked menu item
+      $(this).addClass("active");
   });
 });

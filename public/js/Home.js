@@ -36,8 +36,26 @@ $(document).ready(function() {
     }
   });
 
+  $('#continue_watching').owlCarousel({
+    loop:false,
+    lazyLoad:true,
+    mouseDrag:true,
+    nav:true,
+    dots:false,
+    responsive:{
+      0:{
+          items:2
+      },
+      668:{
+          items:2
+      },
+      1024:{
+          items:7
+      }
+  }
+  });
   $('#another-carousel').owlCarousel({
-    loop: true,
+    loop: false,
     lazyLoad: true,
     mouseDrag: true,
     touchDrag: true,
@@ -57,21 +75,22 @@ $(document).ready(function() {
     }
   });
   $('#Before-TV').owlCarousel({
-    loop:true,
+    loop:false,
     lazyLoad:true,
     mouseDrag:true,
     nav:true,
     dots:false,
+   
     // navText:['<>','</>'],
     responsive:{
         0:{
             items:2
         },
         668:{
-            items:6
+            items:6.5
         },
         1024:{
-            items:6
+            items:6.5
         }
     }
   });
@@ -80,6 +99,7 @@ $(document).ready(function() {
     lazyLoad:true,
     dots:false,
     items:7,
+   
     nav:false,
     responsive:{
         0:{
@@ -182,6 +202,23 @@ $(document).ready(function() {
   }
   });
   $('#Comedy').owlCarousel({
+    loop:false,
+    lazyLoad:true,
+    dots:false,
+    nav:true,
+    responsive:{
+      0:{
+          items:3
+      },
+      668:{
+          items:3
+      },
+      1024:{
+          items:7
+      }
+  }
+  });
+  $("#Romance").owlCarousel({
     loop:false,
     lazyLoad:true,
     dots:false,
